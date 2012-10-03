@@ -1,0 +1,9 @@
+Let's try this again
+
+---
+layout: post
+title: "Post test 2"
+date: 2012-10-03 15:45
+comments: true
+categories: 
+---
