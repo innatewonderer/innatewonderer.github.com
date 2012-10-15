@@ -3,11 +3,11 @@
 # ----------------------- #
 
 url: http://innatewonderer.github.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
+title: Screw diamonds. Ruby is a girl's best friend.
+subtitle: Surfing the waters of Ruby programming
 author: Jenya Zueva
 simple_search: http://google.com/search
-description: This is my first hacker blog. Beware ! ! !
+description: ruby programming, how to program, Ruby, Rails, HTML, CSS
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
