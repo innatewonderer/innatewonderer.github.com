@@ -9,7 +9,6 @@ published: true
 
 How many times did you have to sit through a torturous power point
 presentation wondering what did you do to deserve this?  
-
 {% img center http://dilbert.com/dyn/str_strip/000000000/00000000/0000000/000000/00000/0000/200/221/221.strip.gif %} <sub>@2003 United Feature Syndicate, Inc</sub>
 
 Yet, it continues to be one of the most important marketing tools.  
@@ -23,11 +22,11 @@ How many times did you got so exited to talk about your idea and half way throug
 ###2. Always be prepared  
 Please, don't pull out your laptop in the elevator. There is place for an elevator speech, that you should also have prepared, and there is a place to put on a show with your rocking slides.  
 
-###3. Commit your message to memory.  
+###3. Commit your message to memory  
 If you want your listeners to remember bigger part of your presentation, offer them more than one method to remember it. Well put together slide deck will play back in people's memory well way after Q&A.  
 
-###4. Let it speak for you when you are not available.  
-Sending out your résumé to as many potential employers as you can manage during your lunch break won't get you far anymore. You have to stand out from hundreds of other applicants and it's very hard to do remotely. Here is a great [example]  
+###4. Let it speak for you when you are not available  
+Sending out your résumé to as many potential employers as you can manage during your lunch break won't get you far anymore. You have to stand out from hundreds of other applicants and it's very hard to do remotely. Here is a great example  
 
 <center><iframe src="http://app.sliderocket.com:80/app/fullplayer.aspx?id=22455602-8E03-36EF-6598-CE8F4250ABDB" width="400" height="326" scrolling=no frameBorder="1" style="border:1px solid #333333;border-bottom-style:none"></iframe></center>
 <br>
