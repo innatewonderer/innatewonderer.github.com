@@ -3,7 +3,7 @@ layout: post
 title: "Variable Scope"
 date: 2012-10-18 20:02
 comments: true
-published: false
+published: true
 categories: 
 ---
 
