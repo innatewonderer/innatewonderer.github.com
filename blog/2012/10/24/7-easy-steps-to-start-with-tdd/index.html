@@ -1,0 +1,409 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>7 easy steps to start with TDD - Screw diamonds. Ruby is a girl's best friend.</title>
+  <meta name="author" content="Jenya Zueva">
+
+  
+  <meta name="description" content="1:00 pm - TDD is a very useful tool in software development&#8230; 3:30 pm - Test driven development or TDD can be extremely frustrating, time &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.innatewonderer.github.com/blog/2012/10/24/7-easy-steps-to-start-with-tdd/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Screw diamonds. Ruby is a girl's best friend." type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-35487078-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Screw diamonds. Ruby is a girl's best friend.</a></h1>
+  
+    <h2>Surfing the waters of programming</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.innatewonderer.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">7 Easy Steps to Start With TDD</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-24T18:26:00-04:00" pubdate data-updated="true">Oct 24<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>1:00 pm - TDD is a very useful tool in software development&#8230;</p>
+
+<p>3:30 pm - Test driven development or TDD can be extremely frustrating, time consuming and sole devouring experience.</p>
+
+<p>6:00 pm - Be patient. Like a sorority club, TDD will put you through a tidious initiation ceremony. Once, accepted, you will be able to produce a much cleaner code and improve your style.</p>
+
+<p>Few easy steps to get you started with TDD using <strong><a href="https://rubygems.org/gems/rspec">rspec</a></strong>.</p>
+
+<p>Tools used:</p>
+
+<ul>
+<li>Sublime Text 2</li>
+<li>Terminal</li>
+<li>gem of choise: rspec</li>
+<li>original assignment: by <a href="http://twitter.com/aviflombaum">Avi Flombaum</a> can be found in my <a href="https://github.com/innatewonderer/playlister-jenya">GitHub repo</a>.</li>
+</ul>
+
+
+<h3>Step 1 : Installing rspec</h3>
+
+<p>Create a new folder for your project, cd to that folder and run <strong>gem install rspec</strong>.</p>
+
+<p><img src="/images/rspec_tdd-Jenya@Flatiron-Air-1-bash-122×30.jpg"></p>
+
+<pre><code>**TIP**
+**spec_helper.rb** will hold all of the required paths for you.
+Do not forget to include all necessary files, gem names, and libraries.
+_require 'spec_helper'_ will be the only line needed in your testing files.
+</code></pre>
+
+<figure class='code'><figcaption><span>spec_helper.rb  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;rspec&#39;</span>
+</span><span class='line'>  <span class="n">require_relative</span> <span class="s1">&#39;../artist&#39;</span>
+</span><span class='line'>  <span class="n">require_relative</span> <span class="s1">&#39;../artist&#39;</span>
+</span><span class='line'>  <span class="n">require_relative</span> <span class="s1">&#39;../song&#39;</span>
+</span><span class='line'>  <span class="n">require_relative</span> <span class="s1">&#39;../genre&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;yaml&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>artist.rb  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;spec_helper&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Step 2 : Identify what needs to be accomplished</h3>
+
+<p>I had a sample of tests completed for Ruby assignment using <em>assert_method</em>. By running this test, I can test if my program is able to create an instance of <em>artist</em>.</p>
+
+<figure class='code'><figcaption><span>[assert_test] [ruby] </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>test 'Can initialize an Artist' do
+</span><span class='line'>  assert Artist.new
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Step 3 : Write your test</h3>
+
+<p><img src="/images/artist_spec.rb-final_ruby_tdd.jpg"></p>
+
+<p>In artist_spec.rb, I need to be able to test that</p>
+
+<ul>
+<li>by calling <em>#new</em> method on class variable <strong>@artist</strong></li>
+<li>I will be able to create a new instance of artist</li>
+<li>that should be_an_instance_of Artist class.</li>
+</ul>
+
+
+<p> (<em>What? Yes! It is all one sentence.
+ You don&#8217;t like my overly explicit coding syntax? Sorry, get over it.</em>)</p>
+
+<pre><code>**TIP**
+</code></pre>
+
+<p>Stay on a safe side. Commit your code to a GitHub repository. Here is a great post on <a href="http://cjbrock.github.com/blog/2012/10/23/5-easy-guides-to-help-you-get-started-with-github/">how to get started with Git</a>.</p>
+
+<h3>Step 4 : Run your test - FAIL</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rspect artist_spec.rb</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Terminal will tell you exactly what is wrong with your test.</p>
+
+<p><img src="/images/spec_jenya@Flatiron-Air-1_bash_107×13.jpg"></p>
+
+<h3>Step 5 : Fix your code</h3>
+
+<p>To pass this test we need to initiate class Artist.</p>
+
+<figure class='code'><figcaption><span>[artist.rb] [ruby] </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="k">class</span> <span class="nc">Artist</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Step 6 : Run your test again - PASS</h3>
+
+<p><img src="/images/Arc.jpg"></p>
+
+<h3>Step 7 : Do a happy dance</h3>
+
+<p><img src="/images/original_art.jpg"><br/>
+Original Work</p>
+
+<h4>Here is an example of a more complex test:</h4>
+
+<p>Create the test<br/>
+Test and Fail<br/>
+Fix your code</p>
+
+<p><img src="/images/Skitch-1.jpg"></p>
+
+<p>  Test and Pass</p>
+
+<p><img src="/images/spec-jenya@Flatiron-Air-1-bash-164×8.jpg"></p>
+
+<p>  Happy dance anyone???</p>
+
+<p><img src="/images/original_art.jpg"></p>
+
+<p>  <strong>NOTE</strong><br/>
+  I plan to transofrm all test cases from original state to rspect. Feel free to <a href="https://github.com/innatewonderer/final_ruby_tdd">fork it here</a>.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Jenya Zueva</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-24T18:26:00-04:00" pubdate data-updated="true">Oct 24<span>th</span>, 2012</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.innatewonderer.github.com/blog/2012/10/24/7-easy-steps-to-start-with-tdd/" data-via="jzueva" data-counturl="http://www.innatewonderer.github.com/blog/2012/10/24/7-easy-steps-to-start-with-tdd/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/10/18/variable-scope/" title="Previous Post: Variable Scope">&laquo; Variable Scope</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/10/24/7-easy-steps-to-start-with-tdd/">7 easy steps to start with TDD</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/18/variable-scope/">Variable Scope</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/15/why-we-should-not-discard-power-point-just-yet/">Do not discard slide decks just yet</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/innatewonderer">@innatewonderer</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'innatewonderer',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("jzueva", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/jzueva" class="twitter-follow-button" data-show-count="false">Follow @jzueva</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Jenya Zueva -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
