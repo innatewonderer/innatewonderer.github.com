@@ -9,8 +9,7 @@
   <meta name="author" content="Jenya Zueva">
 
   
-  <meta name="description" content="How many times did you have to sit through a torturous power point
-presentation wondering what did you do to deserve this? @2003 United Feature &hellip;">
+  <meta name="description" content="Variable is an essential building block of any programming language. It is a way to store information and assign a name to it for future use. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -50,7 +49,7 @@ presentation wondering what did you do to deserve this? @2003 United Feature &he
   <header role="banner"><hgroup>
   <h1><a href="/">Screw diamonds. Ruby is a girl's best friend.</a></h1>
   
-    <h2>Surfing the waters of Ruby programming</h2>
+    <h2>Surfing the waters of programming</h2>
   
 </hgroup>
 
@@ -77,6 +76,241 @@ presentation wondering what did you do to deserve this? @2003 United Feature &he
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/18/variable-scope/">Variable Scope</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-18T20:02:00-04:00" pubdate data-updated="true">Oct 18<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Variable is an essential building block of any programming language. It is a way to store information and assign a name to it for future use. Variables come in all shapes and sizes. Anything from an integer to a string of characters can be used to reference data in the program.</p>
+
+<h3>There are four main types of variables:</h3>
+
+<p><img class="right" src="http://public.arnau-sanchez.com/ruby-functional/pics/functional-programming-joke.png" width="350" height="190"></p>
+
+<ul>
+<li>$global_variable</li>
+<li>@@class_variable</li>
+<li>@instance_variable</li>
+<li>local_variable (use [a..z] or _ )</li>
+</ul>
+
+
+<p>Ruby comes with two pseudo-variables <em>nil</em> and <em>self</em> that do not accept values. <em>Nil</em> is assigned to uninitialized variables. <em>Self</em> will always refer to the object currently being executed.</p>
+
+<p>Looks simple, right? It gets somewhat confusing when you try to define the scope of each variable. Even more confusing, when you try to call on a variable that is does not belong to your current scope.</p>
+
+<p>Ruby is always here to help you. <strong>defined? variable</strong> will show you the what the scope of selected variable.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'> <span class="vc">@@var</span> <span class="o">=</span> <span class="s2">&quot;class variable&quot;</span>
+</span><span class='line'>  
+</span><span class='line'><span class="err">$</span> <span class="n">irb</span>
+</span><span class='line'><span class="mo">001</span><span class="p">:</span><span class="mi">0</span> <span class="o">&gt;</span> <span class="n">defined?</span> <span class="vc">@@var</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'> <span class="k">class</span> <span class="nc">Code</span>
+</span><span class='line'>  <span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;class variable&quot;</span>
+</span><span class='line'> <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">$</span> <span class="n">irb</span>
+</span><span class='line'><span class="mo">001</span><span class="p">:</span><span class="mi">0</span> <span class="o">&gt;</span> <span class="n">defined?</span> <span class="n">var</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>Debugging</h4>
+
+<p>If you run this code, it will give Object(NameError), which means that the variable you are trying to call on is currently out of scope. To solve this error locate where you first introduced the variable and either change its scope or rename the second variable.</p>
+
+<h2>Local Variable</h2>
+
+<p><strong>local_variable</strong> can be declaired and referenced only within given scope (method, loop, etc).</p>
+
+<h2>Instance Variable</h2>
+
+<p><strong>@instance_variables</strong> only belong to the given instance of an object. In an example below, when @instance_variable is changed in some_method, it retains its value when called in some_other_method.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">CodeBlock</span>
+</span><span class='line'>  <span class="vi">@instance_variable</span> <span class="o">=</span> <span class="s2">&quot;string&quot;</span>
+</span><span class='line'>  
+</span><span class='line'>  <span class="k">def</span> <span class="nf">some_method</span>
+</span><span class='line'>      <span class="vi">@instane_variable</span> <span class="o">=</span> <span class="mi">15</span> <span class="o">&lt;==</span> <span class="mi">15</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">some_pther_method</span>
+</span><span class='line'>      <span class="vi">@instane_variable</span> <span class="o">&lt;==</span> <span class="mi">10</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Global Variables</h2>
+
+<p><strong>$global_variables</strong> are set to access anywhere in the program. It is ruby&#8217;s convention NOT to use global variables.</p>
+
+<blockquote><p>“&#8230; global variables? <br/>They pollute the planet. <br/>You know who uses global variables? <br/>PHP”</p><footer><strong>@aviflombaum</strong> <cite><a href='https://twitter.com/aviflombaum'>twitter.com/aviflombaum/&hellip;</a></cite></footer></blockquote>
+
+
+<p>Debugging will become a nightmare, if you redefine a global variable somewhere in your program, and then try to call on its original value.
+Ruby offers us a number of major system variables. Aliases will come handy when working on bigger applications.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="center">  <strong>Symbol</strong>      </th>
+<th align="center">           <strong>Description</strong>              </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="center"> $!             </td>
+<td align="center"> latest error message</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> $@             </td>
+<td align="center"> location of error</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> $_             </td>
+<td align="center"> string last read by gets</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> $.             </td>
+<td align="center"> line number last read by interpreter</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> $&amp;             </td>
+<td align="center"> string last matched by regexp</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> $~             </td>
+<td align="center"> the last regexp match, as an array of subexpressions</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> $n             </td>
+<td align="center"> the nth subexpression in the last match (same as $~[n])</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> $=             </td>
+<td align="center"> case-insensitivity flag </td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> $/             </td>
+<td align="center"> input record separator</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> $\             </td>
+<td align="center"> output record separator</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> $0             </td>
+<td align="center"> the name of the ruby script file</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> $*             </td>
+<td align="center"> the command line arguments</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> $$             </td>
+<td align="center"> interpreter&#8217;s process ID</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> $?             </td>
+<td align="center"> exit status of last executed child process</td>
+</tr>
+</tbody>
+</table>
+
+
+<h2>Class Variables</h2>
+
+<p>A class variable are defined and availbale <strong>only</strong> inside that class, meaning that only <strong>one variable value exists for all objects represented by that instance within that class</strong>. @@variable will be available for reference in any methods that might be defined for that class.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Code</span>
+</span><span class='line'>  <span class="vc">@@class_variable</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">class_method</span>
+</span><span class='line'>      <span class="vc">@@class_variable</span><span class="o">.</span><span class="n">reverse</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Variables are your friends. Learn them, love them.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -171,6 +405,10 @@ people learn from it and see your seeds sprout.</p>
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/10/18/variable-scope/">Variable Scope</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/10/15/why-we-should-not-discard-power-point-just-yet/">Do not discard slide decks just yet</a>
