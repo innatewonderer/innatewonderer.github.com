@@ -111,141 +111,12 @@
 
 <p>6:00 pm - Be patient. Like a sorority club, TDD will put you through a tidious initiation ceremony. Once, accepted, you will be able to produce a much cleaner code and improve your style.</p>
 
-<p>Few easy steps to get you started with TDD using <strong><a href="https://rubygems.org/gems/rspec">rspec</a></strong>.</p>
-
-<p>Tools used:</p>
-
-<ul>
-<li>Sublime Text 2</li>
-<li>Terminal</li>
-<li>gem of choise: rspec</li>
-<li>original assignment: by <a href="http://twitter.com/aviflombaum">Avi Flombaum</a> can be found in my <a href="https://github.com/innatewonderer/playlister-jenya">GitHub repo</a>.</li>
-</ul>
-
-
-<h3>Step 1 : Installing rspec</h3>
-
-<p>Create a new folder for your project, cd to that folder and run <strong>gem install rspec</strong>.</p>
-
-<p><img src="/images/rspec_tdd-Jenya@Flatiron-Air-1-bash-122×30.jpg"></p>
-
-<pre><code>**TIP**
-**spec_helper.rb** will hold all of the required paths for you.
-Do not forget to include all necessary files, gem names, and libraries.
-_require 'spec_helper'_ will be the only line needed in your testing files.
-</code></pre>
-
-<figure class='code'><figcaption><span>spec_helper.rb  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;rspec&#39;</span>
-</span><span class='line'>  <span class="n">require_relative</span> <span class="s1">&#39;../artist&#39;</span>
-</span><span class='line'>  <span class="n">require_relative</span> <span class="s1">&#39;../artist&#39;</span>
-</span><span class='line'>  <span class="n">require_relative</span> <span class="s1">&#39;../song&#39;</span>
-</span><span class='line'>  <span class="n">require_relative</span> <span class="s1">&#39;../genre&#39;</span>
-</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;yaml&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span>artist.rb  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;spec_helper&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>Step 2 : Identify what needs to be accomplished</h3>
-
-<p>I had a sample of tests completed for Ruby assignment using <em>assert_method</em>. By running this test, I can test if my program is able to create an instance of <em>artist</em>.</p>
-
-<figure class='code'><figcaption><span>[assert_test] [ruby] </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>test 'Can initialize an Artist' do
-</span><span class='line'>  assert Artist.new
-</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>Step 3 : Write your test</h3>
-
-<p><img src="/images/artist_spec.rb-final_ruby_tdd.jpg"></p>
-
-<p>In artist_spec.rb, I need to be able to test that</p>
-
-<ul>
-<li>by calling <em>#new</em> method on class variable <strong>@artist</strong></li>
-<li>I will be able to create a new instance of artist</li>
-<li>that should be_an_instance_of Artist class.</li>
-</ul>
-
-
-<p> (<em>What? Yes! It is all one sentence.
- You don&#8217;t like my overly explicit coding syntax? Sorry, get over it.</em>)</p>
-
-<pre><code>**TIP**
-</code></pre>
-
-<p>Stay on a safe side. Commit your code to a GitHub repository. Here is a great post on <a href="http://cjbrock.github.com/blog/2012/10/23/5-easy-guides-to-help-you-get-started-with-github/">how to get started with Git</a>.</p>
-
-<h3>Step 4 : Run your test - FAIL</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rspect artist_spec.rb</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Terminal will tell you exactly what is wrong with your test.</p>
-
-<p><img src="/images/spec_jenya@Flatiron-Air-1_bash_107×13.jpg"></p>
-
-<h3>Step 5 : Fix your code</h3>
-
-<p>To pass this test we need to initiate class Artist.</p>
-
-<figure class='code'><figcaption><span>[artist.rb] [ruby] </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="k">class</span> <span class="nc">Artist</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>Step 6 : Run your test again - PASS</h3>
-
-<p><img src="/images/Arc.jpg"></p>
-
-<h3>Step 7 : Do a happy dance</h3>
-
-<p><img src="/images/original_art.jpg"><br/>
-Original Work</p>
-
-<h4>Here is an example of a more complex test:</h4>
-
-<p>Create the test<br/>
-Test and Fail<br/>
-Fix your code</p>
-
-<p><img src="/images/Skitch-1.jpg"></p>
-
-<p>  Test and Pass</p>
-
-<p><img src="/images/spec-jenya@Flatiron-Air-1-bash-164×8.jpg"></p>
-
-<p>  Happy dance anyone???</p>
-
-<p><img src="/images/original_art.jpg"></p>
-
-<p>  <strong>NOTE</strong><br/>
-  I plan to transofrm all test cases from original state to rspect. Feel free to <a href="https://github.com/innatewonderer/final_ruby_tdd">fork it here</a>.</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/10/24/7-easy-steps-to-start-with-tdd/">Read on &rarr;</a>
+    </footer>
   
 
 
@@ -281,206 +152,14 @@ Fix your code</p>
 
   <div class="entry-content"><p>Variable is an essential building block of any programming language. It is a way to store information and assign a name to it for future use. Variables come in all shapes and sizes. Anything from an integer to a string of characters can be used to reference data in the program.</p>
 
-<h3>There are four main types of variables:</h3>
-
 <p><img class="right" src="http://public.arnau-sanchez.com/ruby-functional/pics/functional-programming-joke.png" width="350" height="190"></p>
 
-<ul>
-<li>$global_variable</li>
-<li>@@class_variable</li>
-<li>@instance_variable</li>
-<li>local_variable (use [a..z] or _ )</li>
-</ul>
-
-
-<p>Ruby comes with two pseudo-variables <em>nil</em> and <em>self</em> that do not accept values. <em>Nil</em> is assigned to uninitialized variables. <em>Self</em> will always refer to the object currently being executed.</p>
-
-<p>Looks simple, right? It gets somewhat confusing when you try to define the scope of each variable. Even more confusing, when you try to call on a variable that is does not belong to your current scope.</p>
-
-<p>Ruby is always here to help you. <strong>defined? variable</strong> will show you the what the scope of selected variable.</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'> <span class="vc">@@var</span> <span class="o">=</span> <span class="s2">&quot;class variable&quot;</span>
-</span><span class='line'>  
-</span><span class='line'><span class="err">$</span> <span class="n">irb</span>
-</span><span class='line'><span class="mo">001</span><span class="p">:</span><span class="mi">0</span> <span class="o">&gt;</span> <span class="n">defined?</span> <span class="vc">@@var</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'> <span class="k">class</span> <span class="nc">Code</span>
-</span><span class='line'>  <span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;class variable&quot;</span>
-</span><span class='line'> <span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'><span class="err">$</span> <span class="n">irb</span>
-</span><span class='line'><span class="mo">001</span><span class="p">:</span><span class="mi">0</span> <span class="o">&gt;</span> <span class="n">defined?</span> <span class="n">var</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h4>Debugging</h4>
-
-<p>If you run this code, it will give Object(NameError), which means that the variable you are trying to call on is currently out of scope. To solve this error locate where you first introduced the variable and either change its scope or rename the second variable.</p>
-
-<h2>Local Variable</h2>
-
-<p><strong>local_variable</strong> can be declaired and referenced only within given scope (method, loop, etc).</p>
-
-<h2>Instance Variable</h2>
-
-<p><strong>@instance_variables</strong> only belong to the given instance of an object. In an example below, when @instance_variable is changed in some_method, it retains its value when called in some_other_method.</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">CodeBlock</span>
-</span><span class='line'>  <span class="vi">@instance_variable</span> <span class="o">=</span> <span class="s2">&quot;string&quot;</span>
-</span><span class='line'>  
-</span><span class='line'>  <span class="k">def</span> <span class="nf">some_method</span>
-</span><span class='line'>      <span class="vi">@instane_variable</span> <span class="o">=</span> <span class="mi">15</span> <span class="o">&lt;==</span> <span class="mi">15</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">some_pther_method</span>
-</span><span class='line'>      <span class="vi">@instane_variable</span> <span class="o">&lt;==</span> <span class="mi">10</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Global Variables</h2>
-
-<p><strong>$global_variables</strong> are set to access anywhere in the program. It is ruby&#8217;s convention NOT to use global variables.</p>
-
-<blockquote><p>“&#8230; global variables? <br/>They pollute the planet. <br/>You know who uses global variables? <br/>PHP”</p><footer><strong>@aviflombaum</strong> <cite><a href='https://twitter.com/aviflombaum'>twitter.com/aviflombaum/&hellip;</a></cite></footer></blockquote>
-
-
-<p>Debugging will become a nightmare, if you redefine a global variable somewhere in your program, and then try to call on its original value.
-Ruby offers us a number of major system variables. Aliases will come handy when working on bigger applications.</p>
-
-<table>
-<thead>
-<tr>
-<th></th>
-<th align="center">  <strong>Symbol</strong>      </th>
-<th align="center">           <strong>Description</strong>              </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td align="center"> $!             </td>
-<td align="center"> latest error message</td>
-</tr>
-<tr>
-<td></td>
-<td align="center"> $@             </td>
-<td align="center"> location of error</td>
-</tr>
-<tr>
-<td></td>
-<td align="center"> $_             </td>
-<td align="center"> string last read by gets</td>
-</tr>
-<tr>
-<td></td>
-<td align="center"> $.             </td>
-<td align="center"> line number last read by interpreter</td>
-</tr>
-<tr>
-<td></td>
-<td align="center"> $&amp;             </td>
-<td align="center"> string last matched by regexp</td>
-</tr>
-<tr>
-<td></td>
-<td align="center"> $~             </td>
-<td align="center"> the last regexp match, as an array of subexpressions</td>
-</tr>
-<tr>
-<td></td>
-<td align="center"> $n             </td>
-<td align="center"> the nth subexpression in the last match (same as $~[n])</td>
-</tr>
-<tr>
-<td></td>
-<td align="center"> $=             </td>
-<td align="center"> case-insensitivity flag </td>
-</tr>
-<tr>
-<td></td>
-<td align="center"> $/             </td>
-<td align="center"> input record separator</td>
-</tr>
-<tr>
-<td></td>
-<td align="center"> $\             </td>
-<td align="center"> output record separator</td>
-</tr>
-<tr>
-<td></td>
-<td align="center"> $0             </td>
-<td align="center"> the name of the ruby script file</td>
-</tr>
-<tr>
-<td></td>
-<td align="center"> $*             </td>
-<td align="center"> the command line arguments</td>
-</tr>
-<tr>
-<td></td>
-<td align="center"> $$             </td>
-<td align="center"> interpreter&#8217;s process ID</td>
-</tr>
-<tr>
-<td></td>
-<td align="center"> $?             </td>
-<td align="center"> exit status of last executed child process</td>
-</tr>
-</tbody>
-</table>
-
-
-<h2>Class Variables</h2>
-
-<p>A class variable are defined and availbale <strong>only</strong> inside that class, meaning that only <strong>one variable value exists for all objects represented by that instance within that class</strong>. @@variable will be available for reference in any methods that might be defined for that class.</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Code</span>
-</span><span class='line'>  <span class="vc">@@class_variable</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">class_method</span>
-</span><span class='line'>      <span class="vc">@@class_variable</span><span class="o">.</span><span class="n">reverse</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Variables are your friends. Learn them, love them.</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/10/18/variable-scope/">Read on &rarr;</a>
+    </footer>
   
 
 
@@ -521,48 +200,12 @@ presentation wondering what did you do to deserve this?<br/>
 <p>Yet, it continues to be one of the most important marketing tools.<br/>
 Why should we not discard this method completely just yet?</p>
 
-<p>Slides will always help you to:</p>
-
-<h3>1. Organize your thoughts</h3>
-
-<p>How many times did you got so exited to talk about your idea and half way through your speech you found yourself completely lost? Slide deck will help you stay on track.</p>
-
-<h3>2. Always be prepared</h3>
-
-<p>Please, don&#8217;t pull out your laptop in the elevator. There is place for an elevator speech, that you should also have prepared, and there is a place to put on a show with your rocking slides.</p>
-
-<h3>3. Commit your message to memory</h3>
-
-<p>If you want your listeners to remember bigger part of your presentation, offer them more than one method to remember it. Well put together slide deck will play back in people&#8217;s memory well way after Q&amp;A.</p>
-
-<h3>4. Let it speak for you when you are not available</h3>
-
-<p>Sending out your résumé to as many potential employers as you can manage during your lunch break won&#8217;t get you far anymore. You have to stand out from hundreds of other applicants and it&#8217;s very hard to do remotely. Here is a great example</p>
-
-<center><iframe src="http://app.sliderocket.com:80/app/fullplayer.aspx?id=22455602-8E03-36EF-6598-CE8F4250ABDB" width="400" height="326" scrolling=no frameBorder="1" style="border:1px solid #333333;border-bottom-style:none"></iframe></center>
-
-
-<br>
-
-
-<p>Fantastic job application by <a href="https://twitter.com/margotleong">Margot</a>. Follow her on twitter.</p>
-
-<p>I think it&#8217;s safe to agree that presentation deck is still important. Now let&#8217;s talk about how to deliver your message and keep people from falling asleep:</p>
-
-<h3>1. Make it fun</h3>
-
-<p>Sense of humor and positive attitude are greatly appreciated in anyone who you have to spend 8+ hours per day with. Show them that you enjoy what you do and people will want to share your energy.</p>
-
-<h3>2. Keep it professional</h3>
-
-<p>Remember that once online, any information represents you. Employers now run background chek on your facebook, twitter feed and tumblr reposts. Just as it can ruin your chances of getting that dream job, it is a good way to show everyone your vast range of interests.</p>
-
-<h3>3. Share it</h3>
-
-<p>Online tech community is growing fast. Attending professional meet-ups and networking events is important, but not enough. Maintain your presence and allow it to contribute to open source community. Let
-people learn from it and see your seeds sprout.</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/10/15/why-we-should-not-discard-power-point-just-yet/">Read on &rarr;</a>
+    </footer>
   
 
 
