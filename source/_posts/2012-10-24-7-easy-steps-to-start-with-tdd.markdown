@@ -13,6 +13,8 @@ published: true
 
 6:00 pm - Be patient. Like a sorority club, TDD will put you through a tidious initiation ceremony. Once, accepted, you will be able to produce a much cleaner code and improve your style. 
 
+<!-- more -->
+
 Few easy steps to get you started with TDD using **[rspec](https://rubygems.org/gems/rspec)**.
 
 Tools used:

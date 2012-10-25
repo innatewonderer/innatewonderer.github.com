@@ -14,6 +14,8 @@ presentation wondering what did you do to deserve this?
 Yet, it continues to be one of the most important marketing tools.  
 Why should we not discard this method completely just yet?  
 
+<!-- more -->
+
 Slides will always help you to:  
 
 ###1. Organize your thoughts  

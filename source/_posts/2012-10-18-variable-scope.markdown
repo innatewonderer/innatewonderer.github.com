@@ -9,9 +9,11 @@ categories:
 
 Variable is an essential building block of any programming language. It is a way to store information and assign a name to it for future use. Variables come in all shapes and sizes. Anything from an integer to a string of characters can be used to reference data in the program.
 
-###There are four main types of variables:
-
 {% img right http://public.arnau-sanchez.com/ruby-functional/pics/functional-programming-joke.png 350 190 %}
+
+<!-- more -->
+
+###There are four main types of variables:
 
 * $global_variable
 * @@class_variable
