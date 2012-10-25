@@ -9,7 +9,7 @@
   <meta name="author" content="Jenya Zueva">
 
   
-  <meta name="description" content="Variable is an essential building block of any programming language. It is a way to store information and assign a name to it for future use. &hellip;">
+  <meta name="description" content="1:00 pm - TDD is a very useful tool in software development&#8230; 3:30 pm - Test driven development or TDD can be extremely frustrating, time &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,178 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/24/7-easy-steps-to-start-with-tdd/">7 Easy Steps to Start With TDD</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-24T18:26:00-04:00" pubdate data-updated="true">Oct 24<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>1:00 pm - TDD is a very useful tool in software development&#8230;</p>
+
+<p>3:30 pm - Test driven development or TDD can be extremely frustrating, time consuming and sole devouring experience.</p>
+
+<p>6:00 pm - Be patient. Like a sorority club, TDD will put you through a tidious initiation ceremony. Once, accepted, you will be able to produce a much cleaner code and improve your style.</p>
+
+<p>Few easy steps to get you started with TDD using <strong><a href="https://rubygems.org/gems/rspec">rspec</a></strong>.</p>
+
+<p>Tools used:</p>
+
+<ul>
+<li>Sublime Text 2</li>
+<li>Terminal</li>
+<li>gem of choise: rspec</li>
+<li>original assignment: by <a href="http://twitter.com/aviflombaum">Avi Flombaum</a> can be found in my <a href="https://github.com/innatewonderer/playlister-jenya">GitHub repo</a>.</li>
+</ul>
+
+
+<h3>Step 1 : Installing rspec</h3>
+
+<p>Create a new folder for your project, cd to that folder and run <strong>gem install rspec</strong>.</p>
+
+<p><img src="/images/rspec_tdd-Jenya@Flatiron-Air-1-bash-122×30.jpg"></p>
+
+<pre><code>**TIP**
+**spec_helper.rb** will hold all of the required paths for you. Do not forget to include all necessary files, gem names, and libraries. _require 'spec_helper'_ will be the only line needed in your testing files.
+</code></pre>
+
+<figure class='code'><figcaption><span>spec_helper.rb  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;rspec&#39;</span>
+</span><span class='line'>  <span class="n">require_relative</span> <span class="s1">&#39;../artist&#39;</span>
+</span><span class='line'>  <span class="n">require_relative</span> <span class="s1">&#39;../artist&#39;</span>
+</span><span class='line'>  <span class="n">require_relative</span> <span class="s1">&#39;../song&#39;</span>
+</span><span class='line'>  <span class="n">require_relative</span> <span class="s1">&#39;../genre&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;yaml&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>artist.rb  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;spec_helper&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Step 2 : Identify what needs to be accomplished</h3>
+
+<p>I had a sample of tests completed for Ruby assignment using <em>assert_method</em>. By running this test, I can test if my program is able to create an instance of <em>artist</em>.</p>
+
+<figure class='code'><figcaption><span>[assert_test] [ruby] </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>test 'Can initialize an Artist' do
+</span><span class='line'>  assert Artist.new
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Step 3 : Write your test</h3>
+
+<p><img src="/images/artist_spec.rb-final_ruby_tdd.jpg"></p>
+
+<p>In artist_spec.rb, I need to be able to test that</p>
+
+<ul>
+<li>by calling <em>#new</em> method on class variable <strong>@artist</strong></li>
+<li>I will be able to create a new instance of artist</li>
+<li>that should be_an_instance_of Artist class.</li>
+</ul>
+
+
+<p> (<em>What? Yes! It is all one sentence.
+ You don&#8217;t like my overly explicit coding syntax? Sorry, get over it.</em>)</p>
+
+<pre><code>**TIP**
+</code></pre>
+
+<p>Stay on a safe side. Commit your code to a GitHub repository. Here is a great post on <a href="http://cjbrock.github.com/blog/2012/10/23/5-easy-guides-to-help-you-get-started-with-github/">how to get started with Git</a>.</p>
+
+<h3>Step 4 : Run your test - FAIL</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rspect artist_spec.rb</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Terminal will tell you exactly what is wrong with your test.</p>
+
+<p><img src="/images/spec_jenya@Flatiron-Air-1_bash_107×13.jpg"></p>
+
+<h3>Step 5 : Fix your code</h3>
+
+<p>To pass this test we need to initiate class Artist.</p>
+
+<figure class='code'><figcaption><span>[artist.rb] [ruby] </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="k">class</span> <span class="nc">Artist</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Step 6 : Run your test again - PASS</h3>
+
+<p><img src="/images/Arc.jpg"></p>
+
+<h3>Step 7 : Do a happy dance</h3>
+
+<p><img src="/images/original_art.jpg"><br/>
+Original Work</p>
+
+<h4>Here is an example of a more complex test:</h4>
+
+<p>Create the test<br/>
+Test and Fail<br/>
+Fix your code</p>
+
+<p><img src="/images/Skitch-1.jpg"></p>
+
+<p>  Test and Pass</p>
+
+<p><img src="/images/spec-jenya@Flatiron-Air-1-bash-164×8.jpg"></p>
+
+<p>  Happy dance anyone???</p>
+
+<p><img src="/images/original_art.jpg"></p>
+
+<p>  <strong>NOTE</strong><br/>
+  I plan to transofrm all test cases from original state to rspect. Feel free to <a href="https://github.com/innatewonderer/final_ruby_tdd">fork it here</a>.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -405,6 +577,10 @@ people learn from it and see your seeds sprout.</p>
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/10/24/7-easy-steps-to-start-with-tdd/">7 easy steps to start with TDD</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/10/18/variable-scope/">Variable Scope</a>
