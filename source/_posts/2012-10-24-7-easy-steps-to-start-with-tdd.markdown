@@ -4,7 +4,7 @@ title: "7 easy steps to start with TDD"
 date: 2012-10-24 18:26
 comments: true
 categories: 
-published: false 
+published: true 
 ---
 
 1:00 pm - TDD is a very useful tool in software development...
@@ -29,7 +29,9 @@ Create a new folder for your project, cd to that folder and run **gem install rs
 {% img /images/rspec_tdd-Jenya@Flatiron-Air-1-bash-122×30.jpg %}
 
 	**TIP**
-	**spec_helper.rb** will hold all of the required paths for you. Do not forget to include all necessary files, gem names, and libraries. _require 'spec_helper'_ will be the only line needed in your testing files.
+	**spec_helper.rb** will hold all of the required paths for you.
+	Do not forget to include all necessary files, gem names, and libraries.
+	_require 'spec_helper'_ will be the only line needed in your testing files.
 
 {% codeblock spec_helper.rb lang:ruby %}
 
