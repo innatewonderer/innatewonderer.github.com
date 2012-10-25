@@ -4,7 +4,7 @@
   <title><![CDATA[Screw diamonds. Ruby is a girl's best friend.]]></title>
   <link href="http://www.innatewonderer.github.com/atom.xml" rel="self"/>
   <link href="http://www.innatewonderer.github.com/"/>
-  <updated>2012-10-25T09:53:46-04:00</updated>
+  <updated>2012-10-25T14:07:39-04:00</updated>
   <id>http://www.innatewonderer.github.com/</id>
   <author>
     <name><![CDATA[Jenya Zueva]]></name>
@@ -23,6 +23,9 @@
 <p>3:30 pm - Test driven development or TDD can be extremely frustrating, time consuming and sole devouring experience.</p>
 
 <p>6:00 pm - Be patient. Like a sorority club, TDD will put you through a tidious initiation ceremony. Once, accepted, you will be able to produce a much cleaner code and improve your style.</p>
+
+<!-- more -->
+
 
 <p>Few easy steps to get you started with TDD using <strong><a href="https://rubygems.org/gems/rspec">rspec</a></strong>.</p>
 
