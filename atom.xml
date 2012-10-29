@@ -4,7 +4,7 @@
   <title><![CDATA[Screw diamonds. Ruby is a girl's best friend.]]></title>
   <link href="http://www.innatewonderer.github.com/atom.xml" rel="self"/>
   <link href="http://www.innatewonderer.github.com/"/>
-  <updated>2012-10-25T14:12:03-04:00</updated>
+  <updated>2012-10-29T11:24:10-04:00</updated>
   <id>http://www.innatewonderer.github.com/</id>
   <author>
     <name><![CDATA[Jenya Zueva]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Tracking Sandy nerd style]]></title>
+    <link href="http://www.innatewonderer.github.com/blog/2012/10/29/tracking-sandy-nerd-style/"/>
+    <updated>2012-10-29T11:16:00-04:00</updated>
+    <id>http://www.innatewonderer.github.com/blog/2012/10/29/tracking-sandy-nerd-style</id>
+    <content type="html"><![CDATA[<p>A beautiful representation of the wind currents</p>
+
+<p><img src="http://www.innatewonderer.github.com/images/Wind_Map.jpg"></p>
+
+<p>For realtime wind map, <a href="http://hint.fm/wind/">click here</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[7 easy steps to start with TDD]]></title>
