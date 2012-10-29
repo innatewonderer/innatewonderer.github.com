@@ -4,7 +4,7 @@
   <title><![CDATA[Screw diamonds. Ruby is a girl's best friend.]]></title>
   <link href="http://www.innatewonderer.github.com/atom.xml" rel="self"/>
   <link href="http://www.innatewonderer.github.com/"/>
-  <updated>2012-10-29T11:24:10-04:00</updated>
+  <updated>2012-10-29T11:43:30-04:00</updated>
   <id>http://www.innatewonderer.github.com/</id>
   <author>
     <name><![CDATA[Jenya Zueva]]></name>
@@ -181,9 +181,8 @@ Fix your code</p>
     <link href="http://www.innatewonderer.github.com/blog/2012/10/18/variable-scope/"/>
     <updated>2012-10-18T20:02:00-04:00</updated>
     <id>http://www.innatewonderer.github.com/blog/2012/10/18/variable-scope</id>
-    <content type="html"><![CDATA[<p>Variable is an essential building block of any programming language. It is a way to store information and assign a name to it for future use. Variables come in all shapes and sizes. Anything from an integer to a string of characters can be used to reference data in the program.</p>
-
-<p><img class="right" src="http://public.arnau-sanchez.com/ruby-functional/pics/functional-programming-joke.png" width="350" height="190"></p>
+    <content type="html"><![CDATA[<p><img class="right" src="http://public.arnau-sanchez.com/ruby-functional/pics/functional-programming-joke.png" width="350" height="190">
+Variable is an essential building block of any programming language. It is a way to store information and assign a name to it for future use. Variables come in all shapes and sizes. Anything from an integer to a string of characters can be used to reference data in the program.</p>
 
 <!-- more -->
 
