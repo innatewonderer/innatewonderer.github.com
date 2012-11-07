@@ -4,36 +4,46 @@
         <loc>
             http://www.innatewonderer.github.com/blog/2012/10/15/why-we-should-not-discard-power-point-just-yet/
         </loc>
-        <lastmod>2012-10-25T14:08:37-04:00</lastmod>
+        <lastmod>2012-11-07T00:59:24-05:00</lastmod>
     </url>
     <url>
         <loc>http://www.innatewonderer.github.com/blog/2012/10/18/variable-scope/</loc>
-        <lastmod>2012-10-29T11:42:49-04:00</lastmod>
+        <lastmod>2012-11-07T00:59:24-05:00</lastmod>
     </url>
     <url>
         <loc>
             http://www.innatewonderer.github.com/blog/2012/10/24/7-easy-steps-to-start-with-tdd/
         </loc>
-        <lastmod>2012-10-25T14:07:25-04:00</lastmod>
+        <lastmod>2012-11-07T00:59:24-05:00</lastmod>
     </url>
     <url>
         <loc>http://www.innatewonderer.github.com/blog/2012/10/29/tracking-sandy-nerd-style/</loc>
-        <lastmod>2012-10-29T11:23:45-04:00</lastmod>
+        <lastmod>2012-11-07T00:59:24-05:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://www.innatewonderer.github.com/blog/2012/11/06/installing-rspec-in-rails-app/
+        </loc>
+        <lastmod>2012-11-07T01:15:25-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.innatewonderer.github.com/blog/2012/11/07/if-i-ever-fix-this-blog/</loc>
+        <lastmod>2012-11-07T01:15:12-05:00</lastmod>
     </url>
     <url>
         <loc>http://www.innatewonderer.github.com/blog/archives/</loc>
-        <lastmod>2012-10-29T11:42:49-04:00</lastmod>
+        <lastmod>2012-11-07T01:15:25-05:00</lastmod>
     </url>
     <url>
         <loc>http://www.innatewonderer.github.com/</loc>
-        <lastmod>2012-10-29T11:42:49-04:00</lastmod>
+        <lastmod>2012-11-07T01:15:25-05:00</lastmod>
     </url>
     <url>
         <loc>http://www.innatewonderer.github.com/resources/</loc>
-        <lastmod>2012-10-24T21:18:40-04:00</lastmod>
+        <lastmod>2012-11-07T00:59:24-05:00</lastmod>
     </url>
     <url>
         <loc>http://www.innatewonderer.github.com/resources/tdd-resources.html</loc>
-        <lastmod>2012-10-24T21:18:40-04:00</lastmod>
+        <lastmod>2012-11-07T00:59:24-05:00</lastmod>
     </url>
 </urlset>
