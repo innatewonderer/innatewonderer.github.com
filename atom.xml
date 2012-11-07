@@ -4,7 +4,7 @@
   <title><![CDATA[Screw diamonds. Ruby is a girl's best friend.]]></title>
   <link href="http://www.innatewonderer.github.com/atom.xml" rel="self"/>
   <link href="http://www.innatewonderer.github.com/"/>
-  <updated>2012-11-07T10:06:02-05:00</updated>
+  <updated>2012-11-07T18:02:57-05:00</updated>
   <id>http://www.innatewonderer.github.com/</id>
   <author>
     <name><![CDATA[Jenya Zueva]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Upstream and update]]></title>
+    <link href="http://www.innatewonderer.github.com/blog/2012/11/07/upstream-and-update/"/>
+    <updated>2012-11-07T17:49:00-05:00</updated>
+    <id>http://www.innatewonderer.github.com/blog/2012/11/07/upstream-and-update</id>
+    <content type="html"><![CDATA[<p>You forked something, cloned it to your machine, but didn&#8217;t setup remote connection to the origin repository.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git remote add upstream *url to original repository*
+</span><span class='line'>git fetch upstream
+</span><span class='line'>git merge upstream/master</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[If I ever fix this blog]]></title>
@@ -40,55 +59,13 @@
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:16] "GET /stylesheets/screen.css HTTP/1.1" 200 42533 0.0037
 </span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:16] "GET /images/line-tile.png?1352246753 HTTP/1.1" 200 636 0.0027
 </span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:16] "GET /images/rss.png?1352246753 HTTP/1.1" 200 490 0.0025
 </span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:16] "GET /images/noise.png?1352246753 HTTP/1.1" 200 17742 0.0141
 </span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:18] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0011
 </span><span class='line'>[2012-11-06 19:06:18] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
-</span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:19] "GET / HTTP/1.1" 304 - 0.0013
-</span><span class='line'>[2012-11-06 19:06:19] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
-</span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:19] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0011
-</span><span class='line'>[2012-11-06 19:06:19] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
-</span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:19] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0011
-</span><span class='line'>[2012-11-06 19:06:19] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
-</span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:19] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0016
-</span><span class='line'>[2012-11-06 19:06:19] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
-</span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:19] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0014
-</span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:19] "GET /javascripts/ender.js HTTP/1.1" 304 - 0.0011
-</span><span class='line'>[2012-11-06 19:06:19] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
-</span><span class='line'>[2012-11-06 19:06:19] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
-</span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:19] "GET /javascripts/twitter.js HTTP/1.1" 304 - 0.0009
-</span><span class='line'>[2012-11-06 19:06:19] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
-</span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:19] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0020
-</span><span class='line'>[2012-11-06 19:06:19] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
-</span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:19] "GET /images/Wind_Map.jpg HTTP/1.1" 304 - 0.0122
-</span><span class='line'>[2012-11-06 19:06:19] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
-</span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:25] "GET / HTTP/1.1" 304 - 0.0012
-</span><span class='line'>[2012-11-06 19:06:25] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
-</span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:25] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0012
-</span><span class='line'>[2012-11-06 19:06:25] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:19] "GET / HTTP/1.1" 304 - 0.0013</span></code></pre></td></tr></table></div></figure>
 
 
 <p>After several attempts at googling it, numerous pulls and pushs and rebase commands, I decided to get to the very bottom of it
@@ -110,7 +87,7 @@ Liquid error: ClassNotFound: no lexer for alias &#8216;Ruby&#8217; found</p>
     <link href="http://www.innatewonderer.github.com/blog/2012/11/06/installing-rspec-in-rails-app/"/>
     <updated>2012-11-06T17:54:00-05:00</updated>
     <id>http://www.innatewonderer.github.com/blog/2012/11/06/installing-rspec-in-rails-app</id>
-    <content type="html"><![CDATA[<p>Support TDD within your rails app by using rspec.</p>
+    <content type="html"><![CDATA[<h2>Support TDD within your rails app by using rspec.</h2>
 
 <p>Add to <strong>Gemfile</strong>
 Liquid error: ClassNotFound: no lexer for alias &#8216;Ruby&#8217; found</p>
@@ -120,6 +97,16 @@ Liquid error: ClassNotFound: no lexer for alias &#8216;Ruby&#8217; found</p>
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>rails g rspec:install</span></code></pre></td></tr></table></div></figure>
 
+
+<h2>Using Guard with Rspec</h2>
+
+<p>After following careful instructions from their <a href="https://github.com/guard/guard-rspec">GitHubPage</a>, run this before running <strong>guard</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake spec</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It will reset your tables.</p>
 ]]></content>
   </entry>
   

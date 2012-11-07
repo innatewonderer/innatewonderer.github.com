@@ -4,7 +4,7 @@
   <title><![CDATA[Category: installation | Screw diamonds. Ruby is a girl's best friend.]]></title>
   <link href="http://www.innatewonderer.github.com/blog/categories/installation/atom.xml" rel="self"/>
   <link href="http://www.innatewonderer.github.com/"/>
-  <updated>2012-11-07T10:06:02-05:00</updated>
+  <updated>2012-11-07T18:02:57-05:00</updated>
   <id>http://www.innatewonderer.github.com/</id>
   <author>
     <name><![CDATA[Jenya Zueva]]></name>
@@ -18,7 +18,7 @@
     <link href="http://www.innatewonderer.github.com/blog/2012/11/06/installing-rspec-in-rails-app/"/>
     <updated>2012-11-06T17:54:00-05:00</updated>
     <id>http://www.innatewonderer.github.com/blog/2012/11/06/installing-rspec-in-rails-app</id>
-    <content type="html"><![CDATA[<p>Support TDD within your rails app by using rspec.</p>
+    <content type="html"><![CDATA[<h2>Support TDD within your rails app by using rspec.</h2>
 
 <p>Add to <strong>Gemfile</strong>
 Liquid error: ClassNotFound: no lexer for alias 'Ruby' found</p>
@@ -26,6 +26,13 @@ Liquid error: ClassNotFound: no lexer for alias 'Ruby' found</p>
 <p>Enter in Terminal in your <strong>app_folder</strong>
 <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>rails g rspec:install</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h2>Using Guard with Rspec</h2>
+
+<p>After following careful instructions from their <a href="https://github.com/guard/guard-rspec">GitHubPage</a>, run this before running <strong>guard</strong>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake spec</span></code></pre></td></tr></table></div></figure></notextile></div>
+It will reset your tables.</p>
 ]]></content>
   </entry>
   

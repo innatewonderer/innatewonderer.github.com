@@ -9,7 +9,10 @@
   <meta name="author" content="Jenya Zueva">
 
   
-  <meta name="description" content="Debugging If you are reading this post, I was able to save this blog and debug this #$!#%#%)&amp;$ error. Pardon my french. ">
+  <meta name="description" content="You forked something, cloned it to your machine, but didn&#8217;t setup remote connection to the origin repository. 1
+2
+3
+git remote add upstream * &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +79,54 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/11/07/upstream-and-update/">Upstream and Update</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-07T17:49:00-05:00" pubdate data-updated="true">Nov 7<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/11/07/upstream-and-update/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>You forked something, cloned it to your machine, but didn&#8217;t setup remote connection to the origin repository.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git remote add upstream *url to original repository*
+</span><span class='line'>git fetch upstream
+</span><span class='line'>git merge upstream/master</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -152,7 +203,7 @@
   </header>
 
 
-  <div class="entry-content"><p>Support TDD within your rails app by using rspec.</p>
+  <div class="entry-content"><h2>Support TDD within your rails app by using rspec.</h2>
 
 <p>Add to <strong>Gemfile</strong>
 Liquid error: ClassNotFound: no lexer for alias &#8216;Ruby&#8217; found</p>
@@ -162,6 +213,16 @@ Liquid error: ClassNotFound: no lexer for alias &#8216;Ruby&#8217; found</p>
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>rails g rspec:install</span></code></pre></td></tr></table></div></figure>
 
+
+<h2>Using Guard with Rspec</h2>
+
+<p>After following careful instructions from their <a href="https://github.com/guard/guard-rspec">GitHubPage</a>, run this before running <strong>guard</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake spec</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It will reset your tables.</p>
 </div>
   
   
@@ -258,50 +319,6 @@ Liquid error: ClassNotFound: no lexer for alias &#8216;Ruby&#8217; found</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/10/18/variable-scope/">Variable Scope</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-18T20:02:00-04:00" pubdate data-updated="true">Oct 18<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/10/18/variable-scope/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><img class="right" src="http://public.arnau-sanchez.com/ruby-functional/pics/functional-programming-joke.png" width="350" height="190">
-Variable is an essential building block of any programming language. It is a way to store information and assign a name to it for future use. Variables come in all shapes and sizes. Anything from an integer to a string of characters can be used to reference data in the program.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/10/18/variable-scope/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -317,6 +334,10 @@ Variable is an essential building block of any programming language. It is a way
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/11/07/upstream-and-update/">Upstream and update</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/11/07/if-i-ever-fix-this-blog/">If I ever fix this blog</a>
       </li>
     
@@ -330,10 +351,6 @@ Variable is an essential building block of any programming language. It is a way
     
       <li class="post">
         <a href="/blog/2012/10/24/7-easy-steps-to-start-with-tdd/">7 easy steps to start with TDD</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/10/18/variable-scope/">Variable Scope</a>
       </li>
     
   </ul>
