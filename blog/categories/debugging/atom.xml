@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: debugging | Screw diamonds. Ruby is a girl's best friend.]]></title>
+  <link href="http://www.innatewonderer.github.com/blog/categories/debugging/atom.xml" rel="self"/>
+  <link href="http://www.innatewonderer.github.com/"/>
+  <updated>2012-11-07T18:02:57-05:00</updated>
+  <id>http://www.innatewonderer.github.com/</id>
+  <author>
+    <name><![CDATA[Jenya Zueva]]></name>
+    <email><![CDATA[jzueva@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[If I ever fix this blog]]></title>
+    <link href="http://www.innatewonderer.github.com/blog/2012/11/07/if-i-ever-fix-this-blog/"/>
+    <updated>2012-11-07T00:46:00-05:00</updated>
+    <id>http://www.innatewonderer.github.com/blog/2012/11/07/if-i-ever-fix-this-blog</id>
+    <content type="html"><![CDATA[<p>Debugging</p>
+
+<p>If you are reading this post, I was able to save this blog and debug this #$!#%#%)&amp;$ error. Pardon my french.</p>
+
+<!-- more -->
+
+
+<p>When running octopress
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake preview</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>the followng error showed up:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:16] "GET /stylesheets/screen.css HTTP/1.1" 200 42533 0.0037
+</span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:16] "GET /images/line-tile.png?1352246753 HTTP/1.1" 200 636 0.0027
+</span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:16] "GET /images/rss.png?1352246753 HTTP/1.1" 200 490 0.0025
+</span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:16] "GET /images/noise.png?1352246753 HTTP/1.1" 200 17742 0.0141
+</span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:18] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0011
+</span><span class='line'>[2012-11-06 19:06:18] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+</span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:19] "GET / HTTP/1.1" 304 - 0.0013</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>After several attempts at googling it, numerous pulls and pushs and rebase commands, I decided to get to the very bottom of it
+Locate file
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>~/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpresponse.rb</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Set and set it to <strong>true</strong>
+Liquid error: ClassNotFound: no lexer for alias 'Ruby' found</p>
+
+<p>This should get rid of your error.</p>
+]]></content>
+  </entry>
+  
+</feed>
