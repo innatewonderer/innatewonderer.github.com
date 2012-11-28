@@ -4,7 +4,7 @@
   <title><![CDATA[Screw diamonds. Ruby is a girl's best friend.]]></title>
   <link href="http://www.innatewonderer.github.com/atom.xml" rel="self"/>
   <link href="http://www.innatewonderer.github.com/"/>
-  <updated>2012-11-07T18:02:57-05:00</updated>
+  <updated>2012-11-08T09:39:19-05:00</updated>
   <id>http://www.innatewonderer.github.com/</id>
   <author>
     <name><![CDATA[Jenya Zueva]]></name>
@@ -29,6 +29,78 @@
 
 
 
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Decode Object Oriented Design]]></title>
+    <link href="http://www.innatewonderer.github.com/blog/2012/11/07/decode-object-oriented-design-easier/"/>
+    <updated>2012-11-07T10:10:00-05:00</updated>
+    <id>http://www.innatewonderer.github.com/blog/2012/11/07/decode-object-oriented-design-easier</id>
+    <content type="html"><![CDATA[<!-- Instead of writing a post and then finding a good title, I am going to commit to finding at least five facts that will make OOD clear for me... As long as it takes :) -->
+
+
+<p>ODD has been around since mid 60&#8217;s. The concept didn&#8217;t really pick up untill early 90&#8217;s with C++. It&#8217;s receiving a lot of attention in Rails/Ruby community as well. The concept might appear hard to understand, but it&#8217;s important. Below, I have attempted to collected resources and statements that suppose to make it clear to me.</p>
+
+<!-- more -->
+
+
+<h3>OOD includes:</h3>
+
+<ul>
+<li>Code that is broken down into separate objects that help to organize data</li>
+<li>Data isolated into restricted area where only specific procedured had access to it</li>
+<li>Objects that encourage reuse of code (minimal inner dependancies)</li>
+<li>Data that stays separate from actions</li>
+<li>Objects that represent one item</li>
+</ul>
+
+
+<h3><a href="http://www.tonymarston.net/php-mysql/what-is-oop.html">Object Oriented</a> Language should include:</h3>
+
+<p><strong>Class</strong>
+  Blueprint/prototype that defined variables or methods common to all objects of a certain kind.</p>
+
+<p><strong>Object</strong>
+  An instance of a class. A class must be instantiated into an object before it can be used in the software. More than one instance of the same class can be in existence at any one time.</p>
+
+<p><strong>Encapsulation</strong>
+  Placing data and the operations that perform on that data in the same class. The class becomes a &#8216;capsule&#8217; or container for the data and operations.</p>
+
+<p><strong>Inheritance</strong>
+  The reuse of base classes (superclasses) to form derived classes (subclasses). Methods and properties defined in the superclass are automatically shared by any subclass.</p>
+
+<p><strong>Polymorphism</strong>
+  Same interface, different implementation. The ability to substitute one class for another. This means that different classes may contain the same method names, but the result which is returned by each method will be different as the code behind each method (the implementation) is different in each class.</p>
+
+<p>What ODD helps you do is to delegate most of the repetititve logical work <em>to the data itself</em>. Data is becoming active, instead of staying passive.</p>
+
+<h3>Lost yet?</h3>
+
+<p>Ask yourself the following questions. If you answer yes to any, refactor:</p>
+
+<ol>
+<li>Is it the role of this class to know how to do something?</li>
+<li>What should be defined as a class?</li>
+<li>What sort of class hierarchy would be best?</li>
+</ol>
+
+
+<h3>What&#8217;s that smell? (simplified)</h3>
+
+<p>If you see any of the following in your code, refactor:</p>
+
+<ol>
+<li>Duplication of code</li>
+<li>Extensive length of class or method</li>
+<li>Large amount of parameters</li>
+</ol>
+
+
+<p>Resources:<br/>
+1. <a href="https://speakerdeck.com/styliii/object-oriented-design">Ruby User&#8217;s Guide. Object-oriented thinking</a><br/>
+2. <a href="https://speakerdeck.com/styliii/object-oriented-design">Object Oriented Desing. Li Ouyang</a><br/>
+3. <a href="http://www.codinghorror.com/blog/2006/05/code-smells.html">Code Smells by Jeff Atwood</a></p>
 ]]></content>
   </entry>
   
@@ -79,34 +151,6 @@ Locate file</p>
 Liquid error: ClassNotFound: no lexer for alias &#8216;Ruby&#8217; found</p>
 
 <p>This should get rid of your error.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Installing rspec in rails app]]></title>
-    <link href="http://www.innatewonderer.github.com/blog/2012/11/06/installing-rspec-in-rails-app/"/>
-    <updated>2012-11-06T17:54:00-05:00</updated>
-    <id>http://www.innatewonderer.github.com/blog/2012/11/06/installing-rspec-in-rails-app</id>
-    <content type="html"><![CDATA[<h2>Support TDD within your rails app by using rspec.</h2>
-
-<p>Add to <strong>Gemfile</strong>
-Liquid error: ClassNotFound: no lexer for alias &#8216;Ruby&#8217; found</p>
-
-<p>Enter in Terminal in your <strong>app_folder</strong></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rails g rspec:install</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Using Guard with Rspec</h2>
-
-<p>After following careful instructions from their <a href="https://github.com/guard/guard-rspec">GitHubPage</a>, run this before running <strong>guard</strong></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake spec</span></code></pre></td></tr></table></div></figure>
-
-
-<p>It will reset your tables.</p>
 ]]></content>
   </entry>
   
