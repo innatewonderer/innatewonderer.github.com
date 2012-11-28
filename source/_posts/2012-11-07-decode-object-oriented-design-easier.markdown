@@ -9,7 +9,7 @@ published: true
 
 <!-- Instead of writing a post and then finding a good title, I am going to commit to finding at least five facts that will make OOD clear for me... As long as it takes :) -->
 
-ODD has been around since mid 60's. The concept didn't really pick up untill early 90's with C++. It's receiving a lot of attention in Rails/Ruby community as well. The concept might appear hard to understand, but it's important. Below, I have attempted to collected resources and statements that suppose to make it clear to me.
+OOD has been around since mid 60's. The concept didn't really pick up untill early 90's with C++. It's receiving a lot of attention in Rails/Ruby community as well. The concept might appear hard to understand, but it's important. Below, I have attempted to collected resources and statements that suppose to make it clear to me.
 
 <!-- more -->
 
@@ -59,6 +59,8 @@ If you see any of the following in your code, refactor:
 
 
 Resources:  
-1. [Ruby User's Guide. Object-oriented thinking](https://speakerdeck.com/styliii/object-oriented-design)  
+1. [Are Class Methods Evil?](http://nicksda.apotomo.de/2011/07/are-class-methods-evil/) by Nick Sutterer
 2. [Object Oriented Desing. Li Ouyang](https://speakerdeck.com/styliii/object-oriented-design)  
 3. [Code Smells by Jeff Atwood](http://www.codinghorror.com/blog/2006/05/code-smells.html)  
+4. [Class vs instance methods](http://mlomnicki.com/programming/ruby/2011/07/20/class-vs-instance-methods.html) by Michal Lomnicki
+5. [Why Ruby Class Methods Resist Refactoring](http://blog.codeclimate.com/blog/2012/11/14/why-ruby-class-methods-resist-refactoring/) by

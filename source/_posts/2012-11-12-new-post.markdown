@@ -1,0 +1,20 @@
+---
+layout: post
+title: "new-post"
+date: 2012-11-12 13:41
+comments: true
+categories: 
+published: false 
+---
+
+Google search form:
+_search.html.erb
+
+<html>
+  <form action="http://google.com/search" method="get">
+    <fieldset role="search">
+      <input type="hidden" name="q" value="site:gitbo.heroku.com/" />
+      <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+    </fieldset>
+  </form>
+</html>

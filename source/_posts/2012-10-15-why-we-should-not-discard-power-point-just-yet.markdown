@@ -9,7 +9,9 @@ published: true
 
 How many times did you have to sit through a torturous power point
 presentation wondering what did you do to deserve this?  
-{% img center http://dilbert.com/dyn/str_strip/000000000/00000000/0000000/000000/00000/0000/200/221/221.strip.gif %} <sub>@2003 United Feature Syndicate, Inc</sub>
+{% img center http://dilbert.com/dyn/str_strip/000000000/00000000/0000000/000000/00000/0000/200/221/221.strip.gif %} <!-- <sub>@2003 United Feature Syndicate, Inc</sub> -->
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="URL" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" />@2003 United Feature Syndicate, Inc</div>
+
 
 Yet, it continues to be one of the most important marketing tools.  
 Why should we not discard this method completely just yet?  

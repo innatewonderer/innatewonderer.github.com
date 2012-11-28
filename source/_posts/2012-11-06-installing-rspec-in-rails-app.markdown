@@ -31,17 +31,11 @@ It will reset your tables.
 Else :
   rake db:reset
 
+$rails generate rspec:install
+      create  .rspec
+      create  spec
+      create  spec/spec_helper.rb
 
-class Album < ActiveRecord::Base
-  attr_accessible :name, :artist_name, :song_names
-  belongs_to :artist
-  has_many :songs
-
-  def artist_name
-    artist.name if artist_name
-  end
-
-  def artist_name=(string)
-    artist = Artist.find_or_create_by_name(string)
-  end
-end
+rake db:test:prepare
+  When want to start testing in your rails app
+  

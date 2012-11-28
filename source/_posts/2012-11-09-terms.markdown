@@ -1,0 +1,10 @@
+---
+layout: post
+title: "terms"
+date: 2012-11-09 11:45
+comments: true
+categories: 
+published: false 
+---
+>> Song.find_each(&:save)
+  #will generate new attribute for old records
