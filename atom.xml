@@ -4,7 +4,7 @@
   <title><![CDATA[Screw diamonds. Ruby is a girl's best friend.]]></title>
   <link href="http://www.innatewonderer.github.com/atom.xml" rel="self"/>
   <link href="http://www.innatewonderer.github.com/"/>
-  <updated>2012-11-28T18:20:03-05:00</updated>
+  <updated>2012-11-29T20:03:35-05:00</updated>
   <id>http://www.innatewonderer.github.com/</id>
   <author>
     <name><![CDATA[Jenya Zueva]]></name>
@@ -12,6 +12,272 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Testing Tools in Rails Application Development]]></title>
+    <link href="http://www.innatewonderer.github.com/blog/2012/11/29/test-your-way-through-app-development/"/>
+    <updated>2012-11-29T16:41:00-05:00</updated>
+    <id>http://www.innatewonderer.github.com/blog/2012/11/29/test-your-way-through-app-development</id>
+    <content type="html"><![CDATA[<p>Did you ever wake up and thought &#8220;Today, I&#8217;m going to write the entire app in one attempt&#8221;? How did it go for you?</p>
+
+<p>One of the hardest thing for me while learning coding was to understand what my lines of code actually do. I would write ten lines of code only to see it do nothing, and have no idea where to start debugging it. I would assume my entire logic was incorrect, erase it all only to find out later that I used <code>.each</code> instead of <code>.map</code>.</p>
+
+<!-- more -->
+
+
+<p>My biggest AHA moment was to discover tools available to test what my code does as I develop my functionalities. Let&#8217;s take a look at few examples I cannot imagine my day without.</p>
+
+<h3>Use Irb to Master Ruby</h3>
+
+<p>Run <code>irb</code> in your console to access Interactive Ruby console. Can&#8217;t figure out if you need to use <code>.map</code> or <code>.each</code> Test it.</p>
+
+<figure class='code'><figcaption><span>[brainpickings-scraper.rb] </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="o">[</span><span class="mi">17</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mo">06</span><span class="o">]</span> <span class="p">(</span><span class="n">master</span><span class="p">)</span> <span class="n">brainpickings</span><span class="o">-</span><span class="n">scraper</span>
+</span><span class='line'><span class="err">$</span> <span class="n">irb</span>
+</span><span class='line'><span class="mo">001</span><span class="p">:</span><span class="mi">0</span> <span class="o">&gt;</span> <span class="n">var</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="o">]</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="o">]</span>
+</span><span class='line'><span class="mo">002</span><span class="p">:</span><span class="mi">0</span> <span class="o">&gt;</span> <span class="n">var</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span><span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span><span class="o">+</span><span class="n">i</span><span class="p">}</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="o">]</span>
+</span><span class='line'><span class="mo">003</span><span class="p">:</span><span class="mi">0</span> <span class="o">&gt;</span> <span class="n">var</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span><span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span><span class="o">+</span><span class="n">i</span><span class="p">}</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ohhh, now it makes sense. My <code>.each</code> returns the original value, and <code>.map</code> returns the outcome. Easy!</p>
+
+<h3>&#8220;Puts&#8221; in Ruby</h3>
+
+<p>Nokogiri scraper goes through the page and collects values that you can store in the database for later use in the application. Simplified version of my personal scraper project looked like this:</p>
+
+<figure class='code'><figcaption><span>[brainpickings-scraper.rb] [lang: Ruby] </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="nb">require</span> <span class="s1">&#39;nokogiri&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;open-uri&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;sqlite3&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;FileUtils&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="no">FileUtils</span><span class="o">.</span><span class="n">rm</span><span class="p">(</span><span class="s2">&quot;books.db&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="no">File</span><span class="o">.</span><span class="n">exists?</span><span class="p">(</span><span class="s2">&quot;books.db&quot;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">db</span> <span class="o">=</span> <span class="no">SQLite3</span><span class="o">::</span><span class="no">Database</span><span class="o">.</span><span class="n">new</span> <span class="s2">&quot;books.db&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">db</span><span class="o">.</span><span class="n">execute</span> <span class="o">&lt;&lt;-</span><span class="no">SQL</span>
+</span><span class='line'><span class="sh">  CREATE TABLE books (</span>
+</span><span class='line'><span class="sh">    id INTEGER PRIMARY KEY,</span>
+</span><span class='line'><span class="sh">    title TEXT,</span>
+</span><span class='line'><span class="sh">  );</span>
+</span><span class='line'><span class="no">SQL</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">books_url</span> <span class="o">=</span> <span class="s2">&quot;http://bookpickings.brainpickings.org/&quot;</span>
+</span><span class='line'><span class="n">doc</span> <span class="o">=</span> <span class="no">Nokogiri</span><span class="o">::</span><span class="no">HTML</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">books_url</span><span class="p">))</span>
+</span><span class='line'><span class="n">books</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s2">&quot;.photo&quot;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">books</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">book</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">title</span> <span class="o">=</span> <span class="n">book</span><span class="o">.</span><span class="n">at_css</span><span class="p">(</span><span class="s2">&quot;.post_title h1&quot;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO books (title) </span>
+</span><span class='line'><span class="s2">                VALUES (?)&quot;</span><span class="p">,</span> <span class="n">title</span><span class="p">)</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Run this file in your Console to see the result:</p>
+
+<figure class='code'><figcaption><span>[brainpickings-scraper.rb] </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="o">[</span><span class="mi">16</span><span class="p">:</span><span class="mi">47</span><span class="p">:</span><span class="mi">26</span><span class="o">]</span> <span class="p">(</span><span class="n">updated</span><span class="p">)</span> <span class="n">bookshelf</span><span class="o">-</span><span class="n">static</span>
+</span><span class='line'><span class="err">$</span> <span class="n">ruby</span> <span class="n">brainpickings</span><span class="o">-</span><span class="n">scraper</span><span class="o">.</span><span class="n">rb</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It might or might NOT show lines that look like this:</p>
+
+<figure class='code'><figcaption><span>[brainpickings-scraper.rb] [lang: Ruby]</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="sr">/Users/</span><span class="n">jenya</span><span class="o">/.</span><span class="n">rvm</span><span class="o">/</span><span class="n">gems</span><span class="o">/</span><span class="n">ruby</span><span class="o">-</span><span class="mi">1</span><span class="o">.</span><span class="mi">9</span><span class="o">.</span><span class="mi">3</span><span class="o">-</span><span class="n">p194</span><span class="o">/</span><span class="n">gems</span><span class="o">/</span><span class="n">sqlite3</span><span class="o">-</span><span class="mi">1</span><span class="o">.</span><span class="mi">3</span><span class="o">.</span><span class="mi">6</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">sqlite3</span><span class="o">/</span><span class="n">statement</span><span class="o">.</span><span class="n">rb</span><span class="p">:</span><span class="mi">41</span><span class="ss">:in</span> <span class="sb">`bind_param&#39;: can&#39;t prepare Nokogiri::XML::Element (RuntimeError)</span>
+</span><span class='line'><span class="sb">  5/lib/nokogiri/xml/node_set.rb:238:in `</span><span class="n">each</span><span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">  from brainpickings-scraper.rb:25:in `&lt;main&gt;&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>We got an error. (Surprised? Don&#8217;t be). Let&#8217;s start debugging.
+I&#8217;m going to comment out the call to the database and ask <code>ruby</code> to print the value of <code>title</code> on the screen.</p>
+
+<figure class='code'><figcaption><span>[brainpickings-scraper.rb] [lang: Ruby] </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="n">books_url</span> <span class="o">=</span> <span class="s2">&quot;http://bookpickings.brainpickings.org/&quot;</span>
+</span><span class='line'><span class="n">doc</span> <span class="o">=</span> <span class="no">Nokogiri</span><span class="o">::</span><span class="no">HTML</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">books_url</span><span class="p">))</span>
+</span><span class='line'><span class="nb">puts</span>
+</span><span class='line'><span class="n">books</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">book</span><span class="o">|</span>
+</span><span class='line'>   <span class="nb">puts</span> <span class="n">title</span> <span class="o">=</span> <span class="n">book</span><span class="o">.</span><span class="n">at_css</span><span class="p">(</span><span class="s2">&quot;.post_title h1&quot;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">#   db.execute(&quot;INSERT INTO books (title) </span>
+</span><span class='line'><span class="c1">#                 VALUES (?)&quot;, title)</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This will return:</p>
+
+<figure class='code'><figcaption><span>[brainpickings-scraper.rb] [lang: Ruby] </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="no">Sketchbooks</span><span class="p">:</span> <span class="no">The</span> <span class="no">Hidden</span> <span class="no">Art</span> <span class="n">of</span> <span class="no">Designers</span><span class="p">,</span> <span class="no">Illustrators</span><span class="p">,</span> <span class="ow">and</span> <span class="no">Creatives</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>What does this tell us? <strong>Too much information!!!</strong> Let&#8217;s refactor our code to only return the text from the <code>title</code> tag.</p>
+
+<figure class='code'><figcaption><span>[brainpickings-scraper.rb] [lang: Ruby] </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="n">books_url</span> <span class="o">=</span> <span class="s2">&quot;http://bookpickings.brainpickings.org/&quot;</span>
+</span><span class='line'><span class="n">doc</span> <span class="o">=</span> <span class="no">Nokogiri</span><span class="o">::</span><span class="no">HTML</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">books_url</span><span class="p">))</span>
+</span><span class='line'><span class="nb">puts</span>
+</span><span class='line'><span class="n">books</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">book</span><span class="o">|</span>
+</span><span class='line'>   <span class="n">title</span> <span class="o">=</span> <span class="n">book</span><span class="o">.</span><span class="n">at_css</span><span class="p">(</span><span class="s2">&quot;.post_title h1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+</span><span class='line'>
+</span><span class='line'>   <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO books (title) </span>
+</span><span class='line'><span class="s2">                 VALUES (?)&quot;</span><span class="p">,</span> <span class="n">title</span><span class="p">)</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Fantastic. This works. Database is populated.</p>
+
+<h3>Rails C in Rails Environment</h3>
+
+<p>Consider these two methods:</p>
+
+<figure class='code'><figcaption><span>[brainpickings-scraper.rb] [lang: Ruby] </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="k">def</span> <span class="nf">cached_repos</span>
+</span><span class='line'>  <span class="n">cache</span><span class="o">[</span><span class="ss">:repos</span><span class="o">]</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">repos_not_on_gitbo</span>
+</span><span class='line'>  <span class="n">cache</span><span class="o">[</span><span class="ss">:repos</span><span class="o">].</span><span class="n">select</span> <span class="k">do</span> <span class="o">|</span><span class="n">repo_name</span><span class="o">|</span>
+</span><span class='line'>    <span class="kp">true</span> <span class="k">unless</span> <span class="no">Repo</span><span class="o">.</span><span class="n">find_by_owner_name_and_name</span><span class="p">(</span><span class="nb">self</span><span class="o">.</span><span class="n">nickname</span><span class="p">,</span> <span class="n">repo_name</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>One will show you all of the repos available, the other will only show repos that do not already belong to the user. How can I make sure that this method works correctly? Fire <code>rails c</code> in your <strong>active application folder</strong> and test it.</p>
+
+<figure class='code'><figcaption><span>[brainpickings-scraper.rb] [lang: Ruby] </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="o">[</span><span class="mi">17</span><span class="p">:</span><span class="mi">26</span><span class="p">:</span><span class="mi">28</span><span class="o">]</span> <span class="p">(</span><span class="n">master</span><span class="p">)</span> <span class="n">gitbo</span>
+</span><span class='line'><span class="err">$</span> <span class="n">rails</span> <span class="n">c</span>
+</span><span class='line'> <span class="no">Loading</span> <span class="n">development</span> <span class="n">environment</span> <span class="p">(</span><span class="no">Rails</span> <span class="mi">3</span><span class="o">.</span><span class="mi">2</span><span class="o">.</span><span class="mi">8</span><span class="p">)</span>
+</span><span class='line'><span class="mo">001</span><span class="p">:</span><span class="mi">0</span> <span class="o">&gt;</span>  <span class="c1">#check all available attributes for Repo</span>
+</span><span class='line'><span class="sc">?&gt;</span>                                    <span class="no">Repo</span><span class="o">.</span><span class="n">first</span>
+</span><span class='line'>  <span class="no">SCHEMA</span> <span class="p">(</span><span class="mi">6</span><span class="o">.</span><span class="mi">8</span><span class="n">ms</span><span class="p">)</span>  <span class="no">PRAGMA</span> <span class="n">table_info</span><span class="p">(</span><span class="s2">&quot;repos&quot;</span><span class="p">)</span>
+</span><span class='line'>  <span class="no">SCHEMA</span> <span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="mi">2</span><span class="n">ms</span><span class="p">)</span>   <span class="no">SELECT</span> <span class="nb">name</span> <span class="no">FROM</span> <span class="n">sqlite_master</span> <span class="no">WHERE</span> <span class="n">type</span> <span class="o">=</span> <span class="s1">&#39;table&#39;</span> <span class="no">AND</span> <span class="no">NOT</span> <span class="nb">name</span> <span class="o">=</span> <span class="s1">&#39;sqlite_sequence&#39;</span> <span class="no">AND</span> <span class="nb">name</span> <span class="o">=</span> <span class="s2">&quot;repos&quot;</span>
+</span><span class='line'>  <span class="no">SCHEMA</span> <span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="mi">2</span><span class="n">ms</span><span class="p">)</span>  <span class="no">PRAGMA</span> <span class="n">table_info</span><span class="p">(</span><span class="s2">&quot;repos&quot;</span><span class="p">)</span>
+</span><span class='line'>  <span class="no">Repo</span> <span class="no">Load</span> <span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="mi">2</span><span class="n">ms</span><span class="p">)</span>  <span class="no">SELECT</span> <span class="s2">&quot;repos&quot;</span><span class="o">.</span><span class="n">*</span> <span class="no">FROM</span> <span class="s2">&quot;repos&quot;</span> <span class="no">LIMIT</span> <span class="mi">1</span>
+</span><span class='line'>  <span class="no">Repo</span> <span class="no">Load</span> <span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="mi">2</span><span class="n">ms</span><span class="p">)</span>  <span class="no">SELECT</span> <span class="s2">&quot;repos&quot;</span><span class="o">.</span><span class="n">*</span> <span class="no">FROM</span> <span class="s2">&quot;repos&quot;</span> <span class="no">LIMIT</span> <span class="mi">1</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="c1">#&lt;Repo id: 17, name: &quot;omniauth&quot;, owner_name: &quot;intridea&quot;, description: nil, watchers: 3450, open_issues: 26, created_at: &quot;2012-11-16 21:45:21&quot;, updated_at: &quot;2012-11-19 16:04:48&quot;, slug: &quot;omniauth&quot;, git_updated_at: &quot;2012-11-19 13:37:13&quot;&gt;</span>
+</span><span class='line'><span class="mo">003</span><span class="p">:</span><span class="mi">0</span> <span class="o">&gt;</span> <span class="c1">#test method</span>
+</span><span class='line'><span class="sc">?&gt;</span>                                    <span class="no">Repo</span><span class="o">.</span><span class="n">find_by_owner_name_and_name</span><span class="p">(</span><span class="s2">&quot;innatewonderer&quot;</span><span class="p">,</span> <span class="s2">&quot;Test-Repo-for-Gitbo&quot;</span><span class="p">)</span>
+</span><span class='line'>  <span class="no">Repo</span> <span class="no">Load</span> <span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="mi">3</span><span class="n">ms</span><span class="p">)</span>  <span class="no">SELECT</span> <span class="s2">&quot;repos&quot;</span><span class="o">.</span><span class="n">*</span> <span class="no">FROM</span> <span class="s2">&quot;repos&quot;</span> <span class="no">WHERE</span> <span class="s2">&quot;repos&quot;</span><span class="o">.</span><span class="s2">&quot;owner_name&quot;</span> <span class="o">=</span> <span class="s1">&#39;innatewonderer&#39;</span> <span class="no">AND</span> <span class="s2">&quot;repos&quot;</span><span class="o">.</span><span class="s2">&quot;name&quot;</span> <span class="o">=</span> <span class="s1">&#39;Test-Repo-for-Gitbo&#39;</span> <span class="no">LIMIT</span> <span class="mi">1</span>
+</span><span class='line'>  <span class="no">Repo</span> <span class="no">Load</span> <span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="mi">3</span><span class="n">ms</span><span class="p">)</span>  <span class="no">SELECT</span> <span class="s2">&quot;repos&quot;</span><span class="o">.</span><span class="n">*</span> <span class="no">FROM</span> <span class="s2">&quot;repos&quot;</span> <span class="no">WHERE</span> <span class="s2">&quot;repos&quot;</span><span class="o">.</span><span class="s2">&quot;owner_name&quot;</span> <span class="o">=</span> <span class="s1">&#39;innatewonderer&#39;</span> <span class="no">AND</span> <span class="s2">&quot;repos&quot;</span><span class="o">.</span><span class="s2">&quot;name&quot;</span> <span class="o">=</span> <span class="s1">&#39;Test-Repo-for-Gitbo&#39;</span> <span class="no">LIMIT</span> <span class="mi">1</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="c1">#&lt;Repo id: 22, name: &quot;Test-Repo-for-Gitbo&quot;, owner_name: &quot;innatewonderer&quot;, description: nil, watchers: 0, open_issues: 2, created_at: &quot;2012-11-16 21:52:15&quot;, updated_at: &quot;2012-11-18 16:16:16&quot;, slug: &quot;test-repo-for-gitbo&quot;, git_updated_at: &quot;2012-11-16 16:10:46&quot;&gt;</span>
+</span><span class='line'><span class="mo">005</span><span class="p">:</span><span class="mi">0</span> <span class="o">&gt;</span> <span class="c1">#SUCCESS</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>&#8216;Inspect Element&#8217; in Chrome</h3>
+
+<p>Chrome offers several nifty features that make developer&#8217;s life easier. Right-click on the element => &#8216;Inspect Element&#8217; or Command+Shift+c will bring up Developer Tools window on the bottom of the screen. <a href="https://developers.google.com/chrome-developer-tools/docs/console"><code>Console Tab</code></a> can be used to inspect the DOM, debug JavaScript or analyze HTML parse errors.</p>
+
+<p>Remember the example I displayed at the beginning of this post in my Nokogiri project?</p>
+
+<p><img src="http://www.innatewonderer.github.com/images/bookpickings.jpg"></p>
+
+<p>Looks familiar?</p>
+
+<p>Be smart and seek out helper tools to do your work efficiently.<br/>
+Test lines your don&#8217;t understand.<br/>
+Test methods you just created.<br/>
+PLEASE, Work off a separate branch.<br/>
+Test your commits.<br/>
+Enjoy it :)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Upstream and update]]></title>
