@@ -12,22 +12,22 @@ While setting up my new Mac, I came to the task of rebuilding my development fol
 <!-- more -->
 
 ## Recommended subfolders (by [Avi Flombaum](https://twitter.com/aviflombaum))
-books
-code
-data
-designs
-Email Templates
-framework
-gawker
-opensource
-projects
-resource (icons, fonts)
-scripts
-source
-themes
+* books
+* code
+* data
+* designs
+* Email Templates
+* framework
+* gawker
+* opensource
+* projects
+* resource (icons, fonts)
+* scripts
+* source
+* themes
 
 ## Additional folders:
-keynote presentaions
-octopress blog
-tuitorials
+* keynote presentaions
+* octopress blog
+* tuitorials
 
