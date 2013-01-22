@@ -4,7 +4,7 @@
   <title><![CDATA[Screw diamonds. Ruby is a girl's best friend.]]></title>
   <link href="http://www.innatewonderer.github.com/atom.xml" rel="self"/>
   <link href="http://www.innatewonderer.github.com/"/>
-  <updated>2012-11-29T20:03:35-05:00</updated>
+  <updated>2013-01-22T12:55:27-05:00</updated>
   <id>http://www.innatewonderer.github.com/</id>
   <author>
     <name><![CDATA[Jenya Zueva]]></name>
@@ -12,6 +12,40 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Organize your development folder]]></title>
+    <link href="http://www.innatewonderer.github.com/blog/2013/01/22/organize-your-development-folder/"/>
+    <updated>2013-01-22T12:43:00-05:00</updated>
+    <id>http://www.innatewonderer.github.com/blog/2013/01/22/organize-your-development-folder</id>
+    <content type="html"><![CDATA[<p>While setting up my new Mac, I came to the task of rebuilding my development folder. Most developers will find what works for them. I&#8217;m going to provide a list that I am starting with for you to use at your discretion.</p>
+
+<!-- more -->
+
+
+<h2>Recommended subfolders (by <a href="https://twitter.com/aviflombaum">Avi Flombaum</a>)</h2>
+
+<p>books
+code
+data
+designs
+Email Templates
+framework
+gawker
+opensource
+projects
+resource (icons, fonts)
+scripts
+source
+themes</p>
+
+<h2>Additional folders:</h2>
+
+<p>keynote presentaions
+octopress blog
+tuitorials</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Testing Tools in Rails Application Development]]></title>
