@@ -5,14 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - Screw diamonds. Ruby is a girl's best friend.</title>
+  <title>If I ever fix this blog - Screw diamonds. Ruby is a girl's best friend.</title>
   <meta name="author" content="Jenya Zueva">
 
   
-  <meta name="description" content="Blog Archive 2013 Bash and ZSC
-Jan 23 2013 Organize your development folder
-Jan 22 2013 2012 Testing Tools in Rails Application Development
-Nov 29 &hellip;">
+  <meta name="description" content="Debugging If you are reading this post, I was able to save this blog and debug this #$!#%#%)&amp;$ error. Pardon my french. When running octopress 1 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -21,7 +18,7 @@ Nov 29 &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.innatewonderer.github.com/blog/archives/">
+  <link rel="canonical" href="http://www.innatewonderer.github.com/blog/2012/11/07/if-i-ever-fix-this-blog/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -78,137 +75,138 @@ Nov 29 &hellip;">
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Blog Archive</h1>
+    
+      <h1 class="entry-title">If I Ever Fix This Blog</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-07T00:46:00-05:00" pubdate data-updated="true">Nov 7<span>th</span>, 2012</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
 
 
+<div class="entry-content"><p>Debugging</p>
 
-  
-  <h2>2013</h2>
+<p>If you are reading this post, I was able to save this blog and debug this #$!#%#%)&amp;$ error. Pardon my french.</p>
 
-<article>
-  
-<h1><a href="/blog/2013/01/23/bach-and-zsc/">Bash and ZSC</a></h1>
-<time datetime="2013-01-23T12:40:00-05:00" pubdate><span class='month'>Jan</span> <span class='day'>23</span> <span class='year'>2013</span></time>
+<!-- more -->
 
 
-</article>
+<p>When running octopress</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake preview</span></code></pre></td></tr></table></div></figure>
 
 
+<p>the followng error showed up:</p>
 
-<article>
-  
-<h1><a href="/blog/2013/01/22/organize-your-development-folder/">Organize your development folder</a></h1>
-<time datetime="2013-01-22T12:43:00-05:00" pubdate><span class='month'>Jan</span> <span class='day'>22</span> <span class='year'>2013</span></time>
-
-
-</article>
-
-
-
-  
-  <h2>2012</h2>
-
-<article>
-  
-<h1><a href="/blog/2012/11/29/test-your-way-through-app-development/">Testing Tools in Rails Application Development</a></h1>
-<time datetime="2012-11-29T16:41:00-05:00" pubdate><span class='month'>Nov</span> <span class='day'>29</span> <span class='year'>2012</span></time>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:16] "GET /stylesheets/screen.css HTTP/1.1" 200 42533 0.0037
+</span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:16] "GET /images/line-tile.png?1352246753 HTTP/1.1" 200 636 0.0027
+</span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:16] "GET /images/rss.png?1352246753 HTTP/1.1" 200 490 0.0025
+</span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:16] "GET /images/noise.png?1352246753 HTTP/1.1" 200 17742 0.0141
+</span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:18] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0011
+</span><span class='line'>[2012-11-06 19:06:18] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+</span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:19] "GET / HTTP/1.1" 304 - 0.0013</span></code></pre></td></tr></table></div></figure>
 
 
-</article>
+<p>After several attempts at googling it, numerous pulls and pushs and rebase commands, I decided to get to the very bottom of it
+Locate file</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>~/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpresponse.rb</span></code></pre></td></tr></table></div></figure>
 
 
+<p>Set and set it to <strong>true</strong>
+Liquid error: ClassNotFound: no lexer for alias &#8216;Ruby&#8217; found</p>
 
-<article>
-  
-<h1><a href="/blog/2012/11/07/upstream-and-update/">Upstream and update</a></h1>
-<time datetime="2012-11-07T17:49:00-05:00" pubdate><span class='month'>Nov</span> <span class='day'>07</span> <span class='year'>2012</span></time>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/11/07/decode-object-oriented-design-easier/">Decode Object Oriented Design</a></h1>
-<time datetime="2012-11-07T10:10:00-05:00" pubdate><span class='month'>Nov</span> <span class='day'>07</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/ood-/'>OOD,</a>, <a class='category' href='/blog/categories/refactoring/'>refactoring</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/11/07/if-i-ever-fix-this-blog/">If I ever fix this blog</a></h1>
-<time datetime="2012-11-07T00:46:00-05:00" pubdate><span class='month'>Nov</span> <span class='day'>07</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/debugging/'>debugging</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/10/29/tracking-sandy-nerd-style/">Tracking Sandy nerd style</a></h1>
-<time datetime="2012-10-29T11:16:00-04:00" pubdate><span class='month'>Oct</span> <span class='day'>29</span> <span class='year'>2012</span></time>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/10/24/7-easy-steps-to-start-with-tdd/">7 easy steps to start with TDD</a></h1>
-<time datetime="2012-10-24T18:26:00-04:00" pubdate><span class='month'>Oct</span> <span class='day'>24</span> <span class='year'>2012</span></time>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/10/18/variable-scope/">Variable Scope</a></h1>
-<time datetime="2012-10-18T20:02:00-04:00" pubdate><span class='month'>Oct</span> <span class='day'>18</span> <span class='year'>2012</span></time>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/10/15/why-we-should-not-discard-power-point-just-yet/">Do not discard slide decks just yet</a></h1>
-<time datetime="2012-10-15T09:41:00-04:00" pubdate><span class='month'>Oct</span> <span class='day'>15</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/why/'>Why</a></span>
-</footer>
-
-
-</article>
-
+<p>This should get rid of your error.</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Jenya Zueva</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-07T00:46:00-05:00" pubdate data-updated="true">Nov 7<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/debugging/'>debugging</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.innatewonderer.github.com/blog/2012/11/07/if-i-ever-fix-this-blog/" data-via="jzueva" data-counturl="http://www.innatewonderer.github.com/blog/2012/11/07/if-i-ever-fix-this-blog/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/10/29/tracking-sandy-nerd-style/" title="Previous Post: Tracking Sandy nerd style">&laquo; Tracking Sandy nerd style</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/11/07/decode-object-oriented-design-easier/" title="Next Post: Decode Object Oriented Design">Decode Object Oriented Design &raquo;</a>
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -309,7 +307,10 @@ Nov 29 &hellip;">
       var disqus_shortname = 'rubyisgirlsbestfriend';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://www.innatewonderer.github.com/blog/2012/11/07/if-i-ever-fix-this-blog/';
+        var disqus_url = 'http://www.innatewonderer.github.com/blog/2012/11/07/if-i-ever-fix-this-blog/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

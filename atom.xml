@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://innatewonderer.github.com/atom.xml" rel="self"/>
-  <link href="http://innatewonderer.github.com/"/>
-  <updated>2012-10-03T16:05:46-04:00</updated>
-  <id>http://innatewonderer.github.com/</id>
+  <title><![CDATA[Screw diamonds. Ruby is a girl's best friend.]]></title>
+  <link href="http://www.innatewonderer.github.com/atom.xml" rel="self"/>
+  <link href="http://www.innatewonderer.github.com/"/>
+  <updated>2013-01-23T12:55:02-05:00</updated>
+  <id>http://www.innatewonderer.github.com/</id>
   <author>
     <name><![CDATA[Jenya Zueva]]></name>
     <email><![CDATA[jzueva@gmail.com]]></email>
@@ -14,29 +14,908 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Post test 2]]></title>
-    <link href="http://innatewonderer.github.com/blog/2012/10/03/post-test-2/"/>
-    <updated>2012-10-03T15:45:00-04:00</updated>
-    <id>http://innatewonderer.github.com/blog/2012/10/03/post-test-2</id>
-    <content type="html"><![CDATA[<p>Let&#8217;s try this again</p>
+    <title type="html"><![CDATA[Bash and ZSC]]></title>
+    <link href="http://www.innatewonderer.github.com/blog/2013/01/23/bach-and-zsc/"/>
+    <updated>2013-01-23T12:40:00-05:00</updated>
+    <id>http://www.innatewonderer.github.com/blog/2013/01/23/bach-and-zsc</id>
+    <content type="html"><![CDATA[<p>As I&#8217;ve been struggling with setting up my new Mac to be proper RoR utility I need it to be, I can across <a href="https://github.com/thoughtbot/laptop">Laptop</a> script that took care of most installation work for me. It did prompt me to switch to <code>zsh</code>.</p>
+
+<p>For reasons yet unknown to me, <code>zsh</code> doesn&#8217;t follow instructions in <code>.bash_profile</code>. And I like my aliases and prompt line settings, so I&#8217;m going to switch it back to <code>bash</code></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>exec bash</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When I figure out what is the power of <code>zsh</code> and would like to switch back to it:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>exec zsh</span></code></pre></td></tr></table></div></figure>
+
+
+
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[new-post]]></title>
-    <link href="http://innatewonderer.github.com/blog/2012/10/03/new-post/"/>
-    <updated>2012-10-03T15:44:00-04:00</updated>
-    <id>http://innatewonderer.github.com/blog/2012/10/03/new-post</id>
-    <content type="html"><![CDATA[<p>few edits</p>
+    <title type="html"><![CDATA[Organize your development folder]]></title>
+    <link href="http://www.innatewonderer.github.com/blog/2013/01/22/organize-your-development-folder/"/>
+    <updated>2013-01-22T12:43:00-05:00</updated>
+    <id>http://www.innatewonderer.github.com/blog/2013/01/22/organize-your-development-folder</id>
+    <content type="html"><![CDATA[<p>While setting up my new Mac, I came to the task of rebuilding my development folder. Most developers will find what works for them. I&#8217;m going to provide a list that I am starting with for you to use at your discretion.</p>
+
+<!-- more -->
+
+
+<h2>Recommended subfolders (by <a href="https://twitter.com/aviflombaum">Avi Flombaum</a>)</h2>
+
+<ul>
+<li>books</li>
+<li>code</li>
+<li>data</li>
+<li>designs</li>
+<li>Email Templates</li>
+<li>framework</li>
+<li>gawker</li>
+<li>opensource</li>
+<li>projects</li>
+<li>resource (icons, fonts)</li>
+<li>scripts</li>
+<li>source</li>
+<li>themes</li>
+</ul>
+
+
+<h2>Additional folders:</h2>
+
+<ul>
+<li>keynote presentaions</li>
+<li>octopress blog</li>
+<li>tuitorials</li>
+</ul>
+
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Trial and Error]]></title>
-    <link href="http://innatewonderer.github.com/blog/2012/10/03/trial-and-error/"/>
-    <updated>2012-10-03T15:25:00-04:00</updated>
-    <id>http://innatewonderer.github.com/blog/2012/10/03/trial-and-error</id>
-    <content type="html"><![CDATA[<p>Test text and layout</p>
+    <title type="html"><![CDATA[Testing Tools in Rails Application Development]]></title>
+    <link href="http://www.innatewonderer.github.com/blog/2012/11/29/test-your-way-through-app-development/"/>
+    <updated>2012-11-29T16:41:00-05:00</updated>
+    <id>http://www.innatewonderer.github.com/blog/2012/11/29/test-your-way-through-app-development</id>
+    <content type="html"><![CDATA[<p>Did you ever wake up and thought &#8220;Today, I&#8217;m going to write the entire app in one attempt&#8221;? How did it go for you?</p>
+
+<p>One of the hardest thing for me while learning coding was to understand what my lines of code actually do. I would write ten lines of code only to see it do nothing, and have no idea where to start debugging it. I would assume my entire logic was incorrect, erase it all only to find out later that I used <code>.each</code> instead of <code>.map</code>.</p>
+
+<!-- more -->
+
+
+<p>My biggest AHA moment was to discover tools available to test what my code does as I develop my functionalities. Let&#8217;s take a look at few examples I cannot imagine my day without.</p>
+
+<h3>Use Irb to Master Ruby</h3>
+
+<p>Run <code>irb</code> in your console to access Interactive Ruby console. Can&#8217;t figure out if you need to use <code>.map</code> or <code>.each</code> Test it.</p>
+
+<figure class='code'><figcaption><span>[brainpickings-scraper.rb] </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="o">[</span><span class="mi">17</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mo">06</span><span class="o">]</span> <span class="p">(</span><span class="n">master</span><span class="p">)</span> <span class="n">brainpickings</span><span class="o">-</span><span class="n">scraper</span>
+</span><span class='line'><span class="err">$</span> <span class="n">irb</span>
+</span><span class='line'><span class="mo">001</span><span class="p">:</span><span class="mi">0</span> <span class="o">&gt;</span> <span class="n">var</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="o">]</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="o">]</span>
+</span><span class='line'><span class="mo">002</span><span class="p">:</span><span class="mi">0</span> <span class="o">&gt;</span> <span class="n">var</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span><span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span><span class="o">+</span><span class="n">i</span><span class="p">}</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="o">]</span>
+</span><span class='line'><span class="mo">003</span><span class="p">:</span><span class="mi">0</span> <span class="o">&gt;</span> <span class="n">var</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span><span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span><span class="o">+</span><span class="n">i</span><span class="p">}</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="o">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ohhh, now it makes sense. My <code>.each</code> returns the original value, and <code>.map</code> returns the outcome. Easy!</p>
+
+<h3>&#8220;Puts&#8221; in Ruby</h3>
+
+<p>Nokogiri scraper goes through the page and collects values that you can store in the database for later use in the application. Simplified version of my personal scraper project looked like this:</p>
+
+<figure class='code'><figcaption><span>[brainpickings-scraper.rb] [lang: Ruby] </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="nb">require</span> <span class="s1">&#39;nokogiri&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;open-uri&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;sqlite3&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;FileUtils&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="no">FileUtils</span><span class="o">.</span><span class="n">rm</span><span class="p">(</span><span class="s2">&quot;books.db&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="no">File</span><span class="o">.</span><span class="n">exists?</span><span class="p">(</span><span class="s2">&quot;books.db&quot;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">db</span> <span class="o">=</span> <span class="no">SQLite3</span><span class="o">::</span><span class="no">Database</span><span class="o">.</span><span class="n">new</span> <span class="s2">&quot;books.db&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">db</span><span class="o">.</span><span class="n">execute</span> <span class="o">&lt;&lt;-</span><span class="no">SQL</span>
+</span><span class='line'><span class="sh">  CREATE TABLE books (</span>
+</span><span class='line'><span class="sh">    id INTEGER PRIMARY KEY,</span>
+</span><span class='line'><span class="sh">    title TEXT,</span>
+</span><span class='line'><span class="sh">  );</span>
+</span><span class='line'><span class="no">SQL</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">books_url</span> <span class="o">=</span> <span class="s2">&quot;http://bookpickings.brainpickings.org/&quot;</span>
+</span><span class='line'><span class="n">doc</span> <span class="o">=</span> <span class="no">Nokogiri</span><span class="o">::</span><span class="no">HTML</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">books_url</span><span class="p">))</span>
+</span><span class='line'><span class="n">books</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s2">&quot;.photo&quot;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">books</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">book</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">title</span> <span class="o">=</span> <span class="n">book</span><span class="o">.</span><span class="n">at_css</span><span class="p">(</span><span class="s2">&quot;.post_title h1&quot;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO books (title) </span>
+</span><span class='line'><span class="s2">                VALUES (?)&quot;</span><span class="p">,</span> <span class="n">title</span><span class="p">)</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Run this file in your Console to see the result:</p>
+
+<figure class='code'><figcaption><span>[brainpickings-scraper.rb] </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="o">[</span><span class="mi">16</span><span class="p">:</span><span class="mi">47</span><span class="p">:</span><span class="mi">26</span><span class="o">]</span> <span class="p">(</span><span class="n">updated</span><span class="p">)</span> <span class="n">bookshelf</span><span class="o">-</span><span class="n">static</span>
+</span><span class='line'><span class="err">$</span> <span class="n">ruby</span> <span class="n">brainpickings</span><span class="o">-</span><span class="n">scraper</span><span class="o">.</span><span class="n">rb</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It might or might NOT show lines that look like this:</p>
+
+<figure class='code'><figcaption><span>[brainpickings-scraper.rb] [lang: Ruby]</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="sr">/Users/</span><span class="n">jenya</span><span class="o">/.</span><span class="n">rvm</span><span class="o">/</span><span class="n">gems</span><span class="o">/</span><span class="n">ruby</span><span class="o">-</span><span class="mi">1</span><span class="o">.</span><span class="mi">9</span><span class="o">.</span><span class="mi">3</span><span class="o">-</span><span class="n">p194</span><span class="o">/</span><span class="n">gems</span><span class="o">/</span><span class="n">sqlite3</span><span class="o">-</span><span class="mi">1</span><span class="o">.</span><span class="mi">3</span><span class="o">.</span><span class="mi">6</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">sqlite3</span><span class="o">/</span><span class="n">statement</span><span class="o">.</span><span class="n">rb</span><span class="p">:</span><span class="mi">41</span><span class="ss">:in</span> <span class="sb">`bind_param&#39;: can&#39;t prepare Nokogiri::XML::Element (RuntimeError)</span>
+</span><span class='line'><span class="sb">  5/lib/nokogiri/xml/node_set.rb:238:in `</span><span class="n">each</span><span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">  from brainpickings-scraper.rb:25:in `&lt;main&gt;&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>We got an error. (Surprised? Don&#8217;t be). Let&#8217;s start debugging.
+I&#8217;m going to comment out the call to the database and ask <code>ruby</code> to print the value of <code>title</code> on the screen.</p>
+
+<figure class='code'><figcaption><span>[brainpickings-scraper.rb] [lang: Ruby] </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="n">books_url</span> <span class="o">=</span> <span class="s2">&quot;http://bookpickings.brainpickings.org/&quot;</span>
+</span><span class='line'><span class="n">doc</span> <span class="o">=</span> <span class="no">Nokogiri</span><span class="o">::</span><span class="no">HTML</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">books_url</span><span class="p">))</span>
+</span><span class='line'><span class="nb">puts</span>
+</span><span class='line'><span class="n">books</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">book</span><span class="o">|</span>
+</span><span class='line'>   <span class="nb">puts</span> <span class="n">title</span> <span class="o">=</span> <span class="n">book</span><span class="o">.</span><span class="n">at_css</span><span class="p">(</span><span class="s2">&quot;.post_title h1&quot;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">#   db.execute(&quot;INSERT INTO books (title) </span>
+</span><span class='line'><span class="c1">#                 VALUES (?)&quot;, title)</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This will return:</p>
+
+<figure class='code'><figcaption><span>[brainpickings-scraper.rb] [lang: Ruby] </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="no">Sketchbooks</span><span class="p">:</span> <span class="no">The</span> <span class="no">Hidden</span> <span class="no">Art</span> <span class="n">of</span> <span class="no">Designers</span><span class="p">,</span> <span class="no">Illustrators</span><span class="p">,</span> <span class="ow">and</span> <span class="no">Creatives</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>What does this tell us? <strong>Too much information!!!</strong> Let&#8217;s refactor our code to only return the text from the <code>title</code> tag.</p>
+
+<figure class='code'><figcaption><span>[brainpickings-scraper.rb] [lang: Ruby] </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="n">books_url</span> <span class="o">=</span> <span class="s2">&quot;http://bookpickings.brainpickings.org/&quot;</span>
+</span><span class='line'><span class="n">doc</span> <span class="o">=</span> <span class="no">Nokogiri</span><span class="o">::</span><span class="no">HTML</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">books_url</span><span class="p">))</span>
+</span><span class='line'><span class="nb">puts</span>
+</span><span class='line'><span class="n">books</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">book</span><span class="o">|</span>
+</span><span class='line'>   <span class="n">title</span> <span class="o">=</span> <span class="n">book</span><span class="o">.</span><span class="n">at_css</span><span class="p">(</span><span class="s2">&quot;.post_title h1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+</span><span class='line'>
+</span><span class='line'>   <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO books (title) </span>
+</span><span class='line'><span class="s2">                 VALUES (?)&quot;</span><span class="p">,</span> <span class="n">title</span><span class="p">)</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Fantastic. This works. Database is populated.</p>
+
+<h3>Rails C in Rails Environment</h3>
+
+<p>Consider these two methods:</p>
+
+<figure class='code'><figcaption><span>[brainpickings-scraper.rb] [lang: Ruby] </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="k">def</span> <span class="nf">cached_repos</span>
+</span><span class='line'>  <span class="n">cache</span><span class="o">[</span><span class="ss">:repos</span><span class="o">]</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">repos_not_on_gitbo</span>
+</span><span class='line'>  <span class="n">cache</span><span class="o">[</span><span class="ss">:repos</span><span class="o">].</span><span class="n">select</span> <span class="k">do</span> <span class="o">|</span><span class="n">repo_name</span><span class="o">|</span>
+</span><span class='line'>    <span class="kp">true</span> <span class="k">unless</span> <span class="no">Repo</span><span class="o">.</span><span class="n">find_by_owner_name_and_name</span><span class="p">(</span><span class="nb">self</span><span class="o">.</span><span class="n">nickname</span><span class="p">,</span> <span class="n">repo_name</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>One will show you all of the repos available, the other will only show repos that do not already belong to the user. How can I make sure that this method works correctly? Fire <code>rails c</code> in your <strong>active application folder</strong> and test it.</p>
+
+<figure class='code'><figcaption><span>[brainpickings-scraper.rb] [lang: Ruby] </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="o">[</span><span class="mi">17</span><span class="p">:</span><span class="mi">26</span><span class="p">:</span><span class="mi">28</span><span class="o">]</span> <span class="p">(</span><span class="n">master</span><span class="p">)</span> <span class="n">gitbo</span>
+</span><span class='line'><span class="err">$</span> <span class="n">rails</span> <span class="n">c</span>
+</span><span class='line'> <span class="no">Loading</span> <span class="n">development</span> <span class="n">environment</span> <span class="p">(</span><span class="no">Rails</span> <span class="mi">3</span><span class="o">.</span><span class="mi">2</span><span class="o">.</span><span class="mi">8</span><span class="p">)</span>
+</span><span class='line'><span class="mo">001</span><span class="p">:</span><span class="mi">0</span> <span class="o">&gt;</span>  <span class="c1">#check all available attributes for Repo</span>
+</span><span class='line'><span class="sc">?&gt;</span>                                    <span class="no">Repo</span><span class="o">.</span><span class="n">first</span>
+</span><span class='line'>  <span class="no">SCHEMA</span> <span class="p">(</span><span class="mi">6</span><span class="o">.</span><span class="mi">8</span><span class="n">ms</span><span class="p">)</span>  <span class="no">PRAGMA</span> <span class="n">table_info</span><span class="p">(</span><span class="s2">&quot;repos&quot;</span><span class="p">)</span>
+</span><span class='line'>  <span class="no">SCHEMA</span> <span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="mi">2</span><span class="n">ms</span><span class="p">)</span>   <span class="no">SELECT</span> <span class="nb">name</span> <span class="no">FROM</span> <span class="n">sqlite_master</span> <span class="no">WHERE</span> <span class="n">type</span> <span class="o">=</span> <span class="s1">&#39;table&#39;</span> <span class="no">AND</span> <span class="no">NOT</span> <span class="nb">name</span> <span class="o">=</span> <span class="s1">&#39;sqlite_sequence&#39;</span> <span class="no">AND</span> <span class="nb">name</span> <span class="o">=</span> <span class="s2">&quot;repos&quot;</span>
+</span><span class='line'>  <span class="no">SCHEMA</span> <span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="mi">2</span><span class="n">ms</span><span class="p">)</span>  <span class="no">PRAGMA</span> <span class="n">table_info</span><span class="p">(</span><span class="s2">&quot;repos&quot;</span><span class="p">)</span>
+</span><span class='line'>  <span class="no">Repo</span> <span class="no">Load</span> <span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="mi">2</span><span class="n">ms</span><span class="p">)</span>  <span class="no">SELECT</span> <span class="s2">&quot;repos&quot;</span><span class="o">.</span><span class="n">*</span> <span class="no">FROM</span> <span class="s2">&quot;repos&quot;</span> <span class="no">LIMIT</span> <span class="mi">1</span>
+</span><span class='line'>  <span class="no">Repo</span> <span class="no">Load</span> <span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="mi">2</span><span class="n">ms</span><span class="p">)</span>  <span class="no">SELECT</span> <span class="s2">&quot;repos&quot;</span><span class="o">.</span><span class="n">*</span> <span class="no">FROM</span> <span class="s2">&quot;repos&quot;</span> <span class="no">LIMIT</span> <span class="mi">1</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="c1">#&lt;Repo id: 17, name: &quot;omniauth&quot;, owner_name: &quot;intridea&quot;, description: nil, watchers: 3450, open_issues: 26, created_at: &quot;2012-11-16 21:45:21&quot;, updated_at: &quot;2012-11-19 16:04:48&quot;, slug: &quot;omniauth&quot;, git_updated_at: &quot;2012-11-19 13:37:13&quot;&gt;</span>
+</span><span class='line'><span class="mo">003</span><span class="p">:</span><span class="mi">0</span> <span class="o">&gt;</span> <span class="c1">#test method</span>
+</span><span class='line'><span class="sc">?&gt;</span>                                    <span class="no">Repo</span><span class="o">.</span><span class="n">find_by_owner_name_and_name</span><span class="p">(</span><span class="s2">&quot;innatewonderer&quot;</span><span class="p">,</span> <span class="s2">&quot;Test-Repo-for-Gitbo&quot;</span><span class="p">)</span>
+</span><span class='line'>  <span class="no">Repo</span> <span class="no">Load</span> <span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="mi">3</span><span class="n">ms</span><span class="p">)</span>  <span class="no">SELECT</span> <span class="s2">&quot;repos&quot;</span><span class="o">.</span><span class="n">*</span> <span class="no">FROM</span> <span class="s2">&quot;repos&quot;</span> <span class="no">WHERE</span> <span class="s2">&quot;repos&quot;</span><span class="o">.</span><span class="s2">&quot;owner_name&quot;</span> <span class="o">=</span> <span class="s1">&#39;innatewonderer&#39;</span> <span class="no">AND</span> <span class="s2">&quot;repos&quot;</span><span class="o">.</span><span class="s2">&quot;name&quot;</span> <span class="o">=</span> <span class="s1">&#39;Test-Repo-for-Gitbo&#39;</span> <span class="no">LIMIT</span> <span class="mi">1</span>
+</span><span class='line'>  <span class="no">Repo</span> <span class="no">Load</span> <span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="mi">3</span><span class="n">ms</span><span class="p">)</span>  <span class="no">SELECT</span> <span class="s2">&quot;repos&quot;</span><span class="o">.</span><span class="n">*</span> <span class="no">FROM</span> <span class="s2">&quot;repos&quot;</span> <span class="no">WHERE</span> <span class="s2">&quot;repos&quot;</span><span class="o">.</span><span class="s2">&quot;owner_name&quot;</span> <span class="o">=</span> <span class="s1">&#39;innatewonderer&#39;</span> <span class="no">AND</span> <span class="s2">&quot;repos&quot;</span><span class="o">.</span><span class="s2">&quot;name&quot;</span> <span class="o">=</span> <span class="s1">&#39;Test-Repo-for-Gitbo&#39;</span> <span class="no">LIMIT</span> <span class="mi">1</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="c1">#&lt;Repo id: 22, name: &quot;Test-Repo-for-Gitbo&quot;, owner_name: &quot;innatewonderer&quot;, description: nil, watchers: 0, open_issues: 2, created_at: &quot;2012-11-16 21:52:15&quot;, updated_at: &quot;2012-11-18 16:16:16&quot;, slug: &quot;test-repo-for-gitbo&quot;, git_updated_at: &quot;2012-11-16 16:10:46&quot;&gt;</span>
+</span><span class='line'><span class="mo">005</span><span class="p">:</span><span class="mi">0</span> <span class="o">&gt;</span> <span class="c1">#SUCCESS</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>&#8216;Inspect Element&#8217; in Chrome</h3>
+
+<p>Chrome offers several nifty features that make developer&#8217;s life easier. Right-click on the element => &#8216;Inspect Element&#8217; or Command+Shift+c will bring up Developer Tools window on the bottom of the screen. <a href="https://developers.google.com/chrome-developer-tools/docs/console"><code>Console Tab</code></a> can be used to inspect the DOM, debug JavaScript or analyze HTML parse errors.</p>
+
+<p>Remember the example I displayed at the beginning of this post in my Nokogiri project?</p>
+
+<p><img src="http://www.innatewonderer.github.com/images/bookpickings.jpg"></p>
+
+<p>Looks familiar?</p>
+
+<p>Be smart and seek out helper tools to do your work efficiently.<br/>
+Test lines your don&#8217;t understand.<br/>
+Test methods you just created.<br/>
+PLEASE, Work off a separate branch.<br/>
+Test your commits.<br/>
+Enjoy it :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Upstream and update]]></title>
+    <link href="http://www.innatewonderer.github.com/blog/2012/11/07/upstream-and-update/"/>
+    <updated>2012-11-07T17:49:00-05:00</updated>
+    <id>http://www.innatewonderer.github.com/blog/2012/11/07/upstream-and-update</id>
+    <content type="html"><![CDATA[<p>You forked something, cloned it to your machine, but didn&#8217;t setup remote connection to the origin repository.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git remote add upstream *url to original repository*
+</span><span class='line'>git fetch upstream
+</span><span class='line'>git merge upstream/master</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Decode Object Oriented Design]]></title>
+    <link href="http://www.innatewonderer.github.com/blog/2012/11/07/decode-object-oriented-design-easier/"/>
+    <updated>2012-11-07T10:10:00-05:00</updated>
+    <id>http://www.innatewonderer.github.com/blog/2012/11/07/decode-object-oriented-design-easier</id>
+    <content type="html"><![CDATA[<!-- Instead of writing a post and then finding a good title, I am going to commit to finding at least five facts that will make OOD clear for me... As long as it takes :) -->
+
+
+<p>OOD has been around since mid 60&#8217;s. The concept didn&#8217;t really pick up untill early 90&#8217;s with C++. It&#8217;s receiving a lot of attention in Rails/Ruby community as well. The concept might appear hard to understand, but it&#8217;s important. Below, I have attempted to collected resources and statements that suppose to make it clear to me.</p>
+
+<!-- more -->
+
+
+<h3>OOD includes:</h3>
+
+<ul>
+<li>Code that is broken down into separate objects that help to organize data</li>
+<li>Data isolated into restricted area where only specific procedured had access to it</li>
+<li>Objects that encourage reuse of code (minimal inner dependancies)</li>
+<li>Data that stays separate from actions</li>
+<li>Objects that represent one item</li>
+</ul>
+
+
+<h3><a href="http://www.tonymarston.net/php-mysql/what-is-oop.html">Object Oriented</a> Language should include:</h3>
+
+<p><strong>Class</strong>
+  Blueprint/prototype that defined variables or methods common to all objects of a certain kind.</p>
+
+<p><strong>Object</strong>
+  An instance of a class. A class must be instantiated into an object before it can be used in the software. More than one instance of the same class can be in existence at any one time.</p>
+
+<p><strong>Encapsulation</strong>
+  Placing data and the operations that perform on that data in the same class. The class becomes a &#8216;capsule&#8217; or container for the data and operations.</p>
+
+<p><strong>Inheritance</strong>
+  The reuse of base classes (superclasses) to form derived classes (subclasses). Methods and properties defined in the superclass are automatically shared by any subclass.</p>
+
+<p><strong>Polymorphism</strong>
+  Same interface, different implementation. The ability to substitute one class for another. This means that different classes may contain the same method names, but the result which is returned by each method will be different as the code behind each method (the implementation) is different in each class.</p>
+
+<p>What ODD helps you do is to delegate most of the repetititve logical work <em>to the data itself</em>. Data is becoming active, instead of staying passive.</p>
+
+<h3>Lost yet?</h3>
+
+<p>Ask yourself the following questions. If you answer yes to any, refactor:</p>
+
+<ol>
+<li>Is it the role of this class to know how to do something?</li>
+<li>What should be defined as a class?</li>
+<li>What sort of class hierarchy would be best?</li>
+</ol>
+
+
+<h3>What&#8217;s that smell? (simplified)</h3>
+
+<p>If you see any of the following in your code, refactor:</p>
+
+<ol>
+<li>Duplication of code</li>
+<li>Extensive length of class or method</li>
+<li>Large amount of parameters</li>
+</ol>
+
+
+<p>Resources:<br/>
+1. <a href="http://nicksda.apotomo.de/2011/07/are-class-methods-evil/">Are Class Methods Evil?</a> by Nick Sutterer
+2. <a href="https://speakerdeck.com/styliii/object-oriented-design">Object Oriented Desing. Li Ouyang</a><br/>
+3. <a href="http://www.codinghorror.com/blog/2006/05/code-smells.html">Code Smells by Jeff Atwood</a><br/>
+4. <a href="http://mlomnicki.com/programming/ruby/2011/07/20/class-vs-instance-methods.html">Class vs instance methods</a> by Michal Lomnicki
+5. <a href="http://blog.codeclimate.com/blog/2012/11/14/why-ruby-class-methods-resist-refactoring/">Why Ruby Class Methods Resist Refactoring</a> by</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[If I ever fix this blog]]></title>
+    <link href="http://www.innatewonderer.github.com/blog/2012/11/07/if-i-ever-fix-this-blog/"/>
+    <updated>2012-11-07T00:46:00-05:00</updated>
+    <id>http://www.innatewonderer.github.com/blog/2012/11/07/if-i-ever-fix-this-blog</id>
+    <content type="html"><![CDATA[<p>Debugging</p>
+
+<p>If you are reading this post, I was able to save this blog and debug this #$!#%#%)&amp;$ error. Pardon my french.</p>
+
+<!-- more -->
+
+
+<p>When running octopress</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake preview</span></code></pre></td></tr></table></div></figure>
+
+
+<p>the followng error showed up:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:16] "GET /stylesheets/screen.css HTTP/1.1" 200 42533 0.0037
+</span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:16] "GET /images/line-tile.png?1352246753 HTTP/1.1" 200 636 0.0027
+</span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:16] "GET /images/rss.png?1352246753 HTTP/1.1" 200 490 0.0025
+</span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:16] "GET /images/noise.png?1352246753 HTTP/1.1" 200 17742 0.0141
+</span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:18] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0011
+</span><span class='line'>[2012-11-06 19:06:18] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+</span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:19] "GET / HTTP/1.1" 304 - 0.0013</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After several attempts at googling it, numerous pulls and pushs and rebase commands, I decided to get to the very bottom of it
+Locate file</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>~/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpresponse.rb</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Set and set it to <strong>true</strong>
+Liquid error: ClassNotFound: no lexer for alias &#8216;Ruby&#8217; found</p>
+
+<p>This should get rid of your error.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tracking Sandy nerd style]]></title>
+    <link href="http://www.innatewonderer.github.com/blog/2012/10/29/tracking-sandy-nerd-style/"/>
+    <updated>2012-10-29T11:16:00-04:00</updated>
+    <id>http://www.innatewonderer.github.com/blog/2012/10/29/tracking-sandy-nerd-style</id>
+    <content type="html"><![CDATA[<p>A beautiful representation of the wind currents</p>
+
+<p><img src="http://www.innatewonderer.github.com/images/Wind_Map.jpg"></p>
+
+<p>For realtime wind map, <a href="http://hint.fm/wind/">click here</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[7 easy steps to start with TDD]]></title>
+    <link href="http://www.innatewonderer.github.com/blog/2012/10/24/7-easy-steps-to-start-with-tdd/"/>
+    <updated>2012-10-24T18:26:00-04:00</updated>
+    <id>http://www.innatewonderer.github.com/blog/2012/10/24/7-easy-steps-to-start-with-tdd</id>
+    <content type="html"><![CDATA[<p>1:00 pm - TDD is a very useful tool in software development&#8230;</p>
+
+<p>3:30 pm - Test driven development or TDD can be extremely frustrating, time consuming and sole devouring experience.</p>
+
+<p>6:00 pm - Be patient. Like a sorority club, TDD will put you through a tidious initiation ceremony. Once, accepted, you will be able to produce a much cleaner code and improve your style.</p>
+
+<!-- more -->
+
+
+<p>Few easy steps to get you started with TDD using <strong><a href="https://rubygems.org/gems/rspec">rspec</a></strong>.</p>
+
+<p>Tools used:</p>
+
+<ul>
+<li>Sublime Text 2</li>
+<li>Terminal</li>
+<li>gem of choise: rspec</li>
+<li>original assignment: by <a href="http://twitter.com/aviflombaum">Avi Flombaum</a> can be found in my <a href="https://github.com/innatewonderer/playlister-jenya">GitHub repo</a>.</li>
+</ul>
+
+
+<h3>Step 1 : Installing rspec</h3>
+
+<p>Create a new folder for your project, cd to that folder and run <strong>gem install rspec</strong>.</p>
+
+<p><img src="http://www.innatewonderer.github.com/images/rspec_tdd-Jenya@Flatiron-Air-1-bash-122×30.jpg"></p>
+
+<pre><code>**TIP**
+**spec_helper.rb** will hold all of the required paths for you.
+Do not forget to include all necessary files, gem names, and libraries.
+_require 'spec_helper'_ will be the only line needed in your testing files.
+</code></pre>
+
+<figure class='code'><figcaption><span>spec_helper.rb  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;rspec&#39;</span>
+</span><span class='line'>  <span class="n">require_relative</span> <span class="s1">&#39;../artist&#39;</span>
+</span><span class='line'>  <span class="n">require_relative</span> <span class="s1">&#39;../artist&#39;</span>
+</span><span class='line'>  <span class="n">require_relative</span> <span class="s1">&#39;../song&#39;</span>
+</span><span class='line'>  <span class="n">require_relative</span> <span class="s1">&#39;../genre&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;yaml&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>artist.rb  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;spec_helper&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Step 2 : Identify what needs to be accomplished</h3>
+
+<p>I had a sample of tests completed for Ruby assignment using <em>assert_method</em>. By running this test, I can test if my program is able to create an instance of <em>artist</em>.</p>
+
+<figure class='code'><figcaption><span>[assert_test] [ruby] </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>test 'Can initialize an Artist' do
+</span><span class='line'>  assert Artist.new
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Step 3 : Write your test</h3>
+
+<p><img src="http://www.innatewonderer.github.com/images/artist_spec.rb-final_ruby_tdd.jpg"></p>
+
+<p>In artist_spec.rb, I need to be able to test that</p>
+
+<ul>
+<li>by calling <em>#new</em> method on class variable <strong>@artist</strong></li>
+<li>I will be able to create a new instance of artist</li>
+<li>that should be_an_instance_of Artist class.</li>
+</ul>
+
+
+<p> (<em>What? Yes! It is all one sentence.
+ You don&#8217;t like my overly explicit coding syntax? Sorry, get over it.</em>)</p>
+
+<pre><code>**TIP**
+</code></pre>
+
+<p>Stay on a safe side. Commit your code to a GitHub repository. Here is a great post on <a href="http://cjbrock.github.com/blog/2012/10/23/5-easy-guides-to-help-you-get-started-with-github/">how to get started with Git</a>.</p>
+
+<h3>Step 4 : Run your test - FAIL</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rspect artist_spec.rb</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Terminal will tell you exactly what is wrong with your test.</p>
+
+<p><img src="http://www.innatewonderer.github.com/images/spec_jenya@Flatiron-Air-1_bash_107×13.jpg"></p>
+
+<h3>Step 5 : Fix your code</h3>
+
+<p>To pass this test we need to initiate class Artist.</p>
+
+<figure class='code'><figcaption><span>[artist.rb] [ruby] </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="k">class</span> <span class="nc">Artist</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Step 6 : Run your test again - PASS</h3>
+
+<p><img src="http://www.innatewonderer.github.com/images/Arc.jpg"></p>
+
+<h3>Step 7 : Do a happy dance</h3>
+
+<p><img src="http://www.innatewonderer.github.com/images/original_art.jpg"><br/>
+Original Work</p>
+
+<h4>Here is an example of a more complex test:</h4>
+
+<p>Create the test<br/>
+Test and Fail<br/>
+Fix your code</p>
+
+<p><img src="http://www.innatewonderer.github.com/images/Skitch-1.jpg"></p>
+
+<p>  Test and Pass</p>
+
+<p><img src="http://www.innatewonderer.github.com/images/spec-jenya@Flatiron-Air-1-bash-164×8.jpg"></p>
+
+<p>  Happy dance anyone???</p>
+
+<p><img src="http://www.innatewonderer.github.com/images/original_art.jpg"></p>
+
+<p>  <strong>NOTE</strong><br/>
+  I plan to transofrm all test cases from original state to rspect. Feel free to <a href="https://github.com/innatewonderer/final_ruby_tdd">fork it here</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Variable Scope]]></title>
+    <link href="http://www.innatewonderer.github.com/blog/2012/10/18/variable-scope/"/>
+    <updated>2012-10-18T20:02:00-04:00</updated>
+    <id>http://www.innatewonderer.github.com/blog/2012/10/18/variable-scope</id>
+    <content type="html"><![CDATA[<p><img class="right" src="http://public.arnau-sanchez.com/ruby-functional/pics/functional-programming-joke.png" width="350" height="190">
+Variable is an essential building block of any programming language. It is a way to store information and assign a name to it for future use. Variables come in all shapes and sizes. Anything from an integer to a string of characters can be used to reference data in the program.</p>
+
+<!-- more -->
+
+
+<h3>There are four main types of variables:</h3>
+
+<ul>
+<li>$global_variable</li>
+<li>@@class_variable</li>
+<li>@instance_variable</li>
+<li>local_variable (use [a..z] or _ )</li>
+</ul>
+
+
+<p>Ruby comes with two pseudo-variables <em>nil</em> and <em>self</em> that do not accept values. <em>Nil</em> is assigned to uninitialized variables. <em>Self</em> will always refer to the object currently being executed.</p>
+
+<p>Looks simple, right? It gets somewhat confusing when you try to define the scope of each variable. Even more confusing, when you try to call on a variable that is does not belong to your current scope.</p>
+
+<p>Ruby is always here to help you. <strong>defined? variable</strong> will show you the what the scope of selected variable.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'> <span class="vc">@@var</span> <span class="o">=</span> <span class="s2">&quot;class variable&quot;</span>
+</span><span class='line'>  
+</span><span class='line'><span class="err">$</span> <span class="n">irb</span>
+</span><span class='line'><span class="mo">001</span><span class="p">:</span><span class="mi">0</span> <span class="o">&gt;</span> <span class="n">defined?</span> <span class="vc">@@var</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'> <span class="k">class</span> <span class="nc">Code</span>
+</span><span class='line'>  <span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;class variable&quot;</span>
+</span><span class='line'> <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">$</span> <span class="n">irb</span>
+</span><span class='line'><span class="mo">001</span><span class="p">:</span><span class="mi">0</span> <span class="o">&gt;</span> <span class="n">defined?</span> <span class="n">var</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>Debugging</h4>
+
+<p>If you run this code, it will give Object(NameError), which means that the variable you are trying to call on is currently out of scope. To solve this error locate where you first introduced the variable and either change its scope or rename the second variable.</p>
+
+<h2>Local Variable</h2>
+
+<p><strong>local_variable</strong> can be declaired and referenced only within given scope (method, loop, etc).</p>
+
+<h2>Instance Variable</h2>
+
+<p><strong>@instance_variables</strong> only belong to the given instance of an object. In an example below, when @instance_variable is changed in some_method, it retains its value when called in some_other_method.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">CodeBlock</span>
+</span><span class='line'>  <span class="vi">@instance_variable</span> <span class="o">=</span> <span class="s2">&quot;string&quot;</span>
+</span><span class='line'>  
+</span><span class='line'>  <span class="k">def</span> <span class="nf">some_method</span>
+</span><span class='line'>      <span class="vi">@instane_variable</span> <span class="o">=</span> <span class="mi">15</span> <span class="o">&lt;==</span> <span class="mi">15</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">some_pther_method</span>
+</span><span class='line'>      <span class="vi">@instane_variable</span> <span class="o">&lt;==</span> <span class="mi">10</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Global Variables</h2>
+
+<p><strong>$global_variables</strong> are set to access anywhere in the program. It is ruby&#8217;s convention NOT to use global variables.</p>
+
+<blockquote><p>“&#8230; global variables? <br/>They pollute the planet. <br/>You know who uses global variables? <br/>PHP”</p><footer><strong>@aviflombaum</strong> <cite><a href='https://twitter.com/aviflombaum'>twitter.com/aviflombaum/&hellip;</a></cite></footer></blockquote>
+
+
+<p>Debugging will become a nightmare, if you redefine a global variable somewhere in your program, and then try to call on its original value.
+Ruby offers us a number of major system variables. Aliases will come handy when working on bigger applications.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="center">  <strong>Symbol</strong>      </th>
+<th align="center">           <strong>Description</strong>              </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="center"> $!             </td>
+<td align="center"> latest error message</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> $@             </td>
+<td align="center"> location of error</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> $_             </td>
+<td align="center"> string last read by gets</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> $.             </td>
+<td align="center"> line number last read by interpreter</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> $&amp;             </td>
+<td align="center"> string last matched by regexp</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> $~             </td>
+<td align="center"> the last regexp match, as an array of subexpressions</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> $n             </td>
+<td align="center"> the nth subexpression in the last match (same as $~[n])</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> $=             </td>
+<td align="center"> case-insensitivity flag </td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> $/             </td>
+<td align="center"> input record separator</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> $\             </td>
+<td align="center"> output record separator</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> $0             </td>
+<td align="center"> the name of the ruby script file</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> $*             </td>
+<td align="center"> the command line arguments</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> $$             </td>
+<td align="center"> interpreter&#8217;s process ID</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> $?             </td>
+<td align="center"> exit status of last executed child process</td>
+</tr>
+</tbody>
+</table>
+
+
+<h2>Class Variables</h2>
+
+<p>A class variable are defined and availbale <strong>only</strong> inside that class, meaning that only <strong>one variable value exists for all objects represented by that instance within that class</strong>. @@variable will be available for reference in any methods that might be defined for that class.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Code</span>
+</span><span class='line'>  <span class="vc">@@class_variable</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">class_method</span>
+</span><span class='line'>      <span class="vc">@@class_variable</span><span class="o">.</span><span class="n">reverse</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Variables are your friends. Learn them, love them.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Do not discard slide decks just yet]]></title>
+    <link href="http://www.innatewonderer.github.com/blog/2012/10/15/why-we-should-not-discard-power-point-just-yet/"/>
+    <updated>2012-10-15T09:41:00-04:00</updated>
+    <id>http://www.innatewonderer.github.com/blog/2012/10/15/why-we-should-not-discard-power-point-just-yet</id>
+    <content type="html"><![CDATA[<p>How many times did you have to sit through a torturous power point
+presentation wondering what did you do to deserve this?<br/>
+<img class="center" src="http://dilbert.com/dyn/str_strip/000000000/00000000/0000000/000000/00000/0000/200/221/221.strip.gif"> <!-- <sub>@2003 United Feature Syndicate, Inc</sub> &#8211;></p>
+
+<div style="width:image width px; font-size:80%; text-align:center;"><img src="URL" alt="alternate text" width="width" height="height" style="padding-bottom:0.5em;" />@2003 United Feature Syndicate, Inc</div>
+
+
+<p>Yet, it continues to be one of the most important marketing tools.<br/>
+Why should we not discard this method completely just yet?</p>
+
+<!-- more -->
+
+
+<p>Slides will always help you to:</p>
+
+<h3>1. Organize your thoughts</h3>
+
+<p>How many times did you got so exited to talk about your idea and half way through your speech you found yourself completely lost? Slide deck will help you stay on track.</p>
+
+<h3>2. Always be prepared</h3>
+
+<p>Please, don&#8217;t pull out your laptop in the elevator. There is place for an elevator speech, that you should also have prepared, and there is a place to put on a show with your rocking slides.</p>
+
+<h3>3. Commit your message to memory</h3>
+
+<p>If you want your listeners to remember bigger part of your presentation, offer them more than one method to remember it. Well put together slide deck will play back in people&#8217;s memory well way after Q&amp;A.</p>
+
+<h3>4. Let it speak for you when you are not available</h3>
+
+<p>Sending out your résumé to as many potential employers as you can manage during your lunch break won&#8217;t get you far anymore. You have to stand out from hundreds of other applicants and it&#8217;s very hard to do remotely. Here is a great example</p>
+
+<center><iframe src="http://app.sliderocket.com:80/app/fullplayer.aspx?id=22455602-8E03-36EF-6598-CE8F4250ABDB" width="400" height="326" scrolling=no frameBorder="1" style="border:1px solid #333333;border-bottom-style:none"></iframe></center>
+
+
+<br>
+
+
+<p>Fantastic job application by <a href="https://twitter.com/margotleong">Margot</a>. Follow her on twitter.</p>
+
+<p>I think it&#8217;s safe to agree that presentation deck is still important. Now let&#8217;s talk about how to deliver your message and keep people from falling asleep:</p>
+
+<h3>1. Make it fun</h3>
+
+<p>Sense of humor and positive attitude are greatly appreciated in anyone who you have to spend 8+ hours per day with. Show them that you enjoy what you do and people will want to share your energy.</p>
+
+<h3>2. Keep it professional</h3>
+
+<p>Remember that once online, any information represents you. Employers now run background chek on your facebook, twitter feed and tumblr reposts. Just as it can ruin your chances of getting that dream job, it is a good way to show everyone your vast range of interests.</p>
+
+<h3>3. Share it</h3>
+
+<p>Online tech community is growing fast. Attending professional meet-ups and networking events is important, but not enough. Maintain your presence and allow it to contribute to open source community. Let
+people learn from it and see your seeds sprout.</p>
 ]]></content>
   </entry>
   
