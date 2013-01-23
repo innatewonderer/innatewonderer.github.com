@@ -4,7 +4,7 @@
   <title><![CDATA[Screw diamonds. Ruby is a girl's best friend.]]></title>
   <link href="http://www.innatewonderer.github.com/atom.xml" rel="self"/>
   <link href="http://www.innatewonderer.github.com/"/>
-  <updated>2013-01-22T12:55:27-05:00</updated>
+  <updated>2013-01-22T13:13:15-05:00</updated>
   <id>http://www.innatewonderer.github.com/</id>
   <author>
     <name><![CDATA[Jenya Zueva]]></name>
@@ -25,25 +25,31 @@
 
 <h2>Recommended subfolders (by <a href="https://twitter.com/aviflombaum">Avi Flombaum</a>)</h2>
 
-<p>books
-code
-data
-designs
-Email Templates
-framework
-gawker
-opensource
-projects
-resource (icons, fonts)
-scripts
-source
-themes</p>
+<ul>
+<li>books</li>
+<li>code</li>
+<li>data</li>
+<li>designs</li>
+<li>Email Templates</li>
+<li>framework</li>
+<li>gawker</li>
+<li>opensource</li>
+<li>projects</li>
+<li>resource (icons, fonts)</li>
+<li>scripts</li>
+<li>source</li>
+<li>themes</li>
+</ul>
+
 
 <h2>Additional folders:</h2>
 
-<p>keynote presentaions
-octopress blog
-tuitorials</p>
+<ul>
+<li>keynote presentaions</li>
+<li>octopress blog</li>
+<li>tuitorials</li>
+</ul>
+
 ]]></content>
   </entry>
   
