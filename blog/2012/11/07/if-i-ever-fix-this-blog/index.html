@@ -9,7 +9,7 @@
   <meta name="author" content="Jenya Zueva">
 
   
-  <meta name="description" content="Debugging If you are reading this post, I was able to save this blog and debug this #$!#%#%)&amp;$ error. Pardon my french. When running octopress 1 &hellip;">
+  <meta name="description" content="Debugging If you are reading this post, I was able to save this blog and debug this #$!#%#%)&amp;$ error. Pardon my french. Read on how to address &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -106,7 +106,7 @@
 
 <div class="entry-content"><p>Debugging</p>
 
-<p>If you are reading this post, I was able to save this blog and debug this #$!#%#%)&amp;$ error. Pardon my french.</p>
+<p>If you are reading this post, I was able to save this blog and debug this #$!#%#%)&amp;$ error. Pardon my french. Read on how to address <code>lexer</code> issue when deploying your octopress blog:</p>
 
 <!-- more -->
 
@@ -152,6 +152,19 @@
 
 
 <p>This should get rid of your error.</p>
+
+<p>Update: 1/24/13</p>
+
+<p>I was setting up my octopress blog folder on new machine. The following error showed up:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ClassNotFound: no lexer for alias 'Ruby' found
+</span><span class='line'> in 2012-11-06-installing-rspec-in-rails-app.markdown</span></code></pre></td></tr></table></div></figure>
+
+
+<p>For whatever reason, Octopress was having issue with my markdown and syntax. I used [lang:Ruby] within my <code>/{ /% codeblock % /}</code> as <a href="http://octopress.org/docs/plugins/codeblock/">Octopress blog recommends</a>.<br/>
+Removing lang:Ruby did it for the time being, but I have a feeling there is more to it.</p>
 </div>
 
 

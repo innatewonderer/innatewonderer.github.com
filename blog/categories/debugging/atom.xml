@@ -4,7 +4,7 @@
   <title><![CDATA[Category: debugging | Screw diamonds. Ruby is a girl's best friend.]]></title>
   <link href="http://www.innatewonderer.github.com/blog/categories/debugging/atom.xml" rel="self"/>
   <link href="http://www.innatewonderer.github.com/"/>
-  <updated>2013-01-24T14:17:50-05:00</updated>
+  <updated>2013-01-24T15:06:54-05:00</updated>
   <id>http://www.innatewonderer.github.com/</id>
   <author>
     <name><![CDATA[Jenya Zueva]]></name>
@@ -20,7 +20,7 @@
     <id>http://www.innatewonderer.github.com/blog/2012/11/07/if-i-ever-fix-this-blog</id>
     <content type="html"><![CDATA[<p>Debugging</p>
 
-<p>If you are reading this post, I was able to save this blog and debug this #$!#%#%)&amp;$ error. Pardon my french.</p>
+<p>If you are reading this post, I was able to save this blog and debug this #$!#%#%)&amp;$ error. Pardon my french. Read on how to address <code>lexer</code> issue when deploying your octopress blog:</p>
 
 <!-- more -->
 
@@ -59,6 +59,17 @@
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>This should get rid of your error.</p>
+
+<p>Update: 1/24/13</p>
+
+<p>I was setting up my octopress blog folder on new machine. The following error showed up:
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ClassNotFound: no lexer for alias 'Ruby' found
+</span><span class='line'> in 2012-11-06-installing-rspec-in-rails-app.markdown</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>For whatever reason, Octopress was having issue with my markdown and syntax. I used [lang:Ruby] within my <code>/{ /% codeblock % /}</code> as <a href="http://octopress.org/docs/plugins/codeblock/">Octopress blog recommends</a>.<br/>
+Removing lang:Ruby did it for the time being, but I have a feeling there is more to it.</p>
 ]]></content>
   </entry>
   
