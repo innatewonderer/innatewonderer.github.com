@@ -4,7 +4,7 @@
   <title><![CDATA[Screw diamonds. Ruby is a girl's best friend.]]></title>
   <link href="http://www.innatewonderer.github.com/atom.xml" rel="self"/>
   <link href="http://www.innatewonderer.github.com/"/>
-  <updated>2013-01-22T13:13:15-05:00</updated>
+  <updated>2013-01-23T12:55:02-05:00</updated>
   <id>http://www.innatewonderer.github.com/</id>
   <author>
     <name><![CDATA[Jenya Zueva]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Bash and ZSC]]></title>
+    <link href="http://www.innatewonderer.github.com/blog/2013/01/23/bach-and-zsc/"/>
+    <updated>2013-01-23T12:40:00-05:00</updated>
+    <id>http://www.innatewonderer.github.com/blog/2013/01/23/bach-and-zsc</id>
+    <content type="html"><![CDATA[<p>As I&#8217;ve been struggling with setting up my new Mac to be proper RoR utility I need it to be, I can across <a href="https://github.com/thoughtbot/laptop">Laptop</a> script that took care of most installation work for me. It did prompt me to switch to <code>zsh</code>.</p>
+
+<p>For reasons yet unknown to me, <code>zsh</code> doesn&#8217;t follow instructions in <code>.bash_profile</code>. And I like my aliases and prompt line settings, so I&#8217;m going to switch it back to <code>bash</code></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>exec bash</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When I figure out what is the power of <code>zsh</code> and would like to switch back to it:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>exec zsh</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Organize your development folder]]></title>

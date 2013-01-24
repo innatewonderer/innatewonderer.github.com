@@ -2,12 +2,21 @@
 #      Main Configs       #
 # ----------------------- #
 
+<<<<<<< HEAD
 url: http://www.innatewonderer.github.com
 title: Screw diamonds. Ruby is a girl's best friend.
 subtitle: Surfing the waters of programming
 author: Jenya Zueva
 simple_search: http://google.com/search
 description: ruby programming, how to program, Ruby, Rails, HTML, CSS
+=======
+url: http://innatewonderer.github.com
+title: My Octopress Blog
+subtitle: A blogging framework for hackers.
+author: Jenya Zueva
+simple_search: http://google.com/search
+description: This is my first hacker blog. Beware ! ! !
+>>>>>>> f0d972e12e49aea8921d711c0832e29e2e68c04f
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -36,7 +45,11 @@ category_dir: blog/categories
 markdown: rdiscount
 pygments: false # default python pygments have been replaced by pygments.rb
 
+<<<<<<< HEAD
 paginate: 5          # Posts per page on the blog index
+=======
+paginate: 7          # Posts per page on the blog index
+>>>>>>> f0d972e12e49aea8921d711c0832e29e2e68c04f
 pagination_dir: blog  # Directory base for pagination URLs eg. /blog/page/2/
 recent_posts: 5       # Posts in the sidebar Recent Posts section
 excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
@@ -94,6 +107,11 @@ disqus_show_comment_count: true
 
 # Google Analytics
 google_analytics_tracking_id: UA-35487078-1
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f0d972e12e49aea8921d711c0832e29e2e68c04f
 
 # Facebook Like
 facebook_like: true
