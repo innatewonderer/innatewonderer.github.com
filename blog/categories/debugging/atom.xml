@@ -4,7 +4,7 @@
   <title><![CDATA[Category: debugging | Screw diamonds. Ruby is a girl's best friend.]]></title>
   <link href="http://www.innatewonderer.github.com/blog/categories/debugging/atom.xml" rel="self"/>
   <link href="http://www.innatewonderer.github.com/"/>
-  <updated>2013-01-23T12:55:02-05:00</updated>
+  <updated>2013-01-24T14:17:50-05:00</updated>
   <id>http://www.innatewonderer.github.com/</id>
   <author>
     <name><![CDATA[Jenya Zueva]]></name>
@@ -46,13 +46,17 @@
 </span><span class='line'>[2012-11-06 19:06:18] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
 </span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:19] "GET / HTTP/1.1" 304 - 0.0013</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>After several attempts at googling it, numerous pulls and pushs and rebase commands, I decided to get to the very bottom of it
-Locate file
+<p>After several attempts at googling it, numerous pulls and pushs and rebase commands, I decided to get to the very bottom of it</p>
+
+<p>Locate file
 <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>~/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpresponse.rb</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>Set and set it to <strong>true</strong>
-Liquid error: ClassNotFound: no lexer for alias 'Ruby' found</p>
+<p>Set and set it to <strong>true</strong><br/>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>[httpresponse.rb] </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="mi">53</span> <span class="vi">@chunked</span> <span class="o">=</span> <span class="kp">true</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>This should get rid of your error.</p>
 ]]></content>

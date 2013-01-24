@@ -4,7 +4,7 @@
   <title><![CDATA[Screw diamonds. Ruby is a girl's best friend.]]></title>
   <link href="http://www.innatewonderer.github.com/atom.xml" rel="self"/>
   <link href="http://www.innatewonderer.github.com/"/>
-  <updated>2013-01-23T12:55:02-05:00</updated>
+  <updated>2013-01-24T14:17:50-05:00</updated>
   <id>http://www.innatewonderer.github.com/</id>
   <author>
     <name><![CDATA[Jenya Zueva]]></name>
@@ -15,10 +15,10 @@
   
   <entry>
     <title type="html"><![CDATA[Bash and ZSC]]></title>
-    <link href="http://www.innatewonderer.github.com/blog/2013/01/23/bach-and-zsc/"/>
+    <link href="http://www.innatewonderer.github.com/blog/2013/01/23/bash-and-zsc/"/>
     <updated>2013-01-23T12:40:00-05:00</updated>
-    <id>http://www.innatewonderer.github.com/blog/2013/01/23/bach-and-zsc</id>
-    <content type="html"><![CDATA[<p>As I&#8217;ve been struggling with setting up my new Mac to be proper RoR utility I need it to be, I can across <a href="https://github.com/thoughtbot/laptop">Laptop</a> script that took care of most installation work for me. It did prompt me to switch to <code>zsh</code>.</p>
+    <id>http://www.innatewonderer.github.com/blog/2013/01/23/bash-and-zsc</id>
+    <content type="html"><![CDATA[<p>As I&#8217;ve been struggling with setting up my new Mac to be proper RoR utility I need it to be, I can across <a href="https://github.com/thoughtbot/laptop">Laptop</a> script that took care of most installation work for me. It did prompt me to switch to <codde>zsh</code>.</p>
 
 <p>For reasons yet unknown to me, <code>zsh</code> doesn&#8217;t follow instructions in <code>.bash_profile</code>. And I like my aliases and prompt line settings, so I&#8217;m going to switch it back to <code>bash</code></p>
 
@@ -30,6 +30,12 @@
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>exec zsh</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To set <code>bash</code> back as a default login shell</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>chsh -s /bin/bash</span></code></pre></td></tr></table></div></figure>
 
 
 
@@ -154,7 +160,7 @@
 </span><span class='line'>
 </span><span class='line'><span class="no">FileUtils</span><span class="o">.</span><span class="n">rm</span><span class="p">(</span><span class="s2">&quot;books.db&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="no">File</span><span class="o">.</span><span class="n">exists?</span><span class="p">(</span><span class="s2">&quot;books.db&quot;</span><span class="p">)</span>
 </span><span class='line'>
-</span><span class='line'><span class="n">db</span> <span class="o">=</span> <span class="no">SQLite3</span><span class="o">::</span><span class="no">Database</span><span class="o">.</span><span class="n">new</span> <span class="s2">&quot;books.db&quot;</span>
+</span><span class='line'><span class="n">db</span> <span class="o">=</span> <span class="ss">SQLite3</span><span class="p">:</span><span class="ss">:Database</span><span class="o">.</span><span class="n">new</span> <span class="s2">&quot;books.db&quot;</span>
 </span><span class='line'>
 </span><span class='line'><span class="n">db</span><span class="o">.</span><span class="n">execute</span> <span class="o">&lt;&lt;-</span><span class="no">SQL</span>
 </span><span class='line'><span class="sh">  CREATE TABLE books (</span>
@@ -164,7 +170,7 @@
 </span><span class='line'><span class="no">SQL</span>
 </span><span class='line'>
 </span><span class='line'><span class="n">books_url</span> <span class="o">=</span> <span class="s2">&quot;http://bookpickings.brainpickings.org/&quot;</span>
-</span><span class='line'><span class="n">doc</span> <span class="o">=</span> <span class="no">Nokogiri</span><span class="o">::</span><span class="no">HTML</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">books_url</span><span class="p">))</span>
+</span><span class='line'><span class="n">doc</span> <span class="o">=</span> <span class="ss">Nokogiri</span><span class="p">:</span><span class="ss">:HTML</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">books_url</span><span class="p">))</span>
 </span><span class='line'><span class="n">books</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s2">&quot;.photo&quot;</span><span class="p">)</span>
 </span><span class='line'>
 </span><span class='line'><span class="n">books</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">book</span><span class="o">|</span>
@@ -212,7 +218,7 @@ I&#8217;m going to comment out the call to the database and ask <code>ruby</code
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
 </pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="n">books_url</span> <span class="o">=</span> <span class="s2">&quot;http://bookpickings.brainpickings.org/&quot;</span>
-</span><span class='line'><span class="n">doc</span> <span class="o">=</span> <span class="no">Nokogiri</span><span class="o">::</span><span class="no">HTML</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">books_url</span><span class="p">))</span>
+</span><span class='line'><span class="n">doc</span> <span class="o">=</span> <span class="ss">Nokogiri</span><span class="p">:</span><span class="ss">:HTML</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">books_url</span><span class="p">))</span>
 </span><span class='line'><span class="nb">puts</span>
 </span><span class='line'><span class="n">books</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">book</span><span class="o">|</span>
 </span><span class='line'>   <span class="nb">puts</span> <span class="n">title</span> <span class="o">=</span> <span class="n">book</span><span class="o">.</span><span class="n">at_css</span><span class="p">(</span><span class="s2">&quot;.post_title h1&quot;</span><span class="p">)</span>
@@ -227,7 +233,7 @@ I&#8217;m going to comment out the call to the database and ask <code>ruby</code
 
 <figure class='code'><figcaption><span>[brainpickings-scraper.rb] [lang: Ruby] </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="no">Sketchbooks</span><span class="p">:</span> <span class="no">The</span> <span class="no">Hidden</span> <span class="no">Art</span> <span class="n">of</span> <span class="no">Designers</span><span class="p">,</span> <span class="no">Illustrators</span><span class="p">,</span> <span class="ow">and</span> <span class="no">Creatives</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="ss">Sketchbooks</span><span class="p">:</span> <span class="no">The</span> <span class="no">Hidden</span> <span class="no">Art</span> <span class="n">of</span> <span class="no">Designers</span><span class="p">,</span> <span class="no">Illustrators</span><span class="p">,</span> <span class="ow">and</span> <span class="no">Creatives</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -244,7 +250,7 @@ I&#8217;m going to comment out the call to the database and ask <code>ruby</code
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
 </pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="n">books_url</span> <span class="o">=</span> <span class="s2">&quot;http://bookpickings.brainpickings.org/&quot;</span>
-</span><span class='line'><span class="n">doc</span> <span class="o">=</span> <span class="no">Nokogiri</span><span class="o">::</span><span class="no">HTML</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">books_url</span><span class="p">))</span>
+</span><span class='line'><span class="n">doc</span> <span class="o">=</span> <span class="ss">Nokogiri</span><span class="p">:</span><span class="ss">:HTML</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">books_url</span><span class="p">))</span>
 </span><span class='line'><span class="nb">puts</span>
 </span><span class='line'><span class="n">books</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">book</span><span class="o">|</span>
 </span><span class='line'>   <span class="n">title</span> <span class="o">=</span> <span class="n">book</span><span class="o">.</span><span class="n">at_css</span><span class="p">(</span><span class="s2">&quot;.post_title h1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
@@ -471,15 +477,21 @@ Enjoy it :)</p>
 </span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:19] "GET / HTTP/1.1" 304 - 0.0013</span></code></pre></td></tr></table></div></figure>
 
 
-<p>After several attempts at googling it, numerous pulls and pushs and rebase commands, I decided to get to the very bottom of it
-Locate file</p>
+<p>After several attempts at googling it, numerous pulls and pushs and rebase commands, I decided to get to the very bottom of it</p>
+
+<p>Locate file</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>~/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpresponse.rb</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Set and set it to <strong>true</strong>
-Liquid error: ClassNotFound: no lexer for alias &#8216;Ruby&#8217; found</p>
+<p>Set and set it to <strong>true</strong></p>
+
+<figure class='code'><figcaption><span>[httpresponse.rb] </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="mi">53</span> <span class="vi">@chunked</span> <span class="o">=</span> <span class="kp">true</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>This should get rid of your error.</p>
 ]]></content>
