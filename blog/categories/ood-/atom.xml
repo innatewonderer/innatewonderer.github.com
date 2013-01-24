@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: OOD, | Screw diamonds. Ruby is a girl's best friend.]]></title>
+  <link href="http://www.innatewonderer.github.com/blog/categories/ood-/atom.xml" rel="self"/>
+  <link href="http://www.innatewonderer.github.com/"/>
+  <updated>2013-01-23T12:55:02-05:00</updated>
+  <id>http://www.innatewonderer.github.com/</id>
+  <author>
+    <name><![CDATA[Jenya Zueva]]></name>
+    <email><![CDATA[jzueva@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Decode Object Oriented Design]]></title>
+    <link href="http://www.innatewonderer.github.com/blog/2012/11/07/decode-object-oriented-design-easier/"/>
+    <updated>2012-11-07T10:10:00-05:00</updated>
+    <id>http://www.innatewonderer.github.com/blog/2012/11/07/decode-object-oriented-design-easier</id>
+    <content type="html"><![CDATA[<!-- Instead of writing a post and then finding a good title, I am going to commit to finding at least five facts that will make OOD clear for me... As long as it takes :) -->
+
+
+<p>OOD has been around since mid 60's. The concept didn't really pick up untill early 90's with C++. It's receiving a lot of attention in Rails/Ruby community as well. The concept might appear hard to understand, but it's important. Below, I have attempted to collected resources and statements that suppose to make it clear to me.</p>
+
+<!-- more -->
+
+
+<h3>OOD includes:</h3>
+
+<ul>
+<li>Code that is broken down into separate objects that help to organize data</li>
+<li>Data isolated into restricted area where only specific procedured had access to it</li>
+<li>Objects that encourage reuse of code (minimal inner dependancies)</li>
+<li>Data that stays separate from actions</li>
+<li>Objects that represent one item</li>
+</ul>
+
+
+<h3><a href="http://www.tonymarston.net/php-mysql/what-is-oop.html">Object Oriented</a> Language should include:</h3>
+
+<p><strong>Class</strong>
+  Blueprint/prototype that defined variables or methods common to all objects of a certain kind.</p>
+
+<p><strong>Object</strong>
+  An instance of a class. A class must be instantiated into an object before it can be used in the software. More than one instance of the same class can be in existence at any one time.</p>
+
+<p><strong>Encapsulation</strong>
+  Placing data and the operations that perform on that data in the same class. The class becomes a 'capsule' or container for the data and operations.</p>
+
+<p><strong>Inheritance</strong>
+  The reuse of base classes (superclasses) to form derived classes (subclasses). Methods and properties defined in the superclass are automatically shared by any subclass.</p>
+
+<p><strong>Polymorphism</strong>
+  Same interface, different implementation. The ability to substitute one class for another. This means that different classes may contain the same method names, but the result which is returned by each method will be different as the code behind each method (the implementation) is different in each class.</p>
+
+<p>What ODD helps you do is to delegate most of the repetititve logical work <em>to the data itself</em>. Data is becoming active, instead of staying passive.</p>
+
+<h3>Lost yet?</h3>
+
+<p>Ask yourself the following questions. If you answer yes to any, refactor:</p>
+
+<ol>
+<li>Is it the role of this class to know how to do something?</li>
+<li>What should be defined as a class?</li>
+<li>What sort of class hierarchy would be best?</li>
+</ol>
+
+
+<h3>What's that smell? (simplified)</h3>
+
+<p>If you see any of the following in your code, refactor:</p>
+
+<ol>
+<li>Duplication of code</li>
+<li>Extensive length of class or method</li>
+<li>Large amount of parameters</li>
+</ol>
+
+
+<p>Resources:<br/>
+1. <a href="http://nicksda.apotomo.de/2011/07/are-class-methods-evil/">Are Class Methods Evil?</a> by Nick Sutterer
+2. <a href="https://speakerdeck.com/styliii/object-oriented-design">Object Oriented Desing. Li Ouyang</a><br/>
+3. <a href="http://www.codinghorror.com/blog/2006/05/code-smells.html">Code Smells by Jeff Atwood</a><br/>
+4. <a href="http://mlomnicki.com/programming/ruby/2011/07/20/class-vs-instance-methods.html">Class vs instance methods</a> by Michal Lomnicki
+5. <a href="http://blog.codeclimate.com/blog/2012/11/14/why-ruby-class-methods-resist-refactoring/">Why Ruby Class Methods Resist Refactoring</a> by</p>
+]]></content>
+  </entry>
+  
+</feed>

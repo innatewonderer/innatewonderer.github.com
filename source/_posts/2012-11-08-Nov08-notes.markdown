@@ -1,0 +1,73 @@
+---
+layout: post
+title: "Nov08 notes"
+date: 2012-11-08 09:40
+comments: true
+categories: 
+published: false 
+---
+
+Objects
+Relationships
+Attributes
+
+User Model
+
+Anyone is a user
+Any user can be repo owner
+                issue creator
+                contributor
+
+User can login through github
+User can view issues
+  no authentication needed
+User can view comments
+User can upvote/downvote
+  auth needed
+
+User can endorse the issue
+
+
+User can comment on issues
+  no anonomous comments
+
+AR validations and callbacks
+
+to check that a name is present
+edit model under associations
+
+#Attributes
+  attr_accessor
+#Associations
+  belongs_to
+#Scopes
+
+#Validations
+  validations :name => :presence => true
+  multiple validations on single attribute, but :length =>
+                                                 :acceptance => true
+
+  virtual attribute, temporary attribute that
+
+brew info postgres
+
+follow instructions
+
+navacat
+  connection 
+  new conenction to postgres
+  username: yourpcusername
+  click save password
+  test connection
+
+database.yml
+  add
+  username: pcusername
+  host: localhost
+  port: 5432
+
+s.errors - shows why result came false
+s.valid?
+
+shoulda matchers gem
+
