@@ -4,7 +4,7 @@
   <title><![CDATA[Category: debugging | Screw diamonds. Ruby is a girl's best friend.]]></title>
   <link href="http://www.innatewonderer.github.com/blog/categories/debugging/atom.xml" rel="self"/>
   <link href="http://www.innatewonderer.github.com/"/>
-  <updated>2013-01-24T15:06:54-05:00</updated>
+  <updated>2013-02-22T20:15:45-05:00</updated>
   <id>http://www.innatewonderer.github.com/</id>
   <author>
     <name><![CDATA[Jenya Zueva]]></name>
@@ -15,12 +15,12 @@
   
   <entry>
     <title type="html"><![CDATA[If I ever fix this blog]]></title>
-    <link href="http://www.innatewonderer.github.com/blog/2012/11/07/if-i-ever-fix-this-blog/"/>
+    <link href="http://www.innatewonderer.github.com/blog/if-i-ever-fix-this-blog/"/>
     <updated>2012-11-07T00:46:00-05:00</updated>
-    <id>http://www.innatewonderer.github.com/blog/2012/11/07/if-i-ever-fix-this-blog</id>
+    <id>http://www.innatewonderer.github.com/blog/if-i-ever-fix-this-blog</id>
     <content type="html"><![CDATA[<p>Debugging</p>
 
-<p>If you are reading this post, I was able to save this blog and debug this #$!#%#%)&amp;$ error. Pardon my french. Read on how to address <code>lexer</code> issue when deploying your octopress blog:</p>
+<p>If you are reading this post, I was able to save this blog and debug this #$!#%#%)&amp;$ error. Pardon my french.</p>
 
 <!-- more -->
 
@@ -46,29 +46,17 @@
 </span><span class='line'>[2012-11-06 19:06:18] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
 </span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:19] "GET / HTTP/1.1" 304 - 0.0013</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>After several attempts at googling it, numerous pulls and pushs and rebase commands, I decided to get to the very bottom of it</p>
-
-<p>Locate file
+<p>After several attempts at googling it, numerous pulls and pushs and rebase commands, I decided to get to the very bottom of it
+Locate file
 <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>~/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpresponse.rb</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>Set and set it to <strong>true</strong><br/>
-<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>[httpresponse.rb] </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="mi">53</span> <span class="vi">@chunked</span> <span class="o">=</span> <span class="kp">true</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>Set and set it to <strong>true</strong>
+Liquid error: ClassNotFound: no lexer for alias 'Ruby' found</p>
 
 <p>This should get rid of your error.</p>
 
-<p>Update: 1/24/13</p>
-
-<p>I was setting up my octopress blog folder on new machine. The following error showed up:
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>ClassNotFound: no lexer for alias 'Ruby' found
-</span><span class='line'> in 2012-11-06-installing-rspec-in-rails-app.markdown</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>For whatever reason, Octopress was having issue with my markdown and syntax. I used [lang:Ruby] within my <code>/{ /% codeblock % /}</code> as <a href="http://octopress.org/docs/plugins/codeblock/">Octopress blog recommends</a>.<br/>
+<p>For whatever reason, Octopress was having issue with my markdown and syntax. I used [lang:Ruby] within my codeblock as <a href="http://octopress.org/docs/plugins/codeblock/">Octopress blog recommends</a>.<br/>
 Removing lang:Ruby did it for the time being, but I have a feeling there is more to it.</p>
 ]]></content>
   </entry>

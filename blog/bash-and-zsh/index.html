@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Decode Object Oriented Design - Screw diamonds. Ruby is a girl's best friend.</title>
+  <title>Bash and zsh - Screw diamonds. Ruby is a girl's best friend.</title>
   <meta name="author" content="Jenya Zueva">
 
   
-  <meta name="description" content="OOD has been around since mid 60&#8217;s. The concept didn&#8217;t really pick up untill early 90&#8217;s with C++. It&#8217;s receiving a lot of &hellip;">
+  <meta name="description" content="As I&#8217;ve been struggling with setting up my new Mac to be proper RoR utility I need it to be, I can across Laptop script that took care of most &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.innatewonderer.github.com/blog/2012/11/07/decode-object-oriented-design-easier/">
+  <link rel="canonical" href="http://www.innatewonderer.github.com/blog/bash-and-zsh/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -79,7 +79,7 @@
   
   <header>
     
-      <h1 class="entry-title">Decode Object Oriented Design</h1>
+      <h1 class="entry-title">Bash and Zsh</h1>
     
     
       <p class="meta">
@@ -95,7 +95,7 @@
   
 
 
-<time datetime="2012-11-07T10:10:00-05:00" pubdate data-updated="true">Nov 7<span>th</span>, 2012</time>
+<time datetime="2013-02-22T19:24:00-05:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2013</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -104,72 +104,25 @@
   </header>
 
 
-<div class="entry-content"><!-- Instead of writing a post and then finding a good title, I am going to commit to finding at least five facts that will make OOD clear for me... As long as it takes :) -->
+<div class="entry-content"><p>As I&#8217;ve been struggling with setting up my new Mac to be proper RoR utility I need it to be, I can across <a href="https://github.com/thoughtbot/laptop">Laptop</a> script that took care of most installation work for me. It did prompt me to switch to <codde>zsh</code>.</p>
+
+<p>For reasons yet unknown to me, <code>zsh</code> doesn&#8217;t follow instructions in <code>.bash_profile</code>. And I like my aliases and prompt line settings, so I&#8217;m going to switch it back to <code>bash</code></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>exec bash</span></code></pre></td></tr></table></div></figure>
 
 
-<p>OOD has been around since mid 60&#8217;s. The concept didn&#8217;t really pick up untill early 90&#8217;s with C++. It&#8217;s receiving a lot of attention in Rails/Ruby community as well. The concept might appear hard to understand, but it&#8217;s important. Below, I have attempted to collected resources and statements that suppose to make it clear to me.</p>
+<p>When I figure out what is the power of <code>zsh</code> and would like to switch back to it:</p>
 
-<!-- more -->
-
-
-<h3>OOD includes:</h3>
-
-<ul>
-<li>Code that is broken down into separate objects that help to organize data</li>
-<li>Data isolated into restricted area where only specific procedured had access to it</li>
-<li>Objects that encourage reuse of code (minimal inner dependancies)</li>
-<li>Data that stays separate from actions</li>
-<li>Objects that represent one item</li>
-</ul>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>exec zsh</span></code></pre></td></tr></table></div></figure>
 
 
-<h3><a href="http://www.tonymarston.net/php-mysql/what-is-oop.html">Object Oriented</a> Language should include:</h3>
+<p>To set <code>bash</code> back as a default login shell</p>
 
-<p><strong>Class</strong>
-  Blueprint/prototype that defined variables or methods common to all objects of a certain kind.</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>chsh -s /bin/bash</span></code></pre></td></tr></table></div></figure>
 
-<p><strong>Object</strong>
-  An instance of a class. A class must be instantiated into an object before it can be used in the software. More than one instance of the same class can be in existence at any one time.</p>
-
-<p><strong>Encapsulation</strong>
-  Placing data and the operations that perform on that data in the same class. The class becomes a &#8216;capsule&#8217; or container for the data and operations.</p>
-
-<p><strong>Inheritance</strong>
-  The reuse of base classes (superclasses) to form derived classes (subclasses). Methods and properties defined in the superclass are automatically shared by any subclass.</p>
-
-<p><strong>Polymorphism</strong>
-  Same interface, different implementation. The ability to substitute one class for another. This means that different classes may contain the same method names, but the result which is returned by each method will be different as the code behind each method (the implementation) is different in each class.</p>
-
-<p>What ODD helps you do is to delegate most of the repetititve logical work <em>to the data itself</em>. Data is becoming active, instead of staying passive.</p>
-
-<h3>Lost yet?</h3>
-
-<p>Ask yourself the following questions. If you answer yes to any, refactor:</p>
-
-<ol>
-<li>Is it the role of this class to know how to do something?</li>
-<li>What should be defined as a class?</li>
-<li>What sort of class hierarchy would be best?</li>
-</ol>
-
-
-<h3>What&#8217;s that smell? (simplified)</h3>
-
-<p>If you see any of the following in your code, refactor:</p>
-
-<ol>
-<li>Duplication of code</li>
-<li>Extensive length of class or method</li>
-<li>Large amount of parameters</li>
-</ol>
-
-
-<p>Resources:<br/>
-1. <a href="http://nicksda.apotomo.de/2011/07/are-class-methods-evil/">Are Class Methods Evil?</a> by Nick Sutterer
-2. <a href="https://speakerdeck.com/styliii/object-oriented-design">Object Oriented Desing. Li Ouyang</a><br/>
-3. <a href="http://www.codinghorror.com/blog/2006/05/code-smells.html">Code Smells by Jeff Atwood</a><br/>
-4. <a href="http://mlomnicki.com/programming/ruby/2011/07/20/class-vs-instance-methods.html">Class vs instance methods</a> by Michal Lomnicki
-5. <a href="http://blog.codeclimate.com/blog/2012/11/14/why-ruby-class-methods-resist-refactoring/">Why Ruby Class Methods Resist Refactoring</a> by</p>
 </div>
 
 
@@ -192,21 +145,15 @@
   
 
 
-<time datetime="2012-11-07T10:10:00-05:00" pubdate data-updated="true">Nov 7<span>th</span>, 2012</time>
+<time datetime="2013-02-22T19:24:00-05:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2013</time>
       
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/ood-/'>OOD,</a>, <a class='category' href='/blog/categories/refactoring/'>refactoring</a>
-  
-</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.innatewonderer.github.com/blog/2012/11/07/decode-object-oriented-design-easier/" data-via="jzueva" data-counturl="http://www.innatewonderer.github.com/blog/2012/11/07/decode-object-oriented-design-easier/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.innatewonderer.github.com/blog/bash-and-zsh/" data-via="jzueva" data-counturl="http://www.innatewonderer.github.com/blog/bash-and-zsh/" >Tweet</a>
   
   
   
@@ -217,10 +164,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/11/07/if-i-ever-fix-this-blog/" title="Previous Post: If I ever fix this blog">&laquo; If I ever fix this blog</a>
+        <a class="basic-alignment left" href="/blog/organize-your-development-folder/" title="Previous Post: Organize your development folder">&laquo; Organize your development folder</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/11/07/upstream-and-update/" title="Next Post: Upstream and update">Upstream and update &raquo;</a>
       
     </p>
   </footer>
@@ -241,23 +186,23 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2013/01/23/bash-and-zsc/">Bash and ZSC</a>
+        <a href="/blog/bash-and-zsh/">Bash and zsh</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2013/01/22/organize-your-development-folder/">Organize your development folder</a>
+        <a href="/blog/organize-your-development-folder/">Organize your development folder</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/11/29/test-your-way-through-app-development/">Testing Tools in Rails Application Development</a>
+        <a href="/blog/test-your-way-through-app-development/">Testing Tools in Rails Application Development</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/11/07/upstream-and-update/">Upstream and update</a>
+        <a href="/blog/upstream-and-update/">Upstream and update</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/11/07/decode-object-oriented-design-easier/">Decode Object Oriented Design</a>
+        <a href="/blog/decode-object-oriented-design-easier/">Decode Object Oriented Design</a>
       </li>
     
   </ul>
@@ -332,8 +277,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://www.innatewonderer.github.com/blog/2012/11/07/decode-object-oriented-design-easier/';
-        var disqus_url = 'http://www.innatewonderer.github.com/blog/2012/11/07/decode-object-oriented-design-easier/';
+        var disqus_identifier = 'http://www.innatewonderer.github.com/blog/bash-and-zsh/';
+        var disqus_url = 'http://www.innatewonderer.github.com/blog/bash-and-zsh/';
         var disqus_script = 'embed.js';
       
     (function () {

@@ -4,7 +4,7 @@
   <title><![CDATA[Screw diamonds. Ruby is a girl's best friend.]]></title>
   <link href="http://www.innatewonderer.github.com/atom.xml" rel="self"/>
   <link href="http://www.innatewonderer.github.com/"/>
-  <updated>2013-01-24T15:06:54-05:00</updated>
+  <updated>2013-02-22T20:15:45-05:00</updated>
   <id>http://www.innatewonderer.github.com/</id>
   <author>
     <name><![CDATA[Jenya Zueva]]></name>
@@ -14,10 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Bash and ZSC]]></title>
-    <link href="http://www.innatewonderer.github.com/blog/2013/01/23/bash-and-zsc/"/>
-    <updated>2013-01-23T12:40:00-05:00</updated>
-    <id>http://www.innatewonderer.github.com/blog/2013/01/23/bash-and-zsc</id>
+    <title type="html"><![CDATA[Bash and zsh]]></title>
+    <link href="http://www.innatewonderer.github.com/blog/bash-and-zsh/"/>
+    <updated>2013-02-22T19:24:00-05:00</updated>
+    <id>http://www.innatewonderer.github.com/blog/bash-and-zsh</id>
     <content type="html"><![CDATA[<p>As I&#8217;ve been struggling with setting up my new Mac to be proper RoR utility I need it to be, I can across <a href="https://github.com/thoughtbot/laptop">Laptop</a> script that took care of most installation work for me. It did prompt me to switch to <codde>zsh</code>.</p>
 
 <p>For reasons yet unknown to me, <code>zsh</code> doesn&#8217;t follow instructions in <code>.bash_profile</code>. And I like my aliases and prompt line settings, so I&#8217;m going to switch it back to <code>bash</code></p>
@@ -37,16 +37,14 @@
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>chsh -s /bin/bash</span></code></pre></td></tr></table></div></figure>
 
-
-
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Organize your development folder]]></title>
-    <link href="http://www.innatewonderer.github.com/blog/2013/01/22/organize-your-development-folder/"/>
+    <link href="http://www.innatewonderer.github.com/blog/organize-your-development-folder/"/>
     <updated>2013-01-22T12:43:00-05:00</updated>
-    <id>http://www.innatewonderer.github.com/blog/2013/01/22/organize-your-development-folder</id>
+    <id>http://www.innatewonderer.github.com/blog/organize-your-development-folder</id>
     <content type="html"><![CDATA[<p>While setting up my new Mac, I came to the task of rebuilding my development folder. Most developers will find what works for them. I&#8217;m going to provide a list that I am starting with for you to use at your discretion.</p>
 
 <!-- more -->
@@ -84,9 +82,9 @@
   
   <entry>
     <title type="html"><![CDATA[Testing Tools in Rails Application Development]]></title>
-    <link href="http://www.innatewonderer.github.com/blog/2012/11/29/test-your-way-through-app-development/"/>
+    <link href="http://www.innatewonderer.github.com/blog/test-your-way-through-app-development/"/>
     <updated>2012-11-29T16:41:00-05:00</updated>
-    <id>http://www.innatewonderer.github.com/blog/2012/11/29/test-your-way-through-app-development</id>
+    <id>http://www.innatewonderer.github.com/blog/test-your-way-through-app-development</id>
     <content type="html"><![CDATA[<p>Did you ever wake up and thought &#8220;Today, I&#8217;m going to write the entire app in one attempt&#8221;? How did it go for you?</p>
 
 <p>One of the hardest thing for me while learning coding was to understand what my lines of code actually do. I would write ten lines of code only to see it do nothing, and have no idea where to start debugging it. I would assume my entire logic was incorrect, erase it all only to find out later that I used <code>.each</code> instead of <code>.map</code>.</p>
@@ -350,9 +348,9 @@ Enjoy it :)</p>
   
   <entry>
     <title type="html"><![CDATA[Upstream and update]]></title>
-    <link href="http://www.innatewonderer.github.com/blog/2012/11/07/upstream-and-update/"/>
+    <link href="http://www.innatewonderer.github.com/blog/upstream-and-update/"/>
     <updated>2012-11-07T17:49:00-05:00</updated>
-    <id>http://www.innatewonderer.github.com/blog/2012/11/07/upstream-and-update</id>
+    <id>http://www.innatewonderer.github.com/blog/upstream-and-update</id>
     <content type="html"><![CDATA[<p>You forked something, cloned it to your machine, but didn&#8217;t setup remote connection to the origin repository.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -369,9 +367,9 @@ Enjoy it :)</p>
   
   <entry>
     <title type="html"><![CDATA[Decode Object Oriented Design]]></title>
-    <link href="http://www.innatewonderer.github.com/blog/2012/11/07/decode-object-oriented-design-easier/"/>
+    <link href="http://www.innatewonderer.github.com/blog/decode-object-oriented-design-easier/"/>
     <updated>2012-11-07T10:10:00-05:00</updated>
-    <id>http://www.innatewonderer.github.com/blog/2012/11/07/decode-object-oriented-design-easier</id>
+    <id>http://www.innatewonderer.github.com/blog/decode-object-oriented-design-easier</id>
     <content type="html"><![CDATA[<!-- Instead of writing a post and then finding a good title, I am going to commit to finding at least five facts that will make OOD clear for me... As long as it takes :) -->
 
 
@@ -443,12 +441,12 @@ Enjoy it :)</p>
   
   <entry>
     <title type="html"><![CDATA[If I ever fix this blog]]></title>
-    <link href="http://www.innatewonderer.github.com/blog/2012/11/07/if-i-ever-fix-this-blog/"/>
+    <link href="http://www.innatewonderer.github.com/blog/if-i-ever-fix-this-blog/"/>
     <updated>2012-11-07T00:46:00-05:00</updated>
-    <id>http://www.innatewonderer.github.com/blog/2012/11/07/if-i-ever-fix-this-blog</id>
+    <id>http://www.innatewonderer.github.com/blog/if-i-ever-fix-this-blog</id>
     <content type="html"><![CDATA[<p>Debugging</p>
 
-<p>If you are reading this post, I was able to save this blog and debug this #$!#%#%)&amp;$ error. Pardon my french. Read on how to address <code>lexer</code> issue when deploying your octopress blog:</p>
+<p>If you are reading this post, I was able to save this blog and debug this #$!#%#%)&amp;$ error. Pardon my french.</p>
 
 <!-- more -->
 
@@ -477,44 +475,28 @@ Enjoy it :)</p>
 </span><span class='line'>127.0.0.1 - - [06/Nov/2012 19:06:19] "GET / HTTP/1.1" 304 - 0.0013</span></code></pre></td></tr></table></div></figure>
 
 
-<p>After several attempts at googling it, numerous pulls and pushs and rebase commands, I decided to get to the very bottom of it</p>
-
-<p>Locate file</p>
+<p>After several attempts at googling it, numerous pulls and pushs and rebase commands, I decided to get to the very bottom of it
+Locate file</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>~/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpresponse.rb</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Set and set it to <strong>true</strong></p>
-
-<figure class='code'><figcaption><span>[httpresponse.rb] </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="mi">53</span> <span class="vi">@chunked</span> <span class="o">=</span> <span class="kp">true</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<p>Set and set it to <strong>true</strong>
+Liquid error: ClassNotFound: no lexer for alias &#8216;Ruby&#8217; found</p>
 
 <p>This should get rid of your error.</p>
 
-<p>Update: 1/24/13</p>
-
-<p>I was setting up my octopress blog folder on new machine. The following error showed up:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>ClassNotFound: no lexer for alias 'Ruby' found
-</span><span class='line'> in 2012-11-06-installing-rspec-in-rails-app.markdown</span></code></pre></td></tr></table></div></figure>
-
-
-<p>For whatever reason, Octopress was having issue with my markdown and syntax. I used [lang:Ruby] within my <code>/{ /% codeblock % /}</code> as <a href="http://octopress.org/docs/plugins/codeblock/">Octopress blog recommends</a>.<br/>
+<p>For whatever reason, Octopress was having issue with my markdown and syntax. I used [lang:Ruby] within my codeblock as <a href="http://octopress.org/docs/plugins/codeblock/">Octopress blog recommends</a>.<br/>
 Removing lang:Ruby did it for the time being, but I have a feeling there is more to it.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Tracking Sandy nerd style]]></title>
-    <link href="http://www.innatewonderer.github.com/blog/2012/10/29/tracking-sandy-nerd-style/"/>
+    <link href="http://www.innatewonderer.github.com/blog/tracking-sandy-nerd-style/"/>
     <updated>2012-10-29T11:16:00-04:00</updated>
-    <id>http://www.innatewonderer.github.com/blog/2012/10/29/tracking-sandy-nerd-style</id>
+    <id>http://www.innatewonderer.github.com/blog/tracking-sandy-nerd-style</id>
     <content type="html"><![CDATA[<p>A beautiful representation of the wind currents</p>
 
 <p><img src="http://www.innatewonderer.github.com/images/Wind_Map.jpg"></p>
@@ -525,9 +507,9 @@ Removing lang:Ruby did it for the time being, but I have a feeling there is more
   
   <entry>
     <title type="html"><![CDATA[7 easy steps to start with TDD]]></title>
-    <link href="http://www.innatewonderer.github.com/blog/2012/10/24/7-easy-steps-to-start-with-tdd/"/>
+    <link href="http://www.innatewonderer.github.com/blog/7-easy-steps-to-start-with-tdd/"/>
     <updated>2012-10-24T18:26:00-04:00</updated>
-    <id>http://www.innatewonderer.github.com/blog/2012/10/24/7-easy-steps-to-start-with-tdd</id>
+    <id>http://www.innatewonderer.github.com/blog/7-easy-steps-to-start-with-tdd</id>
     <content type="html"><![CDATA[<p>1:00 pm - TDD is a very useful tool in software development&#8230;</p>
 
 <p>3:30 pm - Test driven development or TDD can be extremely frustrating, time consuming and sole devouring experience.</p>
@@ -675,9 +657,9 @@ Fix your code</p>
   
   <entry>
     <title type="html"><![CDATA[Variable Scope]]></title>
-    <link href="http://www.innatewonderer.github.com/blog/2012/10/18/variable-scope/"/>
+    <link href="http://www.innatewonderer.github.com/blog/variable-scope/"/>
     <updated>2012-10-18T20:02:00-04:00</updated>
-    <id>http://www.innatewonderer.github.com/blog/2012/10/18/variable-scope</id>
+    <id>http://www.innatewonderer.github.com/blog/variable-scope</id>
     <content type="html"><![CDATA[<p><img class="right" src="http://public.arnau-sanchez.com/ruby-functional/pics/functional-programming-joke.png" width="350" height="190">
 Variable is an essential building block of any programming language. It is a way to store information and assign a name to it for future use. Variables come in all shapes and sizes. Anything from an integer to a string of characters can be used to reference data in the program.</p>
 
@@ -885,9 +867,9 @@ Ruby offers us a number of major system variables. Aliases will come handy when 
   
   <entry>
     <title type="html"><![CDATA[Do not discard slide decks just yet]]></title>
-    <link href="http://www.innatewonderer.github.com/blog/2012/10/15/why-we-should-not-discard-power-point-just-yet/"/>
+    <link href="http://www.innatewonderer.github.com/blog/why-we-should-not-discard-power-point-just-yet/"/>
     <updated>2012-10-15T09:41:00-04:00</updated>
-    <id>http://www.innatewonderer.github.com/blog/2012/10/15/why-we-should-not-discard-power-point-just-yet</id>
+    <id>http://www.innatewonderer.github.com/blog/why-we-should-not-discard-power-point-just-yet</id>
     <content type="html"><![CDATA[<p>How many times did you have to sit through a torturous power point
 presentation wondering what did you do to deserve this?<br/>
 <img class="center" src="http://dilbert.com/dyn/str_strip/000000000/00000000/0000000/000000/00000/0000/200/221/221.strip.gif"> <!-- <sub>@2003 United Feature Syndicate, Inc</sub> &#8211;></p>

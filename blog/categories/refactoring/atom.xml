@@ -4,7 +4,7 @@
   <title><![CDATA[Category: refactoring | Screw diamonds. Ruby is a girl's best friend.]]></title>
   <link href="http://www.innatewonderer.github.com/blog/categories/refactoring/atom.xml" rel="self"/>
   <link href="http://www.innatewonderer.github.com/"/>
-  <updated>2013-01-24T15:06:54-05:00</updated>
+  <updated>2013-02-22T20:15:45-05:00</updated>
   <id>http://www.innatewonderer.github.com/</id>
   <author>
     <name><![CDATA[Jenya Zueva]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Decode Object Oriented Design]]></title>
-    <link href="http://www.innatewonderer.github.com/blog/2012/11/07/decode-object-oriented-design-easier/"/>
+    <link href="http://www.innatewonderer.github.com/blog/decode-object-oriented-design-easier/"/>
     <updated>2012-11-07T10:10:00-05:00</updated>
-    <id>http://www.innatewonderer.github.com/blog/2012/11/07/decode-object-oriented-design-easier</id>
+    <id>http://www.innatewonderer.github.com/blog/decode-object-oriented-design-easier</id>
     <content type="html"><![CDATA[<!-- Instead of writing a post and then finding a good title, I am going to commit to finding at least five facts that will make OOD clear for me... As long as it takes :) -->
 
 
