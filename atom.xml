@@ -4,7 +4,7 @@
   <title><![CDATA[Screw diamonds. Ruby is a girl's best friend.]]></title>
   <link href="http://www.innatewonderer.github.com/atom.xml" rel="self"/>
   <link href="http://www.innatewonderer.github.com/"/>
-  <updated>2013-02-22T20:15:45-05:00</updated>
+  <updated>2013-02-22T23:25:22-05:00</updated>
   <id>http://www.innatewonderer.github.com/</id>
   <author>
     <name><![CDATA[Jenya Zueva]]></name>
@@ -37,6 +37,128 @@
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>chsh -s /bin/bash</span></code></pre></td></tr></table></div></figure>
 
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby exercise 1: Triangle of numbers]]></title>
+    <link href="http://www.innatewonderer.github.com/blog/ruby-exercise-1-triangle-of-numbers/"/>
+    <updated>2013-02-22T17:02:00-05:00</updated>
+    <id>http://www.innatewonderer.github.com/blog/ruby-exercise-1-triangle-of-numbers</id>
+    <content type="html"><![CDATA[<p>Fun exercise that will allow you to practice iteration and loops as well as look into <a href="http://www.ruby-doc.org/core-1.9.3/ARGF.html">ARGV</a> in Ruby. I will include my detailed logic how I came to resolve this issue because I find it most helpful when learning new concepts in any language to see all nuts and bolts that went into it.</p>
+
+<p>Assignment:<br/>
+Create an application that will take a number in Terminal and output the same number of lines with the same number of digits in each line. Note: elements continue to grow in order.</p>
+
+<p>Enter in terminal:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="err">$</span> <span class="n">ruby</span> <span class="n">triangle</span><span class="o">.</span><span class="n">rb</span> <span class="mi">4</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Expected result:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="mi">1</span>
+</span><span class='line'><span class="mi">2</span> <span class="mi">3</span>
+</span><span class='line'><span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span>
+</span><span class='line'><span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">10</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<!-- more -->
+
+
+<p>If you don&#8217;t need a full step-by-step explanation of this exercise, please scroll to the bottom of this page for final solution.</p>
+
+<p>Being yet a newbie, I quickly have found myself struggling with logic of this application. Obviously, you need to loop through the numbers but where do you ensure that the first element of the next line is the next element in the original array.</p>
+
+<p>Quick sketch on paper and it becomes visible that we are dealing with two elements:
+One (we&#8217;ll call it <code>number</code>) is responsible for line number and number of displayed elements. And another one (<code>order</code>) that is responsible for the location of the next element that will be displayed.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#1 // 1</span>
+</span><span class='line'><span class="c1">#2 // 2 3</span>
+</span><span class='line'><span class="c1">#3 // 4 5 6</span>
+</span><span class='line'><span class="c1">#4 // 7 8 9 10</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>We are working with an <code>array[1, 2, 3, 4, 5, 6, 7 .. n]</code> or<code>array[1..n]</code>. Keeping in mind that we start counting elements in an array from 0, let&#8217;s quickly write the logic:</p>
+
+<p>When we need to show one number on first row: <code>number = 1</code>, position of this element <code>order = 0</code><br/>
+Second row, two numbers, <code>number = 2</code>, position in an array <code>order = 1</code><br/>
+Third row, three numbers, <code>number = 3</code>, <code>order = 3</code><br/>
+Fourth row, four number, <code>number = 4</code>, <code>order = 6</code></p>
+
+<p>It becomes a little more clear that in order to find our next order element we need to add the value of the number to previous order element.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">order</span> <span class="o">=</span> <span class="mi">1</span>              <span class="c1"># we have to set default value for order</span>
+</span><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.n</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">number</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">number</span>               <span class="c1"># number will grow continuously from 1 to finite number n</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="n">order</span> <span class="o">+=</span> <span class="n">number</span>      <span class="c1"># order will grow proportionally to the increase in value of number    </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Great.<br/>
+Now, let&#8217;s look into <a href="http://www.ruby-doc.org/core-1.9.3/ARGF.html">ARGV</a>. We can pass arguments to our ruby program from command line of our terminal. Will look something like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="err">$</span> <span class="n">ruby</span> <span class="n">triangle</span><span class="o">.</span><span class="n">rb</span> <span class="mi">4</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>We are asking our terminal to run file <code>triangle.rb</code> with <code>ruby</code> while passing the value <code>4</code> to the application. ARGV&#8217;s responsibility is to accept given arguments and make them available within our application.<br/>
+Your goal is to provide a place for these values and ensure its correct format.</p>
+
+<p>While testing the format of my argument, I found that 4 came into the application as an <code>Array</code> and I needed it to be an <code>Integer</code> so I could use it to set the limit of my array. There is no easy way to turn array to an integer(please leave comments if you have any suggestions), for the purpose of simplicity and my sanity:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">limit</span> <span class="o">=</span> <span class="no">ARGV</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="n">to_i</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This took an array of arguments that were passed from the terminal, picked the first value and turned it into an integer while saving it in a variable <code>limit</code> for future use.</p>
+
+<p>Final solution:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">array</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">100000</span><span class="p">)</span><span class="o">.</span><span class="n">to_a</span>
+</span><span class='line'><span class="n">order</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span class='line'><span class="n">limit</span> <span class="o">=</span> <span class="no">ARGV</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="n">to_i</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.limit</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">number</span><span class="o">|</span> 
+</span><span class='line'>  <span class="n">array</span><span class="o">[</span><span class="n">order</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">number</span><span class="o">].</span><span class="n">each</span><span class="p">{</span><span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="nb">print</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">i</span><span class="si">}</span><span class="s2"> &quot;</span> <span class="p">}</span>   <span class="c1"># will print it in line</span>
+</span><span class='line'>  <span class="n">order</span> <span class="o">+=</span> <span class="n">number</span>
+</span><span class='line'>  <span class="nb">puts</span>                                                <span class="c1"># will print a break between your lines </span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>P.S. Note to anyone (and my future self) whoever laughs at how long it took me to solve this: <strong>@#%&amp;@#<em>$@#%</em>@#</strong> you!</p>
+
+<p>Now, that ARGV finally makes sense, I&#8217;m going to work on another interview exercise for one really awesome company in DC. As I was told on my first day <a href="www.flatironschool.com">@Flatironschool</a>, <strong>&#8220;It will all make sense one day&#8221;</strong></p>
 ]]></content>
   </entry>
   

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: interview, | Screw diamonds. Ruby is a girl's best friend.]]></title>
+  <link href="http://www.innatewonderer.github.com/blog/categories/interview-/atom.xml" rel="self"/>
+  <link href="http://www.innatewonderer.github.com/"/>
+  <updated>2013-02-22T23:25:22-05:00</updated>
+  <id>http://www.innatewonderer.github.com/</id>
+  <author>
+    <name><![CDATA[Jenya Zueva]]></name>
+    <email><![CDATA[jzueva@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby exercise 1: Triangle of numbers]]></title>
+    <link href="http://www.innatewonderer.github.com/blog/ruby-exercise-1-triangle-of-numbers/"/>
+    <updated>2013-02-22T17:02:00-05:00</updated>
+    <id>http://www.innatewonderer.github.com/blog/ruby-exercise-1-triangle-of-numbers</id>
+    <content type="html"><![CDATA[<p>Fun exercise that will allow you to practice iteration and loops as well as look into <a href="http://www.ruby-doc.org/core-1.9.3/ARGF.html">ARGV</a> in Ruby. I will include my detailed logic how I came to resolve this issue because I find it most helpful when learning new concepts in any language to see all nuts and bolts that went into it.</p>
+
+<p>Assignment:<br/>
+Create an application that will take a number in Terminal and output the same number of lines with the same number of digits in each line. Note: elements continue to grow in order.</p>
+
+<p>Enter in terminal:
+<code>ruby
+$ ruby triangle.rb 4
+</code></p>
+
+<p>Expected result:
+<code>
+1
+2 3
+4 5 6
+7 8 9 10
+</code></p>
+
+<!-- more -->
+
+
+<p>If you don't need a full step-by-step explanation of this exercise, please scroll to the bottom of this page for final solution.</p>
+
+<p>Being yet a newbie, I quickly have found myself struggling with logic of this application. Obviously, you need to loop through the numbers but where do you ensure that the first element of the next line is the next element in the original array.</p>
+
+<p>Quick sketch on paper and it becomes visible that we are dealing with two elements:
+One (we'll call it <code>number</code>) is responsible for line number and number of displayed elements. And another one (<code>order</code>) that is responsible for the location of the next element that will be displayed.</p>
+
+<p>```</p>
+
+<h1>1 // 1</h1>
+
+<h1>2 // 2 3</h1>
+
+<h1>3 // 4 5 6</h1>
+
+<h1>4 // 7 8 9 10</h1>
+
+<p><code>``
+We are working with an</code>array[1, 2, 3, 4, 5, 6, 7 .. n]<code>or</code>array[1..n]`. Keeping in mind that we start counting elements in an array from 0, let's quickly write the logic:</p>
+
+<p>When we need to show one number on first row: <code>number = 1</code>, position of this element <code>order = 0</code><br/>
+Second row, two numbers, <code>number = 2</code>, position in an array <code>order = 1</code><br/>
+Third row, three numbers, <code>number = 3</code>, <code>order = 3</code><br/>
+Fourth row, four number, <code>number = 4</code>, <code>order = 6</code></p>
+
+<p>It becomes a little more clear that in order to find our next order element we need to add the value of the number to previous order element.</p>
+
+<p>```ruby
+order = 1               # we have to set default value for order
+(1..n).each do |number|</p>
+
+<pre><code>number              # number will grow continuously from 1 to finite number n
+</code></pre>
+
+<p>end
+order += number         # order will grow proportionally to the increase in value of number
+```</p>
+
+<p>Great.<br/>
+Now, let's look into <a href="http://www.ruby-doc.org/core-1.9.3/ARGF.html">ARGV</a>. We can pass arguments to our ruby program from command line of our terminal. Will look something like this:
+<code>
+$ ruby triangle.rb 4
+</code>
+We are asking our terminal to run file <code>triangle.rb</code> with <code>ruby</code> while passing the value <code>4</code> to the application. ARGV's responsibility is to accept given arguments and make them available within our application.<br/>
+Your goal is to provide a place for these values and ensure its correct format.</p>
+
+<p>While testing the format of my argument, I found that 4 came into the application as an <code>Array</code> and I needed it to be an <code>Integer</code> so I could use it to set the limit of my array. There is no easy way to turn array to an integer(please leave comments if you have any suggestions), for the purpose of simplicity and my sanity:
+<code>ruby
+limit = ARGV[0].to_i
+</code>
+This took an array of arguments that were passed from the terminal, picked the first value and turned it into an integer while saving it in a variable <code>limit</code> for future use.</p>
+
+<p>Final solution:</p>
+
+<p>``` ruby
+array = (1..100000).to_a
+order = 1
+limit = ARGV[0].to_i</p>
+
+<p>(1..limit).each do |number|</p>
+
+<pre><code>array[order - 1, number].each{|i| print "#{i} " }   # will print it in line
+order += number
+puts                                                # will print a break between your lines 
+</code></pre>
+
+<p>end
+```</p>
+
+<p>P.S. Note to anyone (and my future self) whoever laughs at how long it took me to solve this: <strong>@#%&amp;@#<em>$@#%</em>@#</strong> you!</p>
+
+<p>Now, that ARGV finally makes sense, I'm going to work on another interview exercise for one really awesome company in DC. As I was told on my first day <a href="www.flatironschool.com">@Flatironschool</a>, <strong>"It will all make sense one day"</strong></p>
+]]></content>
+  </entry>
+  
+</feed>
