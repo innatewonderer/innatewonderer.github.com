@@ -5,14 +5,14 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Upstream and update - Screw diamonds. Ruby is a girl's best friend.</title>
+  <title>Sorting Hash Values - Screw diamonds. Ruby is a girl's best friend.</title>
   <meta name="author" content="Jenya Zueva">
 
   
-  <meta name="description" content="You forked something, cloned it to your machine, but didn&#8217;t setup remote connection to the origin repository. 1
+  <meta name="description" content="Have a huge Array of hashed and need to find how many times the same event occur? 1
 2
 3
-git remote add upstream * &hellip;">
+h = [ {&quot;a&quot; =&gt; 10}, {&quot;b&quot; =&gt; 20}, {& &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -21,7 +21,7 @@ git remote add upstream * &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.innatewonderer.github.com/blog/upstream-and-update/">
+  <link rel="canonical" href="http://www.innatewonderer.github.com/blog/sorting-hash-values/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -82,7 +82,7 @@ git remote add upstream * &hellip;">
   
   <header>
     
-      <h1 class="entry-title">Upstream and Update</h1>
+      <h1 class="entry-title">Sorting Hash Values</h1>
     
     
       <p class="meta">
@@ -98,7 +98,7 @@ git remote add upstream * &hellip;">
   
 
 
-<time datetime="2012-11-07T17:49:00-05:00" pubdate data-updated="true">Nov 7<span>th</span>, 2012</time>
+<time datetime="2013-02-23T18:07:00-05:00" pubdate data-updated="true">Feb 23<span>rd</span>, 2013</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -107,14 +107,26 @@ git remote add upstream * &hellip;">
   </header>
 
 
-<div class="entry-content"><p>You forked something, cloned it to your machine, but didn&#8217;t setup remote connection to the origin repository.</p>
+<div class="entry-content"><p>Have a huge <code>Array</code> of hashed and need to find how many times the same event occur?</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git remote add upstream *url to original repository*
-</span><span class='line'>git fetch upstream
-</span><span class='line'>git merge upstream/master</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">h</span> <span class="o">=</span> <span class="o">[</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;b&quot;</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;b&quot;</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;c&quot;</span> <span class="o">=&gt;</span> <span class="mi">30</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">}</span> <span class="o">]</span>
+</span><span class='line'><span class="n">count_h</span> <span class="o">=</span> <span class="n">h</span><span class="o">.</span><span class="n">inject</span><span class="p">(</span><span class="no">Hash</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">)){</span> <span class="o">|</span><span class="nb">hash</span><span class="p">,</span> <span class="n">i</span><span class="o">|</span> <span class="nb">hash</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span> <span class="nb">hash</span> <span class="p">}</span>
+</span><span class='line'><span class="nb">puts</span> <span class="n">h</span>                 <span class="c1">#=&gt; {{&quot;a&quot;=&gt;10}=&gt;3, {&quot;b&quot;=&gt;20}=&gt;2, {&quot;c&quot;=&gt;30}=&gt;1} </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Looking for awesome ways to sort <code>Hash</code> by its values?</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">h</span> <span class="o">=</span> <span class="p">{{</span><span class="s2">&quot;a&quot;</span><span class="o">=&gt;</span><span class="mi">10</span><span class="p">}</span><span class="o">=&gt;</span><span class="mi">3</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;c&quot;</span><span class="o">=&gt;</span><span class="mi">30</span><span class="p">}</span><span class="o">=&gt;</span><span class="mi">1</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;b&quot;</span><span class="o">=&gt;</span><span class="mi">20</span><span class="p">}</span><span class="o">=&gt;</span><span class="mi">2</span><span class="p">}</span>
+</span><span class='line'><span class="no">Hash</span><span class="o">[</span><span class="n">h</span><span class="o">.</span><span class="n">sort_by</span> <span class="p">{</span><span class="o">|</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="o">|</span> <span class="o">-</span><span class="n">value</span> <span class="p">}</span><span class="o">]</span> <span class="c1">#=&gt; will sort in descending order</span>
+</span><span class='line'><span class="nb">p</span> <span class="n">h</span> <span class="c1">#=&gt; {{&quot;a&quot;=&gt;10}=&gt;3, {&quot;b&quot;=&gt;20}=&gt;2, {&quot;c&quot;=&gt;30}=&gt;1} </span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
@@ -140,7 +152,7 @@ git remote add upstream * &hellip;">
   
 
 
-<time datetime="2012-11-07T17:49:00-05:00" pubdate data-updated="true">Nov 7<span>th</span>, 2012</time>
+<time datetime="2013-02-23T18:07:00-05:00" pubdate data-updated="true">Feb 23<span>rd</span>, 2013</time>
       
 
 
@@ -148,7 +160,7 @@ git remote add upstream * &hellip;">
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.innatewonderer.github.com/blog/upstream-and-update/" data-via="jzueva" data-counturl="http://www.innatewonderer.github.com/blog/upstream-and-update/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.innatewonderer.github.com/blog/sorting-hash-values/" data-via="jzueva" data-counturl="http://www.innatewonderer.github.com/blog/sorting-hash-values/" >Tweet</a>
   
   
   
@@ -159,10 +171,10 @@ git remote add upstream * &hellip;">
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/decode-object-oriented-design-easier/" title="Previous Post: Decode Object Oriented Design">&laquo; Decode Object Oriented Design</a>
+        <a class="basic-alignment left" href="/blog/bash-and-zsh/" title="Previous Post: Bash and zsh">&laquo; Bash and zsh</a>
       
       
-        <a class="basic-alignment right" href="/blog/test-your-way-through-app-development/" title="Next Post: Testing Tools in Rails Application Development">Testing Tools in Rails Application Development &raquo;</a>
+        <a class="basic-alignment right" href="/blog/creating-a-rake-file/" title="Next Post: Creating a rake file">Creating a rake file &raquo;</a>
       
     </p>
   </footer>
@@ -274,8 +286,8 @@ git remote add upstream * &hellip;">
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://www.innatewonderer.github.com/blog/upstream-and-update/';
-        var disqus_url = 'http://www.innatewonderer.github.com/blog/upstream-and-update/';
+        var disqus_identifier = 'http://www.innatewonderer.github.com/blog/sorting-hash-values/';
+        var disqus_url = 'http://www.innatewonderer.github.com/blog/sorting-hash-values/';
         var disqus_script = 'embed.js';
       
     (function () {

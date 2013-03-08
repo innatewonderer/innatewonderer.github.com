@@ -4,7 +4,7 @@
   <title><![CDATA[Screw diamonds. Ruby is a girl's best friend.]]></title>
   <link href="http://www.innatewonderer.github.com/atom.xml" rel="self"/>
   <link href="http://www.innatewonderer.github.com/"/>
-  <updated>2013-02-22T23:25:22-05:00</updated>
+  <updated>2013-03-08T00:43:32-05:00</updated>
   <id>http://www.innatewonderer.github.com/</id>
   <author>
     <name><![CDATA[Jenya Zueva]]></name>
@@ -12,6 +12,46 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Creating a rake file]]></title>
+    <link href="http://www.innatewonderer.github.com/blog/creating-a-rake-file/"/>
+    <updated>2013-02-24T23:32:00-05:00</updated>
+    <id>http://www.innatewonderer.github.com/blog/creating-a-rake-file</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sorting Hash Values]]></title>
+    <link href="http://www.innatewonderer.github.com/blog/sorting-hash-values/"/>
+    <updated>2013-02-23T18:07:00-05:00</updated>
+    <id>http://www.innatewonderer.github.com/blog/sorting-hash-values</id>
+    <content type="html"><![CDATA[<p>Have a huge <code>Array</code> of hashed and need to find how many times the same event occur?</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">h</span> <span class="o">=</span> <span class="o">[</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;b&quot;</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;b&quot;</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;c&quot;</span> <span class="o">=&gt;</span> <span class="mi">30</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">}</span> <span class="o">]</span>
+</span><span class='line'><span class="n">count_h</span> <span class="o">=</span> <span class="n">h</span><span class="o">.</span><span class="n">inject</span><span class="p">(</span><span class="no">Hash</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">)){</span> <span class="o">|</span><span class="nb">hash</span><span class="p">,</span> <span class="n">i</span><span class="o">|</span> <span class="nb">hash</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span> <span class="nb">hash</span> <span class="p">}</span>
+</span><span class='line'><span class="nb">puts</span> <span class="n">h</span>                 <span class="c1">#=&gt; {{&quot;a&quot;=&gt;10}=&gt;3, {&quot;b&quot;=&gt;20}=&gt;2, {&quot;c&quot;=&gt;30}=&gt;1} </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Looking for awesome ways to sort <code>Hash</code> by its values?</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">h</span> <span class="o">=</span> <span class="p">{{</span><span class="s2">&quot;a&quot;</span><span class="o">=&gt;</span><span class="mi">10</span><span class="p">}</span><span class="o">=&gt;</span><span class="mi">3</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;c&quot;</span><span class="o">=&gt;</span><span class="mi">30</span><span class="p">}</span><span class="o">=&gt;</span><span class="mi">1</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;b&quot;</span><span class="o">=&gt;</span><span class="mi">20</span><span class="p">}</span><span class="o">=&gt;</span><span class="mi">2</span><span class="p">}</span>
+</span><span class='line'><span class="no">Hash</span><span class="o">[</span><span class="n">h</span><span class="o">.</span><span class="n">sort_by</span> <span class="p">{</span><span class="o">|</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="o">|</span> <span class="o">-</span><span class="n">value</span> <span class="p">}</span><span class="o">]</span> <span class="c1">#=&gt; will sort in descending order</span>
+</span><span class='line'><span class="nb">p</span> <span class="n">h</span> <span class="c1">#=&gt; {{&quot;a&quot;=&gt;10}=&gt;3, {&quot;b&quot;=&gt;20}=&gt;2, {&quot;c&quot;=&gt;30}=&gt;1} </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Bash and zsh]]></title>
