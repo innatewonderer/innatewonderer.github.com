@@ -4,7 +4,7 @@
   <title><![CDATA[Screw diamonds. Ruby is a girl's best friend.]]></title>
   <link href="http://www.innatewonderer.github.com/atom.xml" rel="self"/>
   <link href="http://www.innatewonderer.github.com/"/>
-  <updated>2013-03-08T00:43:32-05:00</updated>
+  <updated>2013-03-08T00:44:47-05:00</updated>
   <id>http://www.innatewonderer.github.com/</id>
   <author>
     <name><![CDATA[Jenya Zueva]]></name>
@@ -12,15 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Creating a rake file]]></title>
-    <link href="http://www.innatewonderer.github.com/blog/creating-a-rake-file/"/>
-    <updated>2013-02-24T23:32:00-05:00</updated>
-    <id>http://www.innatewonderer.github.com/blog/creating-a-rake-file</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[Sorting Hash Values]]></title>
